@@ -1,760 +1,212 @@
-/* ===================================
-GOOGLE FONT
-=================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-/* ===================================
-RESET
-=================================== */
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-
-background:#040816;
-overflow:hidden;
-color:white;
-
-}
-
-/* ===================================
-BACKGROUND
-=================================== */
-
-.background{
-
-position:fixed;
-inset:0;
-
-background:
-linear-gradient(rgba(4,8,22,.70),rgba(4,8,22,.90)),
-url("wallpaper.png") center center/cover no-repeat;
-
-z-index:-2;
-
-}
-
-.background::after{
-
-content:"";
-
-position:absolute;
-inset:0;
-
-backdrop-filter:blur(18px);
-
-}
-
-/* ===================================
-SCREEN
-=================================== */
-
-.screen{
-
-position:absolute;
-
-inset:0;
-
-display:none;
-
-justify-content:center;
-
-align-items:center;
-
-flex-direction:column;
-
-padding:30px;
-
-}
-
-.screen.active{
-
-display:flex;
-
-animation:fade .7s;
-
-}
-
-/* ===================================
-LOCK SCREEN
-=================================== */
-
-.statusBar{
-
-position:absolute;
-
-top:18px;
-
-width:100%;
-
-padding:0 25px;
-
-display:flex;
-
-justify-content:space-between;
-
-font-size:14px;
-
-opacity:.9;
-
-}
-
-.lockContent{
-
-text-align:center;
-
-}
-
-#clock{
-
-font-size:68px;
-
-font-weight:700;
-
-letter-spacing:2px;
-
-}
-
-#date{
-
-margin-top:10px;
-
-font-size:18px;
-
-opacity:.8;
-
-}
-
-.heart{
-
-font-size:58px;
-
-margin:35px 0 20px;
-
-animation:beat 1.5s infinite;
-
-}
-
-.lockContent h2{
-
-font-size:34px;
-
-margin-bottom:12px;
-
-}
-
-.lockContent p{
-
-font-size:18px;
-
-line-height:1.7;
-
-opacity:.9;
-
-}
-
-/* ===================================
-UNLOCK
-=================================== */
-
-.unlock{
-
-position:absolute;
-
-bottom:35px;
-
-text-align:center;
-
-font-size:15px;
-
-animation:float 2s infinite;
-
-opacity:.85;
-
-}
-
-.swipeLine{
-
-width:90px;
-
-height:6px;
-
-border-radius:20px;
-
-background:white;
-
-margin:auto auto 12px;
-
-}
-
-/* ===================================
-GLASS CARD
-=================================== */
-
-.glass{
-
-width:100%;
-
-max-width:380px;
-
-background:rgba(255,255,255,.08);
-
-backdrop-filter:blur(18px);
-
-border:1px solid rgba(255,255,255,.15);
-
-border-radius:28px;
-
-padding:30px;
-
-box-shadow:
-
-0 10px 35px rgba(0,0,0,.35);
-
-}
-
-/* ===================================
-HEADINGS
-=================================== */
-
-.glass h2{
-
-text-align:center;
-
-margin-bottom:12px;
-
-font-size:28px;
-
-}
-
-.glass p{
-
-text-align:center;
-
-opacity:.85;
-
-line-height:1.6;
-
-}
-
-/* ===================================
-LIST
-=================================== */
-
-.glass ul{
-
-margin:30px 0;
-
-}
-
-.glass li{
-
-list-style:none;
-
-padding:10px 0;
-
-font-size:16px;
-
-}
-
-/* ===================================
-BUTTON
-=================================== */
-
-button{
-
-width:100%;
-
-padding:16px;
-
-margin-top:10px;
-
-border:none;
-
-border-radius:18px;
-
-font-size:17px;
-
-font-weight:600;
-
-cursor:pointer;
-
-color:white;
-
-background:#3b82f6;
-
-transition:.3s;
-
-}
-
-button:hover{
-
-transform:translateY(-2px);
-
-}
-
-button:active{
-
-transform:scale(.98);
-
-}
-
-/* ===================================
-MOBILE
-=================================== */
-
-@media(max-width:480px){
-
-#clock{
-
-font-size:58px;
-
-}
-
-.lockContent h2{
-
-font-size:28px;
-
-}
-
-.lockContent p{
-
-font-size:16px;
-
-}
-
-.glass{
-
-padding:24px;
-
-}
-
-}
-
-/* ===================================
-ANIMATION
-=================================== */
-
-@keyframes beat{
-
-0%,100%{
-
-transform:scale(1);
-
-}
-
-50%{
-
-transform:scale(1.12);
-
-}
-
-}
-
-@keyframes float{
-
-0%,100%{
-
-transform:translateY(0);
-
-}
-
-50%{
-
-transform:translateY(-8px);
-
-}
-
-}
-
-@keyframes fade{
-
-from{
-
-opacity:0;
-
-transform:scale(.97);
-
-}
-
-to{
-
-opacity:1;
-
-transform:scale(1);
-
-}
-
-}
-
-/* ===================================
-FACE RECOGNITION
-=================================== */
-
-.scanner{
-
-width:120px;
-height:120px;
-
-margin:auto;
-
-border-radius:50%;
-
-border:4px solid #4ea8ff;
-
-box-shadow:
-0 0 30px #4ea8ff;
-
-animation:pulse 2s infinite;
-
-}
-
-/* ===================================
-PROGRESS BAR
-=================================== */
-
-.progress{
-
-width:100%;
-height:10px;
-
-background:rgba(255,255,255,.15);
-
-border-radius:30px;
-
-overflow:hidden;
-
-margin:30px 0;
-
-}
-
-#faceBar,
-#installBar{
-
-width:0%;
+// ==============================
+// SCREENS
+// ==============================
 
-height:100%;
+const lockScreen=document.getElementById("lockScreen");
+const faceScreen=document.getElementById("faceScreen");
+const updateScreen=document.getElementById("updateScreen");
+const installScreen=document.getElementById("installScreen");
+const profileScreen=document.getElementById("profileScreen");
+const bootScreen=document.getElementById("bootScreen");
+const homeScreen=document.getElementById("homeScreen");
 
-background:linear-gradient(90deg,#4ea8ff,#79c2ff);
+// ==============================
+// ELEMENTS
+// ==============================
 
-border-radius:30px;
+const faceBar=document.getElementById("faceBar");
+const installBar=document.getElementById("installBar");
 
-transition:.4s;
+const faceText=document.getElementById("faceText");
+const installText=document.getElementById("installText");
 
-}
-
-#faceStatus{
-
-display:block;
-
-text-align:center;
-
-margin-top:10px;
-
-font-weight:500;
-
-}
-
-/* ===================================
-PROFILE
-=================================== */
-
-.profile{
-
-width:140px;
-height:140px;
-
-object-fit:cover;
-
-border-radius:50%;
-
-display:block;
-
-margin:0 auto 20px;
-
-border:4px solid white;
-
-box-shadow:
-0 0 30px rgba(255,255,255,.4);
-
-}
+const installBtn=document.getElementById("installBtn");
 
-.loveProgress{
+const clock=document.getElementById("clock");
+const date=document.getElementById("date");
 
-width:100%;
-height:12px;
+// ==============================
+// SHOW SCREEN
+// ==============================
 
-background:rgba(255,255,255,.15);
+function showScreen(screen){
 
-border-radius:30px;
+document.querySelectorAll(".screen").forEach(item=>{
 
-overflow:hidden;
+item.classList.remove("active");
 
-margin:25px 0;
+});
 
-}
-
-.loveFill{
-
-width:100%;
-height:100%;
-
-background:linear-gradient(90deg,#ff4d88,#ff87b2);
-
-animation:loveFill 2s;
+screen.classList.add("active");
 
 }
 
-/* ===================================
-BOOT SCREEN
-=================================== */
+// ==============================
+// LOCK SCREEN
+// ==============================
 
-.boot{
+lockScreen.addEventListener("click",()=>{
 
-text-align:center;
+showScreen(faceScreen);
 
-}
+startFace();
 
-.boot h1{
+});
 
-font-size:42px;
+// ==============================
+// FACE RECOGNITION
+// ==============================
 
-font-weight:700;
+function startFace(){
 
-letter-spacing:2px;
+let width=0;
 
-margin-bottom:15px;
+const timer=setInterval(()=>{
 
-}
+width+=2;
 
-.boot p{
+faceBar.style.width=width+"%";
 
-opacity:.85;
+if(width>=100){
 
-margin-bottom:40px;
+clearInterval(timer);
 
-}
+faceText.innerHTML="✔ Face Recognized";
 
-.loadingLine{
+setTimeout(()=>{
 
-width:250px;
+clock.innerHTML="12:00 AM";
 
-height:6px;
+date.innerHTML="Thursday, July 16";
 
-background:rgba(255,255,255,.15);
+},700);
 
-border-radius:30px;
+setTimeout(()=>{
 
-overflow:hidden;
+showScreen(updateScreen);
 
-margin:auto;
+},1700);
 
 }
-
-.loadingFill{
-
-width:0%;
 
-height:100%;
+},40);
 
-background:#4ea8ff;
-
-animation:bootLoad 3s forwards;
-
 }
 
-/* ===================================
-ANIMATIONS
-=================================== */
+// ==============================
+// UPDATE BUTTON
+// ==============================
 
-@keyframes pulse{
+installBtn.addEventListener("click",()=>{
 
-0%{
+showScreen(installScreen);
 
-transform:scale(1);
+startInstall();
 
-}
+});
 
-50%{
+// ==============================
+// INSTALLATION
+// ==============================
 
-transform:scale(1.08);
-
-}
+function startInstall(){
 
-100%{
+let percent=0;
 
-transform:scale(1);
+const messages=[
 
-}
+"Preparing Birthday Update...",
 
-}
+"Downloading Smiles...",
 
-@keyframes loveFill{
+"Collecting Memories...",
 
-from{
+"Installing Happiness...",
 
-width:0%;
+"Searching for the Best Girlfriend...",
 
-}
+"Perfect Match Found ❤️"
 
-to{
+];
 
-width:100%;
+installText.innerHTML=messages[0];
 
-}
+const timer=setInterval(()=>{
 
-}
+percent++;
 
-@keyframes bootLoad{
+installBar.style.width=percent+"%";
 
-from{
+if(percent==20){
 
-width:0%;
+installText.innerHTML=messages[1];
 
 }
 
-to{
+if(percent==40){
 
-width:100%;
+installText.innerHTML=messages[2];
 
 }
 
-}
-
-/* ===================================
-HOME SCREEN
-=================================== */
+if(percent==60){
 
-#homeScreen{
+installText.innerHTML=messages[3];
 
-background:
-linear-gradient(rgba(4,8,22,.45),rgba(4,8,22,.60)),
-url("us.jpeg") center center/cover no-repeat;
-
-justify-content:flex-start;
-
 }
-
-/* Status */
-
-.phoneStatus{
-
-width:100%;
-
-display:flex;
-
-justify-content:space-between;
-
-padding:15px 5px;
 
-font-size:14px;
+if(percent==80){
 
-font-weight:600;
+installText.innerHTML=messages[4];
 
 }
 
-/* Clock */
+if(percent>=100){
 
-.phoneTime{
+clearInterval(timer);
 
-margin-top:30px;
+installText.innerHTML=messages[5];
 
-font-size:64px;
+setTimeout(()=>{
 
-font-weight:700;
+showScreen(profileScreen);
 
-text-align:center;
+startProfile();
 
-}
-
-.phoneDate{
-
-text-align:center;
-
-opacity:.85;
-
-margin-bottom:50px;
+},1200);
 
 }
-
-/* Apps */
-
-.apps{
-
-width:100%;
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
 
-gap:30px;
+},45);
 
-padding:0 15px;
-
 }
-
-/* Icon */
-
-.app{
-
-display:flex;
-
-flex-direction:column;
 
-align-items:center;
+// ==============================
+// PROFILE
+// ==============================
 
-cursor:pointer;
+function startProfile(){
 
-transition:.3s;
+setTimeout(()=>{
 
-}
+showScreen(bootScreen);
 
-.app:hover{
+startBoot();
 
-transform:scale(1.08);
+},3000);
 
 }
-
-.icon{
-
-width:72px;
-
-height:72px;
-
-border-radius:22px;
 
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-font-size:34px;
-
-background:
-
-linear-gradient(135deg,#5ca9ff,#2f6cff);
-
-box-shadow:
-
-0 10px 25px rgba(0,0,0,.35);
-
-backdrop-filter:blur(15px);
-
-}
+// ==============================
+// BOOT
+// ==============================
 
-.app span{
+function startBoot(){
 
-margin-top:10px;
+setTimeout(()=>{
 
-font-size:14px;
+showScreen(homeScreen);
 
-text-align:center;
+},3200);
 
 }
