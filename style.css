@@ -1,9 +1,9 @@
-/* ======================================================
-   GALAXY S26 BIRTHDAY EDITION
-   style.css — PART 1
-====================================================== */
+/* =====================================================
+GALAXY S26 BIRTHDAY EDITION
+style.css - PART 1
+===================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 *{
 margin:0;
@@ -24,20 +24,40 @@ color:#fff;
 
 }
 
+body{
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+/* =====================================================
+PHONE
+===================================================== */
+
 #phone{
 
 position:relative;
 
-width:100vw;
-height:100vh;
+width:390px;
+height:844px;
 
 overflow:hidden;
 
+border-radius:45px;
+
+background:#000;
+
+box-shadow:
+
+0 35px 80px rgba(0,0,0,.45);
+
 }
 
-/* ===========================
+/* =====================================================
 BACKGROUND
-=========================== */
+===================================================== */
 
 .background{
 
@@ -46,7 +66,8 @@ position:absolute;
 inset:0;
 
 background:
-linear-gradient(rgba(5,8,22,.65),rgba(5,8,22,.90)),
+
+linear-gradient(rgba(5,8,22,.55),rgba(5,8,22,.75)),
 url("wallpaper.png") center center/cover no-repeat;
 
 z-index:-2;
@@ -61,13 +82,13 @@ position:absolute;
 
 inset:0;
 
-backdrop-filter:blur(20px);
+backdrop-filter:blur(18px);
 
 }
 
-/* ===========================
+/* =====================================================
 SCREENS
-=========================== */
+===================================================== */
 
 .screen{
 
@@ -77,13 +98,7 @@ inset:0;
 
 display:none;
 
-justify-content:center;
-
-align-items:center;
-
-flex-direction:column;
-
-padding:30px;
+padding:25px;
 
 }
 
@@ -91,94 +106,102 @@ padding:30px;
 
 display:flex;
 
-animation:fade .6s ease;
+flex-direction:column;
+
+animation:fade .45s ease;
 
 }
 
-/* ===========================
-BOOT
-=========================== */
+/* =====================================================
+STATUS BAR
+===================================================== */
 
-.bootContent{
-
-text-align:center;
-
-}
-
-.logo{
-
-font-size:52px;
-
-font-weight:700;
-
-letter-spacing:2px;
-
-margin-bottom:10px;
-
-}
-
-.subtitle{
-
-font-size:18px;
-
-opacity:.8;
-
-margin-bottom:40px;
-
-}
-
-.bootProgress{
-
-width:260px;
-
-height:6px;
-
-background:rgba(255,255,255,.15);
-
-border-radius:20px;
-
-overflow:hidden;
-
-}
-
-#bootFill,
-#restartFill{
-
-width:0%;
-
-height:100%;
-
-background:linear-gradient(90deg,#4ea8ff,#8fd4ff);
-
-}
-
-/* ===========================
-LOCK
-=========================== */
-
-.statusBar{
-
-position:absolute;
-
-top:20px;
-
-left:0;
-
-width:100%;
-
-padding:0 25px;
+.statusBar,
+.homeStatus{
 
 display:flex;
 
 justify-content:space-between;
 
+align-items:center;
+
 font-size:14px;
 
-opacity:.85;
+font-weight:600;
+
+margin-bottom:30px;
 
 }
 
-.lockContent{
+/* =====================================================
+BOOT
+===================================================== */
+
+.bootContainer{
+
+margin:auto;
+
+text-align:center;
+
+}
+
+.samsungLogo{
+
+font-size:48px;
+
+font-weight:800;
+
+letter-spacing:-2px;
+
+margin-bottom:15px;
+
+}
+
+.bootContainer p{
+
+opacity:.8;
+
+margin-bottom:45px;
+
+}
+
+.progressBar{
+
+width:270px;
+
+height:8px;
+
+border-radius:30px;
+
+overflow:hidden;
+
+background:rgba(255,255,255,.15);
+
+}
+
+#bootFill,
+#faceFill,
+#installFill,
+#restartFill,
+#loveFill{
+
+width:0;
+
+height:100%;
+
+background:linear-gradient(90deg,#4da3ff,#7dd3fc);
+
+}
+
+/* =====================================================
+LOCK SCREEN
+===================================================== */
+
+.lockContainer{
+
+margin:auto;
+
+width:100%;
 
 text-align:center;
 
@@ -186,125 +209,177 @@ text-align:center;
 
 #clock{
 
-font-size:72px;
+font-size:92px;
 
-font-weight:700;
+font-weight:800;
+
+line-height:1;
+
+letter-spacing:-5px;
+
+}
+
+.lockContainer h3{
+
+font-size:28px;
+
+font-weight:500;
+
+margin-top:-10px;
 
 }
 
 #date{
 
-margin-top:10px;
-
-font-size:18px;
+margin:15px 0 35px;
 
 opacity:.8;
 
-}
-
-.heart{
-
-font-size:65px;
-
-margin:35px 0 20px;
-
-animation:beat 1.6s infinite;
-
-}
-
-.lockContent h2{
-
-font-size:34px;
-
-margin-bottom:10px;
-
-}
-
-.lockContent p{
-
 font-size:18px;
 
-line-height:1.7;
+}
 
-opacity:.9;
+/* =====================================================
+LOCK WIDGET
+===================================================== */
+
+.lockWidget{
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+padding:18px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(25px);
+
+-webkit-backdrop-filter:blur(25px);
+
+border:1px solid rgba(255,255,255,.18);
+
+margin-top:20px;
 
 }
 
-.unlockArea{
+.lockWidget img{
 
-position:absolute;
+width:90px;
 
-bottom:35px;
+height:90px;
+
+border-radius:22px;
+
+object-fit:cover;
+
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.lockWidget span{
+
+display:inline-block;
+
+padding:6px 12px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,.12);
+
+font-size:12px;
+
+margin-bottom:8px;
+
+}
+
+.lockWidget h2{
+
+font-size:22px;
+
+margin-bottom:6px;
+
+}
+
+.lockWidget p{
+
+font-size:15px;
+
+opacity:.85;
+
+line-height:1.5;
+
+}
+
+.unlockText{
 
 text-align:center;
 
-opacity:.85;
+margin-top:auto;
+
+margin-bottom:15px;
+
+font-size:15px;
+
+opacity:.8;
 
 animation:float 2s infinite;
 
 }
 
-.swipeBar{
-
-width:90px;
-
-height:6px;
-
-background:white;
-
-border-radius:20px;
-
-margin:auto auto 12px;
-
-}
-
-/* ===========================
+/* =====================================================
 CARD
-=========================== */
+===================================================== */
 
 .card{
 
+margin:auto;
+
 width:100%;
 
-max-width:380px;
+max-width:360px;
 
 padding:30px;
 
-border-radius:30px;
+border-radius:32px;
 
-background:rgba(255,255,255,.08);
+background:rgba(255,255,255,.12);
 
-backdrop-filter:blur(20px);
+backdrop-filter:blur(28px);
 
-border:1px solid rgba(255,255,255,.12);
+-webkit-backdrop-filter:blur(28px);
 
-box-shadow:
+border:1px solid rgba(255,255,255,.18);
 
-0 15px 45px rgba(0,0,0,.35);
+text-align:center;
 
 }
 
 .card h2{
 
-text-align:center;
+margin:18px 0 10px;
 
-margin-bottom:15px;
+font-size:28px;
 
 }
 
 .card p{
 
-text-align:center;
-
-line-height:1.6;
-
 opacity:.85;
+
+line-height:1.7;
 
 }
 
 .card ul{
 
 margin:25px 0;
+
+padding:0;
 
 }
 
@@ -316,23 +391,17 @@ padding:10px 0;
 
 }
 
-/* ===========================
-BUTTON
-=========================== */
-
 button{
 
 width:100%;
 
 padding:16px;
 
-margin-top:20px;
-
 border:none;
 
 border-radius:18px;
 
-background:#3b82f6;
+background:#2f80ff;
 
 color:white;
 
@@ -352,41 +421,33 @@ transform:translateY(-2px);
 
 }
 
-button:active{
-
-transform:scale(.98);
-
-}
-
-/* ===========================
-FACE RECOGNITION
-=========================== */
+/* =====================================================
+FACE SCANNER
+===================================================== */
 
 .scanner{
 
 position:relative;
 
-width:130px;
+width:150px;
 
-height:130px;
+height:150px;
 
-margin:0 auto 25px;
+margin:0 auto 20px;
 
 border-radius:50%;
 
-border:4px solid #4ea8ff;
+border:4px solid #58a6ff;
 
 overflow:hidden;
 
 box-shadow:
 
-0 0 30px #4ea8ff;
-
-animation:pulse 2s infinite;
+0 0 30px rgba(88,166,255,.5);
 
 }
 
-.scannerLine{
+.scanLine{
 
 position:absolute;
 
@@ -396,65 +457,15 @@ width:100%;
 
 height:6px;
 
-background:#7fd4ff;
+background:#7dd3fc;
 
-box-shadow:
-
-0 0 15px #7fd4ff;
+box-shadow:0 0 15px #7dd3fc;
 
 animation:scan 2s linear infinite;
 
 }
 
-.progress{
-
-width:100%;
-
-height:10px;
-
-margin:30px 0;
-
-border-radius:20px;
-
-overflow:hidden;
-
-background:rgba(255,255,255,.15);
-
-}
-
-#faceBar,
-#installBar{
-
-width:0%;
-
-height:100%;
-
-background:linear-gradient(90deg,#4ea8ff,#7fd4ff);
-
-border-radius:20px;
-
-transition:.3s;
-
-}
-
-#faceText,
-#installText{
-
-display:block;
-
-text-align:center;
-
-font-weight:500;
-
-margin-top:10px;
-
-}
-
-/* ===========================
-PROFILE
-=========================== */
-
-.profileImage{
+.profilePhoto{
 
 width:150px;
 
@@ -464,126 +475,153 @@ border-radius:50%;
 
 object-fit:cover;
 
-display:block;
+margin-bottom:20px;
 
-margin:0 auto 25px;
-
-border:4px solid white;
-
-box-shadow:
-
-0 0 35px rgba(255,255,255,.35);
+border:4px solid rgba(255,255,255,.4);
 
 }
 
-.loveProgress{
+.verified{
 
-width:100%;
+display:inline-block;
 
-height:12px;
-
-margin:25px 0;
+padding:8px 16px;
 
 border-radius:20px;
 
-overflow:hidden;
+background:rgba(255,255,255,.12);
 
-background:rgba(255,255,255,.15);
+margin-bottom:15px;
 
-}
-
-.loveFill{
-
-width:100%;
-
-height:100%;
-
-background:linear-gradient(90deg,#ff4f8a,#ff9bbd);
+font-size:13px;
 
 }
 
-/* ===========================
+/* =====================================================
 HOME
-=========================== */
+===================================================== */
 
-#homeScreen{
-
-padding:0;
-
-}
-
-.homeBackground{
-
-width:100%;
-
-height:100%;
-
-.homeBackground{
-
-background:
-linear-gradient(rgba(5,8,22,.55),rgba(5,8,22,.72)),
-url("wallpaper.png") center center/cover no-repeat;
+.home{
 
 display:flex;
 
 flex-direction:column;
 
-align-items:center;
+height:100%;
 
 }
 
-.phoneStatus{
+.homeClock{
 
-width:100%;
+font-size:86px;
 
-padding:18px 22px;
+font-weight:800;
 
-display:flex;
-
-justify-content:space-between;
-
-font-size:14px;
-
-font-weight:600;
-
-}
-
-.phoneClock{
-
-font-size:82px;
-
-font-weight:700;
-
-letter-spacing:-3px;
+letter-spacing:-4px;
 
 line-height:1;
 
-margin-top:35px;
-
-text-shadow:
-
-0 10px 30px rgba(0,0,0,.35);
-
-}
-.phoneDate{
-
-font-size:19px;
-
-font-weight:500;
-
-opacity:.95;
-
-margin-bottom:30px;
+margin-top:10px;
 
 }
 
-/* ===========================
+.homeDate{
+
+font-size:18px;
+
+opacity:.85;
+
+margin-bottom:25px;
+
+}
+
+.birthdayWidget{
+
+display:flex;
+
+gap:18px;
+
+padding:18px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(28px);
+
+-webkit-backdrop-filter:blur(28px);
+
+border:1px solid rgba(255,255,255,.20);
+
+margin-bottom:35px;
+
+}
+
+.widgetImage{
+
+width:105px;
+
+height:105px;
+
+border-radius:24px;
+
+object-fit:cover;
+
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.widgetContent{
+
+flex:1;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+}
+
+.widgetContent span{
+
+font-size:12px;
+
+padding:6px 12px;
+
+background:rgba(255,255,255,.12);
+
+border-radius:20px;
+
+width:max-content;
+
+margin-bottom:10px;
+
+}
+
+.widgetContent h2{
+
+font-size:24px;
+
+margin-bottom:8px;
+
+}
+
+.widgetContent p{
+
+font-size:15px;
+
+line-height:1.6;
+
+opacity:.9;
+
+}
+
+/* =====================================================
 APPS
-=========================== */
+===================================================== */
 
 .appsGrid{
-
-width:100%;
 
 display:grid;
 
@@ -591,7 +629,7 @@ grid-template-columns:repeat(3,1fr);
 
 gap:28px;
 
-padding:0 18px;
+padding:0 8px;
 
 }
 
@@ -603,25 +641,27 @@ flex-direction:column;
 
 align-items:center;
 
+justify-content:center;
+
 cursor:pointer;
 
-transition:.3s;
+transition:.35s;
 
 }
 
 .app:hover{
 
-transform:scale(1.08);
+transform:translateY(-6px);
 
 }
 
-.appIcon{
+.icon{
 
-width:76px;
+width:72px;
 
-height:76px;
+height:72px;
 
-border-radius:24px;
+border-radius:22px;
 
 display:flex;
 
@@ -631,57 +671,27 @@ align-items:center;
 
 font-size:34px;
 
-background:
+background:linear-gradient(180deg,#4da3ff,#1d6df2);
 
-linear-gradient(180deg,#4aa8ff,#1877f2);
+box-shadow:0 15px 35px rgba(0,0,0,.35);
 
-box-shadow:
-
-0 15px 35px rgba(0,0,0,.35);
-
-transition:.35s;
-
-}
-
-.app:hover .appIcon{
-
-transform:
-
-translateY(-6px)
-
-scale(1.06);
+margin-bottom:10px;
 
 }
 
 .app span{
 
-margin-top:10px;
-
 font-size:14px;
-
-text-align:center;
 
 }
 
-/* ===========================
+/* =====================================================
 DOCK
-=========================== */
+===================================================== */
 
 .dock{
 
-position:absolute;
-
-bottom:22px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-width:92%;
-
-max-width:420px;
-
-padding:16px;
+margin-top:auto;
 
 display:flex;
 
@@ -689,41 +699,39 @@ justify-content:space-evenly;
 
 align-items:center;
 
-border-radius:34px;
+padding:15px;
 
-background:rgba(255,255,255,.18);
+border-radius:30px;
 
-backdrop-filter:blur(30px);
+background:rgba(255,255,255,.14);
 
-border:1px solid rgba(255,255,255,.25);
+backdrop-filter:blur(25px);
 
-box-shadow:
+-webkit-backdrop-filter:blur(25px);
 
-0 20px 45px rgba(0,0,0,.30);
+border:1px solid rgba(255,255,255,.15);
 
 }
 
-/* ===========================
+.dock div{
+
+font-size:28px;
+
+}
+
+/* =====================================================
 APP HEADER
-=========================== */
+===================================================== */
 
 .appHeader{
-
-width:100%;
-
-padding:20px;
 
 display:flex;
 
 align-items:center;
 
-gap:18px;
+gap:15px;
 
-background:rgba(255,255,255,.08);
-
-backdrop-filter:blur(20px);
-
-border-bottom:1px solid rgba(255,255,255,.08);
+margin-bottom:20px;
 
 }
 
@@ -735,93 +743,115 @@ height:48px;
 
 padding:0;
 
-margin:0;
-
 border-radius:50%;
 
 font-size:22px;
 
-background:#2563eb;
+}
+
+.headerInfo{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
 
 }
 
-/* ===========================
+.chatProfile{
+
+width:52px;
+
+height:52px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+}
+
+.headerInfo h3{
+
+font-size:18px;
+
+}
+
+.headerInfo span{
+
+font-size:13px;
+
+opacity:.7;
+
+}
+
+/* =====================================================
 MESSAGES
-=========================== */
-
-#messagesScreen{
-
-background:#0b1120;
-
-padding:0;
-
-justify-content:flex-start;
-
-}
+===================================================== */
 
 .chatArea{
 
-width:100%;
+flex:1;
 
-padding:20px;
+overflow-y:auto;
 
 display:flex;
 
 flex-direction:column;
 
-gap:15px;
+gap:16px;
 
-overflow:auto;
+padding-right:5px;
 
 }
 
 .message{
 
-max-width:80%;
+align-self:flex-start;
 
-padding:15px 18px;
+max-width:82%;
 
-border-radius:22px;
+padding:16px 20px;
 
-font-size:15px;
+border-radius:24px;
+
+background:#2f80ff;
 
 line-height:1.6;
 
-}
+animation:messageIn .45s ease;
 
-.left{
-
-align-self:flex-start;
-
-background:#2563eb;
+position:relative;
 
 }
 
-/* ===========================
+.message::after{
+
+content:"✓✓ 12:00 AM";
+
+position:absolute;
+
+bottom:8px;
+
+right:15px;
+
+font-size:10px;
+
+opacity:.7;
+
+}
+
+/* =====================================================
 GALLERY
-=========================== */
-
-#galleryScreen{
-
-background:#050816;
-
-padding:0;
-
-justify-content:flex-start;
-
-}
+===================================================== */
 
 .galleryGrid{
-
-padding:20px;
 
 display:grid;
 
 grid-template-columns:repeat(2,1fr);
 
 gap:15px;
-
-width:100%;
 
 overflow:auto;
 
@@ -831,103 +861,29 @@ overflow:auto;
 
 width:100%;
 
-height:180px;
+height:185px;
 
 object-fit:cover;
 
-border-radius:18px;
+border-radius:20px;
+
+transition:.3s;
+
+cursor:pointer;
 
 }
 
-/* ===========================
+.galleryGrid img:hover{
+
+transform:scale(1.03);
+
+}
+
+/* =====================================================
 MUSIC
-=========================== */
-
-#musicScreen{
-
-background:#050816;
-
-padding:0;
-
-justify-content:flex-start;
-
-}
+===================================================== */
 
 .musicPlayer{
-
-padding:40px 25px;
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-width:100%;
-
-}
-
-.albumArt{
-
-width:250px;
-
-height:250px;
-
-border-radius:30px;
-
-object-fit:cover;
-
-margin-bottom:30px;
-
-box-shadow:
-
-0 15px 40px rgba(0,0,0,.35);
-
-}
-
-.musicPlayer h3{
-
-font-size:28px;
-
-margin-bottom:8px;
-
-}
-
-.musicPlayer p{
-
-opacity:.8;
-
-margin-bottom:25px;
-
-}
-
-audio{
-
-width:100%;
-
-max-width:350px;
-
-}
-
-/* ===========================
-BIRTHDAY
-=========================== */
-
-#birthdayScreen{
-
-background:#050816;
-
-padding:0;
-
-justify-content:flex-start;
-
-}
-
-.birthdayContent{
-
-width:100%;
-
-padding:40px 25px;
 
 display:flex;
 
@@ -939,57 +895,135 @@ text-align:center;
 
 }
 
+.albumCover{
+
+width:240px;
+
+height:240px;
+
+border-radius:28px;
+
+object-fit:cover;
+
+margin-bottom:25px;
+
+box-shadow:0 20px 45px rgba(0,0,0,.4);
+
+}
+
+.musicProgress{
+
+width:100%;
+
+height:7px;
+
+background:rgba(255,255,255,.12);
+
+border-radius:20px;
+
+overflow:hidden;
+
+margin:25px 0 12px;
+
+}
+
+#musicFill{
+
+width:0;
+
+height:100%;
+
+background:#fff;
+
+}
+
+.musicTime{
+
+width:100%;
+
+display:flex;
+
+justify-content:space-between;
+
+font-size:13px;
+
+opacity:.7;
+
+}
+
+.controls{
+
+display:flex;
+
+gap:22px;
+
+margin-top:30px;
+
+}
+
+.controls button{
+
+width:68px;
+
+height:68px;
+
+padding:0;
+
+border-radius:50%;
+
+}
+
+#playBtn{
+
+width:82px;
+
+height:82px;
+
+font-size:30px;
+
+background:#fff;
+
+color:#111;
+
+}
+
+/* =====================================================
+BIRTHDAY
+===================================================== */
+
+.birthdayContent{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+height:100%;
+
+}
+
 .giftBox{
 
-font-size:120px;
+font-size:110px;
 
 cursor:pointer;
 
-animation:bounce 2s infinite;
-
-margin-bottom:30px;
-
-}
-
-.birthdayContent h2{
-
-font-size:32px;
-
-margin-bottom:15px;
-
-}
-
-.birthdayContent p{
-
-font-size:17px;
-
-opacity:.85;
-
-line-height:1.7;
+animation:giftFloat 2s infinite;
 
 margin-bottom:25px;
 
 }
 
-/* ===========================
+/* =====================================================
 SETTINGS
-=========================== */
-
-#settingsScreen{
-
-background:#050816;
-
-padding:0;
-
-justify-content:flex-start;
-
-}
+===================================================== */
 
 .settingsList{
-
-width:100%;
-
-padding:20px;
 
 display:flex;
 
@@ -999,55 +1033,57 @@ gap:15px;
 
 }
 
-.settingItem{
+.setting{
 
 display:flex;
 
 justify-content:space-between;
 
-align-items:center;
+padding:18px;
 
-padding:18px 20px;
+border-radius:20px;
 
-border-radius:18px;
+background:rgba(255,255,255,.12);
 
-background:rgba(255,255,255,.08);
-
-backdrop-filter:blur(18px);
+backdrop-filter:blur(20px);
 
 }
 
-.settingItem span{
-
-opacity:.8;
-
-font-size:15px;
-
-}
-
-.settingItem strong{
-
-font-size:15px;
-
-font-weight:600;
-
-}
-
-/* ===========================
+/* =====================================================
 ANIMATIONS
-=========================== */
+===================================================== */
 
-@keyframes beat{
+@keyframes fade{
 
-0%,100%{
+from{
+
+opacity:0;
+
+transform:scale(.97);
+
+}
+
+to{
+
+opacity:1;
 
 transform:scale(1);
 
 }
 
-50%{
+}
 
-transform:scale(1.12);
+@keyframes scan{
+
+0%{
+
+top:-10px;
+
+}
+
+100%{
+
+top:150px;
 
 }
 
@@ -1069,300 +1105,6 @@ transform:translateY(-8px);
 
 }
 
-@keyframes pulse{
-
-0%{
-
-transform:scale(1);
-
-}
-
-50%{
-
-transform:scale(1.08);
-
-}
-
-100%{
-
-transform:scale(1);
-
-}
-
-}
-
-@keyframes scan{
-
-0%{
-
-top:-10px;
-
-}
-
-100%{
-
-top:140px;
-
-}
-
-}
-
-@keyframes fade{
-
-from{
-
-opacity:0;
-
-transform:scale(.98);
-
-}
-
-to{
-
-opacity:1;
-
-transform:scale(1);
-
-}
-
-}
-
-@keyframes bounce{
-
-0%,100%{
-
-transform:translateY(0);
-
-}
-
-50%{
-
-transform:translateY(-15px);
-
-}
-
-}
-
-/* ===========================
-RESPONSIVE
-=========================== */
-
-@media(max-width:480px){
-
-.logo{
-
-font-size:42px;
-
-}
-
-#clock{
-
-font-size:58px;
-
-}
-
-.phoneClock{
-
-font-size:58px;
-
-}
-
-.lockContent h2{
-
-font-size:28px;
-
-}
-
-.lockContent p{
-
-font-size:16px;
-
-}
-
-.card{
-
-padding:24px;
-
-}
-
-.appIcon{
-
-width:65px;
-
-height:65px;
-
-font-size:30px;
-
-}
-
-.albumArt{
-
-width:220px;
-
-height:220px;
-
-}
-
-.giftBox{
-
-font-size:90px;
-
-}
-
-}
-
-/* ===========================
-HOME WIDGET
-=========================== */
-
-.homeWidget{
-
-width:90%;
-
-max-width:420px;
-
-display:flex;
-
-align-items:center;
-
-gap:18px;
-
-padding:18px;
-
-margin-bottom:40px;
-
-border-radius:28px;
-
-background:rgba(255,255,255,.15);
-
-backdrop-filter:blur(22px);
-
-border:1px solid rgba(255,255,255,.20);
-
-box-shadow:
-
-0 18px 45px rgba(0,0,0,.30);
-
-}
-
-.widgetPhoto{
-
-width:95px;
-
-height:95px;
-
-border-radius:24px;
-
-object-fit:cover;
-
-box-shadow:
-
-0 12px 25px rgba(0,0,0,.25);
-
-}
-
-.widgetText{
-
-flex:1;
-
-}
-
-.widgetText h2{
-
-font-size:24px;
-
-margin-bottom:8px;
-
-}
-
-.widgetText p{
-
-opacity:.85;
-
-line-height:1.6;
-
-}
-
-/* make icons a little lower */
-
-.appsGrid{
-
-margin-top:15px;
-
-}
-
-.appOpen{
-
-animation:appOpen .35s ease;
-
-}
-
-@keyframes appOpen{
-
-from{
-
-opacity:0;
-
-transform:scale(.93);
-
-}
-
-to{
-
-opacity:1;
-
-transform:scale(1);
-
-}
-
-}
-
-.message{
-
-opacity:0;
-
-transform:translateY(20px);
-
-animation:messageIn .45s forwards;
-
-}
-
-@keyframes messageIn{
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-
-/* ==========================================
-GIFT
-========================================== */
-
-.giftBox{
-
-font-size:110px;
-
-cursor:pointer;
-
-transition:.4s;
-
-animation:giftFloat 2s infinite;
-
-user-select:none;
-
-}
-
-.giftBox:hover{
-
-transform:scale(1.08) rotate(-6deg);
-
-}
-
 @keyframes giftFloat{
 
 0%,100%{
@@ -1379,240 +1121,40 @@ transform:translateY(-12px);
 
 }
 
-/* ==========================================
-CONFETTI
-========================================== */
+@keyframes messageIn{
 
-.confetti{
-
-position:fixed;
-
-width:10px;
-
-height:18px;
-
-border-radius:4px;
-
-top:-20px;
-
-animation:fall 3s linear forwards;
-
-z-index:9999;
-
-}
-
-@keyframes fall{
-
-to{
-
-transform:
-
-translateY(110vh)
-
-rotate(720deg);
+from{
 
 opacity:0;
 
+transform:translateY(18px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
 }
 
 }
 
-/* =====================================
-CHAT HEADER
-===================================== */
+/* =====================================================
+RESPONSIVE
+===================================================== */
 
-.chatHeader{
+@media (max-width:430px){
 
-width:100%;
+#phone{
 
-padding:18px 20px;
+width:100vw;
 
-display:flex;
+height:100vh;
 
-align-items:center;
-
-gap:15px;
-
-background:rgba(255,255,255,.08);
-
-border-bottom:1px solid rgba(255,255,255,.08);
+border-radius:0;
 
 }
-
-.chatProfile{
-
-width:52px;
-
-height:52px;
-
-border-radius:50%;
-
-object-fit:cover;
-
-border:2px solid rgba(255,255,255,.3);
-
-}
-
-.chatHeader h3{
-
-font-size:18px;
-
-margin-bottom:2px;
-
-}
-
-.chatHeader span{
-
-font-size:13px;
-
-opacity:.75;
-
-}
-
-.message{
-
-position:relative;
-
-padding-bottom:28px;
-
-}
-
-.message::after{
-
-content:"✓✓ 12:00 AM";
-
-position:absolute;
-
-right:16px;
-
-bottom:8px;
-
-font-size:11px;
-
-opacity:.65;
-
-}
-
-/* ==========================================
-MUSIC PLAYER V2
-========================================== */
-
-.nowPlaying{
-
-letter-spacing:3px;
-
-font-size:12px;
-
-opacity:.65;
-
-margin-bottom:12px;
-
-}
-
-.musicProgress{
-
-width:100%;
-
-max-width:320px;
-
-height:6px;
-
-background:rgba(255,255,255,.15);
-
-border-radius:20px;
-
-margin-top:35px;
-
-overflow:hidden;
-
-}
-
-.musicFill{
-
-width:0%;
-
-height:100%;
-
-background:white;
-
-border-radius:20px;
-
-}
-
-.musicTime{
-
-width:100%;
-
-max-width:320px;
-
-display:flex;
-
-justify-content:space-between;
-
-margin-top:12px;
-
-font-size:13px;
-
-opacity:.7;
-
-}
-
-.musicControls{
-
-display:flex;
-
-gap:25px;
-
-margin-top:35px;
-
-}
-
-.musicControls button{
-
-width:65px;
-
-height:65px;
-
-padding:0;
-
-margin:0;
-
-border-radius:50%;
-
-font-size:24px;
-
-background:rgba(255,255,255,.15);
-
-backdrop-filter:blur(20px);
-
-}
-
-#playSong{
-
-width:80px;
-
-height:80px;
-
-font-size:30px;
-
-background:white;
-
-color:#111;
-
-}
-
-/* ===========================
-LUCIDE ICONS
-=========================== */
-
-.appIcon svg{
-
-width:34px;
-
-height:34px;
-
-stroke-width:2.2;
-
-color:white;
 
 }
