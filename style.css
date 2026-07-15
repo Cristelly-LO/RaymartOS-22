@@ -1600,3 +1600,19 @@ background:white;
 color:#111;
 
 }
+
+/* ===========================
+LUCIDE ICONS
+=========================== */
+
+.appIcon svg{
+
+width:34px;
+
+height:34px;
+
+stroke-width:2.2;
+
+color:white;
+
+}
