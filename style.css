@@ -550,21 +550,30 @@ font-weight:600;
 
 .phoneClock{
 
-font-size:72px;
+font-size:82px;
 
 font-weight:700;
 
-margin-top:30px;
+letter-spacing:-3px;
+
+line-height:1;
+
+margin-top:35px;
+
+text-shadow:
+
+0 10px 30px rgba(0,0,0,.35);
 
 }
-
 .phoneDate{
 
-font-size:18px;
+font-size:19px;
 
-opacity:.85;
+font-weight:500;
 
-margin-bottom:45px;
+opacity:.95;
+
+margin-bottom:30px;
 
 }
 
@@ -608,11 +617,11 @@ transform:scale(1.08);
 
 .appIcon{
 
-width:72px;
+width:76px;
 
-height:72px;
+height:76px;
 
-border-radius:22px;
+border-radius:24px;
 
 display:flex;
 
@@ -622,11 +631,25 @@ align-items:center;
 
 font-size:34px;
 
-background:linear-gradient(135deg,#5ca8ff,#2563eb);
+background:
+
+linear-gradient(180deg,#4aa8ff,#1877f2);
 
 box-shadow:
 
-0 12px 30px rgba(0,0,0,.35);
+0 15px 35px rgba(0,0,0,.35);
+
+transition:.35s;
+
+}
+
+.app:hover .appIcon{
+
+transform:
+
+translateY(-6px)
+
+scale(1.06);
 
 }
 
