@@ -1,0 +1,308 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow:hidden;
+    background:#050816;
+    color:white;
+}
+
+/* ===========================
+BACKGROUND
+=========================== */
+
+.background{
+    position:fixed;
+    inset:0;
+    background:
+    linear-gradient(rgba(4,8,20,.65),rgba(4,8,20,.85)),
+    url("assets/wallpaper.jpg") center/cover no-repeat;
+    z-index:-2;
+}
+
+.background::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    backdrop-filter:blur(14px);
+}
+
+/* ===========================
+SCREEN
+=========================== */
+
+.screen{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    opacity:0;
+    visibility:hidden;
+    transition:.6s;
+    padding:45px 25px;
+}
+
+.screen.active{
+    opacity:1;
+    visibility:visible;
+}
+
+/* ===========================
+STATUS BAR
+=========================== */
+
+.status-bar{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    font-size:14px;
+    opacity:.9;
+    letter-spacing:1px;
+}
+
+/* ===========================
+LOCK CONTENT
+=========================== */
+
+.lock-content{
+    text-align:center;
+    margin-top:70px;
+}
+
+.clock{
+    font-size:72px;
+    font-weight:600;
+    letter-spacing:2px;
+}
+
+.date{
+    margin-top:8px;
+    opacity:.8;
+    font-size:18px;
+}
+
+.heart{
+    font-size:60px;
+    margin:35px 0 15px;
+    animation:beat 1.5s infinite;
+}
+
+.lock-content h2{
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    font-size:18px;
+    line-height:1.7;
+    opacity:.85;
+}
+
+/* ===========================
+SWIPE
+=========================== */
+
+.swipe{
+    text-align:center;
+    margin-bottom:20px;
+    animation:float 2s infinite;
+}
+
+.swipe-line{
+    width:90px;
+    height:6px;
+    border-radius:20px;
+    background:white;
+    margin:auto auto 15px;
+    opacity:.9;
+}
+
+.swipe p{
+    font-size:15px;
+    opacity:.85;
+}
+
+/* ===========================
+FACE SCREEN
+=========================== */
+
+.face-box{
+    width:100%;
+    max-width:360px;
+    margin:auto;
+    padding:35px;
+    border-radius:28px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    text-align:center;
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.scanner{
+    width:120px;
+    height:120px;
+    border:4px solid #4aa8ff;
+    border-radius:50%;
+    margin:auto;
+    box-shadow:0 0 25px #4aa8ff;
+    animation:pulse 2s infinite;
+}
+
+.face-box h2{
+    margin-top:25px;
+}
+
+.face-box p{
+    margin-top:10px;
+    opacity:.8;
+}
+
+.progress{
+    width:100%;
+    height:10px;
+    background:rgba(255,255,255,.15);
+    border-radius:20px;
+    margin:35px 0 20px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    width:0%;
+    height:100%;
+    border-radius:20px;
+    background:#4aa8ff;
+    transition:3s linear;
+}
+
+#faceStatus{
+    font-weight:500;
+}
+
+/* ===========================
+UPDATE CARD
+=========================== */
+
+.card{
+    width:100%;
+    max-width:380px;
+    margin:auto;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    border-radius:30px;
+    padding:35px;
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.card h2{
+    text-align:center;
+    margin-bottom:18px;
+}
+
+.card p{
+    opacity:.85;
+    text-align:center;
+}
+
+.card ul{
+    margin:30px 0;
+    line-height:2;
+}
+
+.card li{
+    list-style:none;
+}
+
+button{
+    width:100%;
+    border:none;
+    border-radius:18px;
+    padding:18px;
+    font-size:18px;
+    font-weight:600;
+    color:white;
+    cursor:pointer;
+    background:#3b82f6;
+    transition:.3s;
+}
+
+button:active{
+    transform:scale(.97);
+}
+
+/* ===========================
+ANIMATIONS
+=========================== */
+
+@keyframes beat{
+
+0%,100%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.15);
+}
+
+}
+
+@keyframes float{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-8px);
+}
+
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+opacity:1;
+}
+
+50%{
+transform:scale(1.08);
+opacity:.8;
+}
+
+100%{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+/* ===========================
+PHONE SIZE
+=========================== */
+
+@media(max-width:480px){
+
+.clock{
+font-size:60px;
+}
+
+.lock-content h2{
+font-size:28px;
+}
+
+.subtitle{
+font-size:16px;
+}
+
+}
