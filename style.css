@@ -1338,3 +1338,81 @@ transform:translateY(0);
 }
 
 }
+
+/* ==========================================
+GIFT
+========================================== */
+
+.giftBox{
+
+font-size:110px;
+
+cursor:pointer;
+
+transition:.4s;
+
+animation:giftFloat 2s infinite;
+
+user-select:none;
+
+}
+
+.giftBox:hover{
+
+transform:scale(1.08) rotate(-6deg);
+
+}
+
+@keyframes giftFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+}
+
+/* ==========================================
+CONFETTI
+========================================== */
+
+.confetti{
+
+position:fixed;
+
+width:10px;
+
+height:18px;
+
+border-radius:4px;
+
+top:-20px;
+
+animation:fall 3s linear forwards;
+
+z-index:9999;
+
+}
+
+@keyframes fall{
+
+to{
+
+transform:
+
+translateY(110vh)
+
+rotate(720deg);
+
+opacity:0;
+
+}
+
+}
