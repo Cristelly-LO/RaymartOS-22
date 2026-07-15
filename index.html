@@ -1,1337 +1,1670 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- ==========================================================
-         GALAXY S26 ❤️ RAYMART EDITION
-         Created by Cristel Joy ❤️
-         ========================================================== -->
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Galaxy S26 ❤️ Raymart Edition</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-    <meta name="theme-color" content="#090b12">
-    <meta name="color-scheme" content="dark">
+    <meta
+        name="theme-color"
+        content="#090B12">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta
+        name="color-scheme"
+        content="dark">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>GALAXY S26 ❤️ Raymart Edition</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
 </head>
 
 <body>
 
-<div id="app">
+<main id="app">
 
-    <!-- ===================================== -->
-    <!-- WALLPAPER -->
-    <!-- ===================================== -->
+    <!-- Wallpaper -->
 
     <div id="wallpaper">
-        <img src="wallpaper.png" alt="Wallpaper">
-        <div class="wallpaper-overlay"></div>
+
+        <img
+            src="wallpaper.png"
+            alt="Wallpaper">
+
+        <div id="wallpaperOverlay"></div>
+
     </div>
 
-    <!-- ===================================== -->
-    <!-- PHONE FRAME -->
-    <!-- ===================================== -->
+    <!-- ========================= -->
+    <!-- Boot Screen -->
+    <!-- ========================= -->
 
-    <div id="phone">
+    <section
+        id="bootScreen"
+        class="screen active">
 
-        <div class="phone-glass"></div>
-
-        <div class="status-bar">
-            <span id="statusTime">12:00</span>
-
-            <div class="status-icons">
-
-                <svg viewBox="0 0 24 24" class="status-icon">
-                    <path d="M2 18h2v2H2zm4-3h2v5H6zm4-4h2v9h-2zm4-3h2v12h-2zm4-5h2v17h-2"/>
-                </svg>
-
-                <svg viewBox="0 0 24 24" class="status-icon">
-                    <path d="M2 8c5-5 15-5 20 0-5-2-15-2-20 0zm3 4c3-3 11-3 14 0-3-1-11-1-14 0zm4 4c2-1 4-1 6 0"/>
-                </svg>
-
-                <svg viewBox="0 0 24 24" class="status-icon">
-                    <path d="M2 8h18v8H2z"/>
-                    <path d="M21 10h1v4h-1z"/>
-                </svg>
-
-            </div>
-        </div>
-
-        <!-- ===================================== -->
-        <!-- BOOT SCREEN -->
-        <!-- ===================================== -->
-
-        <section id="bootScreen" class="screen active">
+        <div class="boot-background">
 
             <div class="boot-glow"></div>
 
-            <div class="boot-content">
+            <div class="boot-particles">
 
-                <div class="boot-logo">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
 
-                    <div class="logo-ring"></div>
+            </div>
 
-                    <h1>GALAXY</h1>
+        </div>
 
-                    <span>Raymart Edition</span>
+        <div class="boot-content">
 
-                    <small>Created with ❤️ by Cristel Joy</small>
+            <div class="boot-logo">
 
-                </div>
+                <div class="logo-ring"></div>
 
-                <div class="boot-progress">
+                <h1>
 
-                    <div class="progress-track">
+                    GALAXY
 
-                        <div
-                            id="bootFill"
-                            class="progress-fill">
-                        </div>
+                </h1>
+
+                <h2>
+
+                    Raymart Edition
+
+                </h2>
+
+                <p>
+
+                    Created with ❤️ by Cristel Joy
+
+                </p>
+
+            </div>
+
+            <div class="boot-loader">
+
+                <div class="loader-track">
+
+                    <div
+                        id="bootProgress"
+                        class="loader-fill">
 
                     </div>
 
-                    <p id="bootText">
-
-                        Initializing Birthday Experience...
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="particles">
-
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </div>
-
-        </section>
-
-        <!-- ===================================== -->
-        <!-- LOCK SCREEN -->
-        <!-- ===================================== -->
-
-        <section id="lockScreen" class="screen">
-
-            <div class="lock-blur"></div>
-
-            <div class="lock-header">
-
-                <div
-                    id="lockClock"
-                    class="lock-clock">
-
-                    12:00
-
                 </div>
 
                 <div
-                    id="lockDate"
-                    class="lock-date">
+                    id="bootStatus"
+                    class="loader-status">
 
-                    Thursday, July 16
-
-                </div>
-
-            </div>
-
-            <div class="weather-card glass">
-
-                <div>
-
-                    <h2>26°</h2>
-
-                    <span>Cloudy</span>
-
-                </div>
-
-                <div class="weather-location">
-
-                    📍 Tanay, Rizal
+                    Initializing Birthday Experience...
 
                 </div>
 
             </div>
 
-            <div class="birthday-card glass">
+        </div>
 
-                <img
-                    src="us.jpeg"
-                    alt="Cristel & Raymart">
+    </section>
 
-                <div>
+    <!-- ========================= -->
+    <!-- Lock Screen -->
+    <!-- ========================= -->
 
-                    <h2>
+    <section
+        id="lockScreen"
+        class="screen">
 
-                        ❤️ Tomorrow starts now.
+        <div class="lock-blur"></div>
 
-                    </h2>
+        <header class="lock-header">
 
-                    <p>
+            <div
+                id="lockClock"
+                class="lock-clock">
 
-                        A beautiful surprise is waiting for you.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div id="unlockHint">
-
-                Tap anywhere to unlock
-
-            </div>
-
-        </section>
-
-        <!-- ===================================== -->
-        <!-- FACE UNLOCK -->
-        <!-- ===================================== -->
-
-        <section
-            id="faceUnlock"
-            class="screen">
-
-            <div class="scanner">
-
-                <div class="scanner-ring"></div>
-
-                <div class="scanner-ring second"></div>
-
-                <div class="scanner-line"></div>
-
-                <div class="scanner-center">
-
-                    <svg
-                        class="face-svg"
-                        viewBox="0 0 64 64">
-
-                        <circle
-                            cx="32"
-                            cy="32"
-                            r="22"/>
-
-                    </svg>
-
-                </div>
+                12:00
 
             </div>
 
             <div
-                id="scannerStatus"
-                class="scanner-status">
+                id="lockDate"
+                class="lock-date">
 
-                Scanning Face...
+                Thursday, July 16
 
             </div>
 
-        </section>
+        </header>
 
-        <!-- ===================================== -->
-        <!-- BIRTHDAY NOTIFICATION -->
-        <!-- ===================================== -->
+        <article class="weather-card glass">
 
-        <section
-            id="birthdayNotification"
-            class="screen">
+            <div class="weather-left">
 
-            <div class="notification glass">
+                <h2>
 
-                <div class="notification-top">
+                    26°
 
-                    <h2>
-
-                        Happy Birthday! 🎉
-
-                    </h2>
-
-                    <span>
-
-                        Now
-
-                    </span>
-
-                </div>
+                </h2>
 
                 <p>
 
-                    Today is July 16.
-
-                    A special surprise has been prepared just for you.
+                    Cloudy
 
                 </p>
 
-                <div class="notification-actions">
+            </div>
+
+            <div class="weather-right">
+
+                <span>
+
+                    📍 Tanay, Rizal
+
+                </span>
+
+            </div>
+
+        </article>
+
+        <article class="birthday-widget glass">
+
+            <img
+                src="us.jpeg"
+                alt="Cristel and Raymart">
+
+            <div>
+
+                <h2>
+
+                    ❤️ Tomorrow starts now.
+
+                </h2>
+
+                <p>
+
+                    A beautiful surprise is waiting for you.
+
+                </p>
+
+            </div>
+
+        </article>
+
+        <button
+            id="unlockButton">
+
+            Tap Anywhere To Unlock
+
+        </button>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- Face Unlock -->
+    <!-- ========================= -->
+
+    <section
+        id="faceUnlock"
+        class="screen">
+
+        <div class="scanner">
+
+            <div class="scanner-ring"></div>
+
+            <div class="scanner-ring second"></div>
+
+            <div class="scanner-line"></div>
+
+            <div class="scanner-center">
+
+                <svg
+                    class="face-icon"
+                    viewBox="0 0 100 100"
+                    fill="none">
+
+                    <circle
+                        cx="50"
+                        cy="50"
+                        r="34"/>
+
+                    <path
+                        d="M36 44h8"/>
+
+                    <path
+                        d="M56 44h8"/>
+
+                    <path
+                        d="M42 62c4 4 12 4 16 0"/>
+
+                </svg>
+
+            </div>
+
+        </div>
+
+        <h2
+            id="scannerText">
+
+            Scanning Face...
+
+        </h2>
+
+    </section>
+    
+        <!-- ========================= -->
+    <!-- Birthday Notification -->
+    <!-- ========================= -->
+
+    <section
+        id="birthdayNotification"
+        class="screen">
+
+        <div class="notification-wrapper">
+
+            <article class="notification-card glass">
+
+                <header class="notification-header">
+
+                    <div>
+
+                        <h2>
+
+                            🎉 Happy Birthday!
+
+                        </h2>
+
+                        <span>
+
+                            Galaxy System
+
+                        </span>
+
+                    </div>
+
+                    <time>
+
+                        Now
+
+                    </time>
+
+                </header>
+
+                <div class="notification-body">
+
+                    <p>
+
+                        Today is July 16.
+
+                    </p>
+
+                    <p>
+
+                        A special surprise has been prepared just for you.
+
+                    </p>
+
+                </div>
+
+                <footer class="notification-actions">
 
                     <button
-                        id="dismissBtn"
-                        class="secondary-btn">
+                        id="dismissNotification"
+                        class="secondary-button">
 
                         Dismiss
 
                     </button>
 
                     <button
-                        id="openBtn"
-                        class="primary-btn">
+                        id="openNotification"
+                        class="primary-button">
 
                         Open
 
                     </button>
 
-                </div>
+                </footer>
 
-            </div>
-
-        </section>
-
-<section id="softwareUpdate" class="screen">
-
-    <div class="update-container glass">
-
-        <div class="update-icon">
-
-            <svg viewBox="0 0 64 64">
-
-                <circle cx="32" cy="32" r="28"></circle>
-
-                <path d="M32 18v18"></path>
-
-                <path d="M24 30l8 8 8-8"></path>
-
-            </svg>
+            </article>
 
         </div>
 
-        <div class="update-title">
+    </section>
 
-            Birthday Edition 22.0
+    <!-- ========================= -->
+    <!-- Software Update -->
+    <!-- ========================= -->
+
+    <section
+        id="softwareUpdate"
+        class="screen">
+
+        <div class="update-wrapper">
+
+            <article class="update-card glass">
+
+                <div class="update-icon">
+
+                    <svg
+                        viewBox="0 0 64 64"
+                        fill="none">
+
+                        <circle
+                            cx="32"
+                            cy="32"
+                            r="26"/>
+
+                        <path
+                            d="M32 18v18"/>
+
+                        <path
+                            d="M24 30l8 8 8-8"/>
+
+                    </svg>
+
+                </div>
+
+                <h2>
+
+                    Birthday Edition 22.0
+
+                </h2>
+
+                <p>
+
+                    A premium update created especially for Raymart.
+
+                </p>
+
+                <div class="feature-list">
+
+                    <div class="feature-item">
+
+                        <div class="feature-badge"></div>
+
+                        <div>
+
+                            <h3>
+
+                                Love Optimization
+
+                            </h3>
+
+                            <p>
+
+                                Improved happiness and affection.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="feature-item">
+
+                        <div class="feature-badge"></div>
+
+                        <div>
+
+                            <h3>
+
+                                Memory Engine
+
+                            </h3>
+
+                            <p>
+
+                                Beautiful moments organized forever.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="feature-item">
+
+                        <div class="feature-badge"></div>
+
+                        <div>
+
+                            <h3>
+
+                                Birthday Experience
+
+                            </h3>
+
+                            <p>
+
+                                Exclusive celebration features unlocked.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="feature-item">
+
+                        <div class="feature-badge"></div>
+
+                        <div>
+
+                            <h3>
+
+                                Happiness Boost
+
+                            </h3>
+
+                            <p>
+
+                                Maximum smile performance enabled.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button
+                    id="installUpdate"
+                    class="primary-button">
+
+                    Install Now
+
+                </button>
+
+            </article>
 
         </div>
 
-        <div class="update-subtitle">
+    </section>
 
-            A special update created exclusively for Raymart.
+    <!-- ========================= -->
+    <!-- Installation -->
+    <!-- ========================= -->
+
+    <section
+        id="installScreen"
+        class="screen">
+
+        <div class="install-wrapper">
+
+            <div class="progress-circle">
+
+                <svg
+                    width="240"
+                    height="240"
+                    viewBox="0 0 240 240">
+
+                    <circle
+                        class="circle-track"
+                        cx="120"
+                        cy="120"
+                        r="92"/>
+
+                    <circle
+                        id="installCircle"
+                        class="circle-progress"
+                        cx="120"
+                        cy="120"
+                        r="92"/>
+
+                </svg>
+
+                <div class="progress-center">
+
+                    <h2
+                        id="installPercentage">
+
+                        0%
+
+                    </h2>
+
+                </div>
+
+            </div>
+
+            <h3
+                id="installStatus">
+
+                Preparing Memories...
+
+            </h3>
+
+            <div class="install-steps">
+
+                <div class="install-step active">
+
+                    Preparing Memories...
+
+                </div>
+
+                <div class="install-step">
+
+                    Downloading Love...
+
+                </div>
+
+                <div class="install-step">
+
+                    Installing Happiness...
+
+                </div>
+
+                <div class="install-step">
+
+                    Building Forever...
+
+                </div>
+
+                <div class="install-step">
+
+                    Almost Ready...
+
+                </div>
+
+            </div>
 
         </div>
 
-        <div class="feature-list">
+    </section>
 
-            <div class="feature-item">
+    <!-- ========================= -->
+    <!-- Perfect Match -->
+    <!-- ========================= -->
 
-                <span class="feature-dot"></span>
+    <section
+        id="perfectMatch"
+        class="screen">
 
-                <div>
+        <div class="match-background">
 
-                    <h3>Love Optimization</h3>
-
-                    <p>Your heart is now running at maximum happiness.</p>
-
-                </div>
-
-            </div>
-
-            <div class="feature-item">
-
-                <span class="feature-dot"></span>
-
-                <div>
-
-                    <h3>Memory Engine</h3>
-
-                    <p>Your favorite moments are now beautifully organized.</p>
-
-                </div>
-
-            </div>
-
-            <div class="feature-item">
-
-                <span class="feature-dot"></span>
-
-                <div>
-
-                    <h3>Birthday Experience</h3>
-
-                    <p>Unlock today's surprise made with love.</p>
-
-                </div>
-
-            </div>
-
-            <div class="feature-item">
-
-                <span class="feature-dot"></span>
-
-                <div>
-
-                    <h3>Forever Mode</h3>
-
-                    <p>Compatibility improvements and lifetime support.</p>
-
-                </div>
-
-            </div>
+            <div class="floating-heart heart-1"></div>
+            <div class="floating-heart heart-2"></div>
+            <div class="floating-heart heart-3"></div>
 
         </div>
 
-        <button id="installBtn" class="primary-btn">
+        <article class="match-card glass">
 
-            Install Now
+            <img
+                src="me.jpeg"
+                alt="Cristel"
+                class="match-photo">
 
-        </button>
+            <h2>
 
-    </div>
+                Perfect Match ❤️
 
-</section>
+            </h2>
 
-<section id="installScreen" class="screen">
+            <div class="love-meter">
 
-    <div class="install-wrapper">
+                <div class="love-track">
 
-        <div class="progress-ring">
+                    <div
+                        id="loveProgress"
+                        class="love-fill">
 
-            <svg width="220" height="220">
+                    </div>
 
-                <circle
-                    class="ring-bg"
-                    cx="110"
-                    cy="110"
-                    r="90">
+                </div>
 
-                </circle>
+                <span
+                    id="loveValue">
 
-                <circle
-                    id="installRing"
-                    class="ring-progress"
-                    cx="110"
-                    cy="110"
-                    r="90">
-
-                </circle>
-
-            </svg>
-
-            <div class="progress-center">
-
-                <span id="installPercent">
-
-                    0%
+                    100%
 
                 </span>
 
             </div>
 
-        </div>
+            <p>
 
-        <div
-            id="installStatus"
-            class="install-status">
+                Verified Soulmate
 
-            Preparing Memories...
+            </p>
 
-        </div>
+            <button
+                id="restartSystem"
+                class="primary-button">
 
-        <div class="install-steps">
+                Restart Device
 
-            <div class="step active">
+            </button>
 
-                Preparing Memories
+        </article>
 
-            </div>
+    </section>
 
-            <div class="step">
+    <!-- ========================= -->
+    <!-- Restart -->
+    <!-- ========================= -->
 
-                Downloading Love
+    <section
+        id="restartScreen"
+        class="screen">
 
-            </div>
+        <div class="restart-wrapper">
 
-            <div class="step">
+            <div class="restart-logo">
 
-                Installing Happiness
-
-            </div>
-
-            <div class="step">
-
-                Building Forever
+                GALAXY
 
             </div>
 
-            <div class="step">
+            <div class="restart-spinner">
 
-                Almost Ready
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="perfectMatch" class="screen">
-
-    <div class="match-card glass">
-
-        <div class="match-photo">
-
-            <img
-                src="me.jpeg"
-                alt="Cristel">
-
-        </div>
-
-        <div class="heart-pulse">
-
-            ❤
-
-        </div>
-
-        <h2>
-
-            Perfect Match
-
-        </h2>
-
-        <div class="compatibility">
-
-            <div class="compatibility-track">
-
-                <div
-                    id="loveFill"
-                    class="compatibility-fill">
-
-                </div>
+                <span></span>
 
             </div>
-
-            <div
-                id="lovePercent"
-                class="compatibility-text">
-
-                100%
-
-            </div>
-
-        </div>
-
-        <div class="verified-badge">
-
-            ✔ Verified Soulmate
-
-        </div>
-
-        <button
-            id="restartBtn"
-            class="primary-btn">
-
-            Restart Device
-
-        </button>
-
-    </div>
-
-</section>
-
-<section id="restartScreen" class="screen">
-
-    <div class="restart-content">
-
-        <div class="restart-logo">
-
-            GALAXY
-
-        </div>
-
-        <div class="restart-ring">
-
-            <span></span>
-
-        </div>
-
-        <div class="restart-text">
-
-            Restarting Birthday Edition...
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="homeScreen" class="screen">
-
-    <div class="home-overlay"></div>
-
-    <div class="home-header">
-
-        <div class="home-clock" id="homeClock">
-            12:00
-        </div>
-
-        <div class="home-date" id="homeDate">
-            Thursday, July 16
-        </div>
-
-    </div>
-
-    <div class="birthday-widget glass">
-
-        <div class="birthday-widget-image">
-
-            <img
-                src="us.jpeg"
-                alt="Raymart & Cristel">
-
-        </div>
-
-        <div class="birthday-widget-content">
-
-            <h2>
-
-                ❤️ Happy Birthday Hubby
-
-            </h2>
 
             <p>
 
-                Every app inside this phone
-                was made with love.
+                Restarting Birthday Edition...
 
             </p>
 
         </div>
 
-    </div>
+    </section>
+    
+        <!-- ========================= -->
+    <!-- Home Screen -->
+    <!-- ========================= -->
 
-    <div class="apps-grid">
+    <section
+        id="homeScreen"
+        class="screen">
 
-        <button
-            class="app-icon"
-            data-app="messages">
+        <div class="home-background"></div>
 
-            <div class="icon-circle">
+        <header class="home-header">
 
-                <svg viewBox="0 0 64 64">
+            <div>
 
-                    <path d="M10 16h44v26H24l-10 10V16z"/>
+                <h1
+                    id="homeClock"
+                    class="home-clock">
 
-                </svg>
+                    12:00
+
+                </h1>
+
+                <p
+                    id="homeDate"
+                    class="home-date">
+
+                    Thursday, July 16
+
+                </p>
 
             </div>
 
-            <span>
+        </header>
 
-                Messages
+        <section class="widget-stack">
 
-            </span>
+            <article class="birthday-home-widget glass">
 
-        </button>
+                <figure>
 
-        <button
-            class="app-icon"
-            data-app="gallery">
+                    <img
+                        src="us.jpeg"
+                        alt="Cristel and Raymart">
 
-            <div class="icon-circle">
+                </figure>
 
-                <svg viewBox="0 0 64 64">
+                <div>
 
-                    <rect
-                        x="10"
-                        y="12"
-                        width="44"
-                        height="40"
-                        rx="8"/>
+                    <h2>
 
-                    <circle
-                        cx="22"
-                        cy="24"
-                        r="4"/>
+                        ❤️ Happy Birthday Hubby
+
+                    </h2>
+
+                    <p>
+
+                        Every app inside this phone
+                        was made with love.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <section
+            class="app-grid"
+            aria-label="Applications">
+
+            <button
+                class="app-icon"
+                data-app="messagesApp">
+
+                <div class="icon-wrapper messages-icon">
+
+                    <svg
+                        viewBox="0 0 64 64"
+                        fill="none">
+
+                        <path
+                            d="M12 16h40v24H28l-10 10V16"/>
+
+                    </svg>
+
+                </div>
+
+                <span>
+
+                    Messages
+
+                </span>
+
+            </button>
+
+            <button
+                class="app-icon"
+                data-app="galleryApp">
+
+                <div class="icon-wrapper gallery-icon">
+
+                    <svg
+                        viewBox="0 0 64 64"
+                        fill="none">
+
+                        <rect
+                            x="12"
+                            y="14"
+                            width="40"
+                            height="36"
+                            rx="8"/>
+
+                        <circle
+                            cx="24"
+                            cy="24"
+                            r="3"/>
+
+                        <path
+                            d="M18 42l10-10 8 8 10-12 6 14"/>
+
+                    </svg>
+
+                </div>
+
+                <span>
+
+                    Gallery
+
+                </span>
+
+            </button>
+
+            <button
+                class="app-icon"
+                data-app="musicApp">
+
+                <div class="icon-wrapper music-icon">
+
+                    <svg
+                        viewBox="0 0 64 64"
+                        fill="none">
+
+                        <path
+                            d="M40 14v26"/>
+
+                        <path
+                            d="M40 14l10 3"/>
+
+                        <circle
+                            cx="24"
+                            cy="46"
+                            r="6"/>
+
+                        <circle
+                            cx="40"
+                            cy="40"
+                            r="6"/>
+
+                    </svg>
+
+                </div>
+
+                <span>
+
+                    Music
+
+                </span>
+
+            </button>
+
+            <button
+                class="app-icon"
+                data-app="birthdayApp">
+
+                <div class="icon-wrapper birthday-icon">
+
+                    <svg
+                        viewBox="0 0 64 64"
+                        fill="none">
+
+                        <rect
+                            x="14"
+                            y="24"
+                            width="36"
+                            height="26"
+                            rx="4"/>
+
+                        <path
+                            d="M32 14v36"/>
+
+                        <path
+                            d="M14 34h36"/>
+
+                    </svg>
+
+                </div>
+
+                <span>
+
+                    Birthday
+
+                </span>
+
+            </button>
+
+            <button
+                class="app-icon"
+                data-app="memoriesApp">
+
+                <div class="icon-wrapper memories-icon">
+
+                    <svg
+                        viewBox="0 0 64 64"
+                        fill="none">
+
+                        <path
+                            d="M20 14h24v36H20z"/>
+
+                        <path
+                            d="M20 26h24"/>
+
+                        <path
+                            d="M20 38h24"/>
+
+                    </svg>
+
+                </div>
+
+                <span>
+
+                    Memories
+
+                </span>
+
+            </button>
+
+            <button
+                class="app-icon"
+                data-app="settingsApp">
+
+                <div class="icon-wrapper settings-icon">
+
+                    <svg
+                        viewBox="0 0 64 64"
+                        fill="none">
+
+                        <circle
+                            cx="32"
+                            cy="32"
+                            r="8"/>
+
+                        <path
+                            d="M32 14v6M32 44v6M14 32h6M44 32h6M20 20l4 4M40 40l4 4M20 44l4-4M40 24l4-4"/>
+
+                    </svg>
+
+                </div>
+
+                <span>
+
+                    Settings
+
+                </span>
+
+            </button>
+
+        </section>
+
+        <nav
+            class="dock glass"
+            aria-label="Dock">
+
+            <button
+                class="dock-icon"
+                aria-label="Phone">
+
+                <svg
+                    viewBox="0 0 64 64"
+                    fill="none">
 
                     <path
-                        d="M18 42l10-10 8 8 8-10 8 12"/>
-
-                </svg>
-
-            </div>
-
-            <span>
-
-                Gallery
-
-            </span>
-
-        </button>
-
-        <button
-            class="app-icon"
-            data-app="music">
-
-            <div class="icon-circle">
-
-                <svg viewBox="0 0 64 64">
-
-                    <path d="M40 14v26"/>
-
-                    <circle cx="24" cy="44" r="6"/>
-
-                    <circle cx="40" cy="40" r="6"/>
-
-                    <path d="M40 14l12 4"/>
-
-                </svg>
-
-            </div>
-
-            <span>
-
-                Music
-
-            </span>
-
-        </button>
-
-        <button
-            class="app-icon"
-            data-app="birthday">
-
-            <div class="icon-circle">
-
-                <svg viewBox="0 0 64 64">
-
-                    <rect
-                        x="14"
-                        y="26"
-                        width="36"
-                        height="24"
-                        rx="4"/>
-
-                    <path d="M32 14v36"/>
-
-                    <path d="M14 34h36"/>
-
-                </svg>
-
-            </div>
-
-            <span>
-
-                Birthday
-
-            </span>
-
-        </button>
-
-        <button
-            class="app-icon"
-            data-app="memories">
-
-            <div class="icon-circle">
-
-                <svg viewBox="0 0 64 64">
-
-                    <path
-                        d="M20 18h24v28H20z"/>
-
-                    <path
-                        d="M20 28h24"/>
-
-                    <path
-                        d="M20 38h24"/>
-
-                </svg>
-
-            </div>
-
-            <span>
-
-                Memories
-
-            </span>
-
-        </button>
-
-        <button
-            class="app-icon"
-            data-app="settings">
-
-            <div class="icon-circle">
-
-                <svg viewBox="0 0 64 64">
-
-                    <circle
-                        cx="32"
-                        cy="32"
-                        r="8"/>
-
-                    <path
-                        d="M32 12v8M32 44v8M12 32h8M44 32h8M18 18l6 6M40 40l6 6M18 46l6-6M40 24l6-6"/>
-
-                </svg>
-
-            </div>
-
-            <span>
-
-                Settings
-
-            </span>
-
-        </button>
-
-    </div>
-
-    <div class="dock glass">
-
-        <button class="dock-app">
-
-            <svg viewBox="0 0 64 64">
-
-                <path d="M20 14h24v36H20z"/>
-
-            </svg>
-
-        </button>
-
-        <button class="dock-app">
-
-            <svg viewBox="0 0 64 64">
-
-                <path d="M10 16h44v26H24l-10 10V16z"/>
-
-            </svg>
-
-        </button>
-
-        <button class="dock-app">
-
-            <svg viewBox="0 0 64 64">
-
-                <circle
-                    cx="32"
-                    cy="32"
-                    r="14"/>
-
-            </svg>
-
-        </button>
-
-        <button class="dock-app">
-
-            <svg viewBox="0 0 64 64">
-
-                <circle
-                    cx="32"
-                    cy="32"
-                    r="18"/>
-
-                <path
-                    d="M32 18v14l10 6"/>
-
-            </svg>
-
-        </button>
-
-    </div>
-
-</section>
-
-<section id="messagesApp" class="app-screen">
-
-    <div class="app-header glass">
-
-        <button class="back-btn" data-close="messages">
-
-            <svg viewBox="0 0 24 24">
-
-                <path d="M15 6l-6 6 6 6"/>
-
-            </svg>
-
-        </button>
-
-        <h2>
-
-            Messages
-
-        </h2>
-
-    </div>
-
-    <div class="messages-container">
-
-        <div class="message received">
-
-            <span class="message-text">
-
-                Hi love. ❤️
-
-            </span>
-
-            <span class="message-time">
-
-                11:40 PM
-
-            </span>
-
-        </div>
-
-        <div class="message sent">
-
-            <span class="message-text">
-
-                Hi hubby! Kumusta ka?
-
-            </span>
-
-            <span class="message-time">
-
-                11:41 PM
-
-            </span>
-
-            <span class="message-status">
-
-                Delivered
-
-            </span>
-
-        </div>
-
-        <div id="typingBubble" class="typing-bubble">
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </div>
-
-        <div id="conversation"></div>
-
-    </div>
-
-</section>
-
-<section id="galleryApp" class="app-screen">
-
-    <div class="app-header glass">
-
-        <button class="back-btn" data-close="gallery">
-
-            <svg viewBox="0 0 24 24">
-
-                <path d="M15 6l-6 6 6 6"/>
-
-            </svg>
-
-        </button>
-
-        <h2>
-
-            Gallery
-
-        </h2>
-
-    </div>
-
-    <div class="gallery-grid">
-
-        <div class="gallery-item">
-
-            <img
-                src="us.jpeg"
-                alt="Memory 1">
-
-        </div>
-
-        <div class="gallery-item">
-
-            <img
-                src="me.jpeg"
-                alt="Memory 2">
-
-        </div>
-
-        <div class="gallery-item">
-
-            <img
-                src="us.jpeg"
-                alt="Memory 3">
-
-        </div>
-
-        <div class="gallery-item">
-
-            <img
-                src="me.jpeg"
-                alt="Memory 4">
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="musicApp" class="app-screen">
-
-    <div class="app-header glass">
-
-        <button class="back-btn" data-close="music">
-
-            <svg viewBox="0 0 24 24">
-
-                <path d="M15 6l-6 6 6 6"/>
-
-            </svg>
-
-        </button>
-
-        <h2>
-
-            Music
-
-        </h2>
-
-    </div>
-
-    <div class="music-player">
-
-        <div class="album-cover">
-
-            <img
-                src="us.jpeg"
-                alt="Album Cover">
-
-        </div>
-
-        <h3>
-
-            14
-
-        </h3>
-
-        <p>
-
-            Our Song ❤️
-
-        </p>
-
-        <div class="music-progress">
-
-            <div
-                id="musicProgress"
-                class="music-progress-fill">
-
-            </div>
-
-        </div>
-
-        <div class="music-time">
-
-            <span id="currentTime">
-
-                0:00
-
-            </span>
-
-            <span id="duration">
-
-                0:00
-
-            </span>
-
-        </div>
-
-        <div class="music-controls">
-
-            <button id="playMusic">
-
-                <svg viewBox="0 0 24 24">
-
-                    <path d="M8 5l11 7-11 7z"/>
+                        d="M22 12h20v40H22z"/>
 
                 </svg>
 
             </button>
 
-        </div>
+            <button
+                class="dock-icon"
+                data-app="messagesApp"
+                aria-label="Messages">
 
-        <audio
-            id="audioPlayer"
-            src="bg.mp3">
+                <svg
+                    viewBox="0 0 64 64"
+                    fill="none">
 
-        </audio>
+                    <path
+                        d="M12 16h40v24H28l-10 10V16"/>
 
-    </div>
+                </svg>
 
-</section>
+            </button>
 
-<section id="memoriesApp" class="app-screen">
+            <button
+                class="dock-icon"
+                aria-label="Camera">
 
-    <div class="app-header glass">
+                <svg
+                    viewBox="0 0 64 64"
+                    fill="none">
 
-        <button class="back-btn" data-close="memories">
+                    <circle
+                        cx="32"
+                        cy="32"
+                        r="12"/>
 
-            <svg viewBox="0 0 24 24">
-                <path d="M15 6l-6 6 6 6"/>
-            </svg>
+                    <rect
+                        x="14"
+                        y="18"
+                        width="36"
+                        height="28"
+                        rx="6"/>
 
-        </button>
+                </svg>
 
-        <h2>Memories</h2>
+            </button>
 
-    </div>
+            <button
+                class="dock-icon"
+                aria-label="Browser">
 
-    <div class="timeline">
+                <svg
+                    viewBox="0 0 64 64"
+                    fill="none">
 
-        <div class="timeline-item">
+                    <circle
+                        cx="32"
+                        cy="32"
+                        r="18"/>
 
-            <div class="timeline-dot"></div>
+                        <path
+                            d="M14 32h36"/>
 
-            <div class="timeline-card glass">
+                        <path
+                            d="M32 14c6 6 6 30 0 36"/>
 
-                <h3>Our First Chat 💬</h3>
+                    </svg>
 
-                <p>
-                    The day everything started.
-                    A simple conversation that became my favorite one.
-                </p>
+                </button>
+
+        </nav>
+
+    </section>
+    
+        <!-- ========================= -->
+    <!-- Messages App -->
+    <!-- ========================= -->
+
+    <section
+        id="messagesApp"
+        class="app-screen">
+
+        <header class="app-header glass">
+
+            <button
+                class="back-button"
+                data-back>
+
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M15 6L9 12L15 18"/>
+                </svg>
+
+            </button>
+
+            <h2>Messages</h2>
+
+        </header>
+
+        <main class="app-content messages-content">
+
+            <div id="messageList">
+
+                <article class="message received">
+
+                    <div class="bubble">
+
+                        Hi, love. ❤️
+
+                    </div>
+
+                    <span class="message-time">
+
+                        11:40 PM
+
+                    </span>
+
+                </article>
+
+                <article class="message sent">
+
+                    <div class="bubble">
+
+                        Hi, hubby! ❤️
+
+                    </div>
+
+                    <span class="message-time">
+
+                        11:41 PM
+
+                    </span>
+
+                    <span class="message-status">
+
+                        Delivered
+
+                    </span>
+
+                </article>
+
+                <div
+                    id="typingIndicator"
+                    class="typing-indicator">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
 
             </div>
 
-        </div>
+        </main>
 
-        <div class="timeline-item">
+    </section>
 
-            <div class="timeline-dot"></div>
+    <!-- ========================= -->
+    <!-- Gallery App -->
+    <!-- ========================= -->
 
-            <div class="timeline-card glass">
+    <section
+        id="galleryApp"
+        class="app-screen">
 
-                <h3>Our First Call 📞</h3>
+        <header class="app-header glass">
 
-                <p>
-                    Hearing your voice for the first time felt like home.
-                </p>
+            <button
+                class="back-button"
+                data-back>
+
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M15 6L9 12L15 18"/>
+                </svg>
+
+            </button>
+
+            <h2>Gallery</h2>
+
+        </header>
+
+        <main class="app-content">
+
+            <div class="gallery-grid">
+
+                <figure class="gallery-item">
+
+                    <img
+                        src="us.jpeg"
+                        alt="Memory One">
+
+                </figure>
+
+                <figure class="gallery-item">
+
+                    <img
+                        src="me.jpeg"
+                        alt="Memory Two">
+
+                </figure>
+
+                <figure class="gallery-item">
+
+                    <img
+                        src="us.jpeg"
+                        alt="Memory Three">
+
+                </figure>
+
+                <figure class="gallery-item">
+
+                    <img
+                        src="me.jpeg"
+                        alt="Memory Four">
+
+                </figure>
 
             </div>
 
-        </div>
+        </main>
 
-        <div class="timeline-item">
+    </section>
 
-            <div class="timeline-dot"></div>
+    <!-- ========================= -->
+    <!-- Music App -->
+    <!-- ========================= -->
 
-            <div class="timeline-card glass">
+    <section
+        id="musicApp"
+        class="app-screen">
 
-                <h3>Our First "I Love You" ❤️</h3>
+        <header class="app-header glass">
 
-                <p>
-                    Three words that changed our lives forever.
-                </p>
+            <button
+                class="back-button"
+                data-back>
 
-            </div>
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M15 6L9 12L15 18"/>
+                </svg>
 
-        </div>
+            </button>
 
-        <div class="timeline-item">
+            <h2>Music</h2>
 
-            <div class="timeline-dot"></div>
+        </header>
 
-            <div class="timeline-card glass">
+        <main class="app-content music-layout">
 
-                <h3>Our First Meeting 🥹</h3>
+            <figure class="album-art">
 
-                <p>
-                    Finally seeing you in person was everything I dreamed of.
-                </p>
+                <img
+                    src="us.jpeg"
+                    alt="Album Cover">
 
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="birthdayApp" class="app-screen">
-
-    <div class="app-header glass">
-
-        <button class="back-btn" data-close="birthday">
-
-            <svg viewBox="0 0 24 24">
-                <path d="M15 6l-6 6 6 6"/>
-            </svg>
-
-        </button>
-
-        <h2>Birthday</h2>
-
-    </div>
-
-    <div class="birthday-content">
-
-        <div id="giftBox" class="gift-box">
-
-            <div class="gift-lid"></div>
-
-            <div class="gift-body"></div>
-
-            <div class="gift-ribbon"></div>
-
-        </div>
-
-        <p class="gift-instruction">
-
-            Tap the gift to open your surprise.
-
-        </p>
-
-        <div id="letterCard" class="letter-card glass">
-
-            <img
-                src="us.jpeg"
-                alt="Us Together"
-                class="letter-photo">
+            </figure>
 
             <h2>
 
-                Happy Birthday, Hubby ❤️
+                14
 
             </h2>
 
-            <p class="love-letter">
+            <p>
 
-                Thank you for loving me, believing in me,
-                and making every ordinary day feel special.
-
-                I hope this little Galaxy phone reminds you
-                that no matter where life takes us,
-                you'll always have my heart.
+                Our Song ❤️
 
             </p>
 
-            <h3>
+            <div class="music-progress">
 
-                I love you forever. ❤️
+                <div
+                    id="musicProgressBar">
 
-            </h3>
+                </div>
 
-        </div>
+            </div>
 
-    </div>
+            <div class="music-time">
 
-</section>
+                <span id="currentMusicTime">
 
-<section id="settingsApp" class="app-screen">
+                    0:00
 
-    <div class="app-header glass">
+                </span>
 
-        <button class="back-btn" data-close="settings">
+                <span id="totalMusicTime">
 
-            <svg viewBox="0 0 24 24">
-                <path d="M15 6l-6 6 6 6"/>
+                    0:00
+
+                </span>
+
+            </div>
+
+            <div class="music-controls">
+
+                <button
+                    id="previousTrack">
+
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L10 12L18 18V6ZM6 6V18"/>
+                    </svg>
+
+                </button>
+
+                <button
+                    id="playPause">
+
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M8 5L19 12L8 19V5"/>
+                    </svg>
+
+                </button>
+
+                <button
+                    id="nextTrack">
+
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M6 6L14 12L6 18V6ZM18 6V18"/>
+                    </svg>
+
+                </button>
+
+            </div>
+
+        </main>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- Memories App -->
+    <!-- ========================= -->
+
+    <section
+        id="memoriesApp"
+        class="app-screen">
+
+        <header class="app-header glass">
+
+            <button
+                class="back-button"
+                data-back>
+
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M15 6L9 12L15 18"/>
+                </svg>
+
+            </button>
+
+            <h2>Memories</h2>
+
+        </header>
+
+        <main class="app-content">
+
+            <div class="timeline">
+
+                <article class="timeline-item">
+
+                    <span class="timeline-dot"></span>
+
+                    <div class="timeline-card glass">
+
+                        <h3>Our First Chat</h3>
+
+                        <p>
+                            The beginning of our beautiful story.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <article class="timeline-item">
+
+                    <span class="timeline-dot"></span>
+
+                    <div class="timeline-card glass">
+
+                        <h3>Our First Call</h3>
+
+                        <p>
+                            I could listen to your voice forever.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <article class="timeline-item">
+
+                    <span class="timeline-dot"></span>
+
+                    <div class="timeline-card glass">
+
+                        <h3>Our First "I Love You"</h3>
+
+                        <p>
+                            The moment my heart became yours.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <article class="timeline-item">
+
+                    <span class="timeline-dot"></span>
+
+                    <div class="timeline-card glass">
+
+                        <h3>Our First Meeting</h3>
+
+                        <p>
+                            Finally seeing you made every wait worth it.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </main>
+
+    </section>
+    
+        <!-- ========================= -->
+    <!-- Birthday App -->
+    <!-- ========================= -->
+
+    <section
+        id="birthdayApp"
+        class="app-screen">
+
+        <header class="app-header glass">
+
+            <button
+                class="back-button"
+                data-back
+                aria-label="Go Back">
+
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M15 6L9 12L15 18"/>
+                </svg>
+
+            </button>
+
+            <h2>Birthday</h2>
+
+        </header>
+
+        <main class="app-content birthday-layout">
+
+            <div id="giftContainer">
+
+                <div id="giftBox">
+
+                    <div class="gift-lid"></div>
+
+                    <div class="gift-body"></div>
+
+                    <div class="gift-ribbon-vertical"></div>
+
+                    <div class="gift-ribbon-horizontal"></div>
+
+                </div>
+
+                <p>
+
+                    Tap the gift to open your surprise.
+
+                </p>
+
+            </div>
+
+            <article
+                id="loveLetter"
+                class="glass hidden">
+
+                <img
+                    src="us.jpeg"
+                    alt="Cristel and Raymart"
+                    class="letter-image">
+
+                <h2>
+
+                    Happy Birthday, Hubby ❤️
+
+                </h2>
+
+                <p>
+
+                    Every day with you is one of my favorite memories.
+
+                    Thank you for loving me,
+                    believing in me,
+                    making me smile,
+                    and choosing me every single day.
+
+                </p>
+
+                <p>
+
+                    I hope this little Galaxy phone
+                    reminds you that wherever life takes us,
+                    you'll always have my heart.
+
+                </p>
+
+                <h3>
+
+                    I love you forever. ❤️
+
+                </h3>
+
+            </article>
+
+        </main>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- Settings App -->
+    <!-- ========================= -->
+
+    <section
+        id="settingsApp"
+        class="app-screen">
+
+        <header class="app-header glass">
+
+            <button
+                class="back-button"
+                data-back
+                aria-label="Go Back">
+
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M15 6L9 12L15 18"/>
+                </svg>
+
+            </button>
+
+            <h2>
+
+                Settings
+
+            </h2>
+
+        </header>
+
+        <main class="app-content settings-layout">
+
+            <article class="setting-card glass">
+
+                <span>Owner</span>
+
+                <strong>
+
+                    Raymart ❤️
+
+                </strong>
+
+            </article>
+
+            <article class="setting-card glass">
+
+                <span>Device</span>
+
+                <strong>
+
+                    Galaxy S26
+
+                </strong>
+
+            </article>
+
+            <article class="setting-card glass">
+
+                <span>Version</span>
+
+                <strong>
+
+                    Birthday Edition 22.0
+
+                </strong>
+
+            </article>
+
+            <article class="setting-card glass">
+
+                <span>Created By</span>
+
+                <strong>
+
+                    Cristel Joy ❤️
+
+                </strong>
+
+            </article>
+
+            <article class="setting-card glass">
+
+                <span>Battery</span>
+
+                <strong id="batteryLevel">
+
+                    100%
+
+                </strong>
+
+            </article>
+
+            <article class="setting-card glass">
+
+                <span>Love Level</span>
+
+                <strong id="loveLevel">
+
+                    ∞ ❤️
+
+                </strong>
+
+            </article>
+
+        </main>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- Image Viewer -->
+    <!-- ========================= -->
+
+    <div
+        id="imageViewer"
+        class="hidden">
+
+        <button
+            id="closeViewer"
+            aria-label="Close">
+
+            <svg viewBox="0 0 24 24" fill="none">
+
+                <path d="M6 6L18 18"/>
+
+                <path d="M18 6L6 18"/>
+
             </svg>
 
         </button>
 
-        <h2>Settings</h2>
+        <img
+            id="viewerImage"
+            src=""
+            alt="Gallery Preview">
 
     </div>
 
-    <div class="settings-list">
+    <!-- ========================= -->
+    <!-- Confetti -->
+    <!-- ========================= -->
 
-        <div class="setting-item">
-
-            <span>Owner</span>
-
-            <strong>Raymart ❤️</strong>
-
-        </div>
-
-        <div class="setting-item">
-
-            <span>Device</span>
-
-            <strong>Galaxy S26</strong>
-
-        </div>
-
-        <div class="setting-item">
-
-            <span>Edition</span>
-
-            <strong>Birthday Edition</strong>
-
-        </div>
-
-        <div class="setting-item">
-
-            <span>Created By</span>
-
-            <strong>Cristel Joy ❤️</strong>
-
-        </div>
-
-        <div class="setting-item">
-
-            <span>Battery</span>
-
-            <strong>100%</strong>
-
-        </div>
-
-        <div class="setting-item">
-
-            <span>Love Level</span>
-
-            <strong>∞ ❤️</strong>
-
-        </div>
+    <div
+        id="confettiContainer"
+        aria-hidden="true">
 
     </div>
 
-</section>
+    <!-- ========================= -->
+    <!-- Audio -->
+    <!-- ========================= -->
 
-<div id="imageViewer">
+    <audio
+        id="audioPlayer"
+        preload="metadata">
 
-    <button id="closeViewer">
+        <source
+            src="bg.mp3"
+            type="audio/mpeg">
 
-        <svg viewBox="0 0 24 24">
-            <path d="M6 6l12 12M18 6L6 18"/>
-        </svg>
+        Your browser does not support audio.
 
-    </button>
+    </audio>
 
-    <img
-        id="viewerImage"
-        src=""
-        alt="Preview">
-
-</div>
-
-<div id="confettiContainer"></div>
-
-</div>
-
-</div>
+</main>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
