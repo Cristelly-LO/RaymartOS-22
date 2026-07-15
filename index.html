@@ -4,407 +4,792 @@
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>RaymartOS 22 ❤️</title>
+<title>Galaxy S26 Birthday Edition</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-rel="stylesheet">
-
-<link rel="stylesheet"
-href="style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<!-- ===========================
-BACKGROUND
-=========================== -->
+<div id="phone">
 
-<div class="background"></div>
+    <!-- =========================
+         BACKGROUND
+    ========================== -->
 
-<!-- ===========================
-LOCK SCREEN
-=========================== -->
+    <div class="background"></div>
 
-<section id="lockScreen"
-class="screen active">
+    <!-- =========================
+         BOOT SCREEN
+    ========================== -->
 
-<div class="status">
+    <section id="bootScreen" class="screen active">
 
-<div>11:59</div>
+        <div class="bootContent">
 
-<div>100%</div>
+            <h1 class="logo">
+
+                Galaxy S26
+
+            </h1>
+
+            <p class="subtitle">
+
+                Birthday Edition
+
+            </p>
+
+            <div class="bootProgress">
+
+                <div id="bootFill"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         LOCK SCREEN
+    ========================== -->
+
+    <section id="lockScreen" class="screen">
+
+        <div class="statusBar">
+
+            <span>
+
+                11:59
+
+            </span>
+
+            <span>
+
+                100%
+
+            </span>
+
+        </div>
+
+        <div class="lockContent">
+
+            <h1 id="clock">
+
+                11:59 PM
+
+            </h1>
+
+            <p id="date">
+
+                Wednesday, July 15
+
+            </p>
+
+            <div class="heart">
+
+                ❤️
+
+            </div>
+
+            <h2>
+
+                Birthday Eve
+
+            </h2>
+
+            <p>
+
+                One more minute until<br>
+
+                Raymart turns 22.
+
+            </p>
+
+        </div>
+
+        <div class="unlockArea">
+
+            <div class="swipeBar"></div>
+
+            <span>
+
+                Tap Anywhere to Unlock
+
+            </span>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         FACE RECOGNITION
+    ========================== -->
+
+    <section id="faceScreen" class="screen">
+
+        <div class="card">
+
+            <div class="scanner">
+
+                <div class="scannerLine"></div>
+
+            </div>
+
+            <h2>
+
+                Face Recognition
+
+            </h2>
+
+            <p>
+
+                Looking for Raymart...
+
+            </p>
+
+            <div class="progress">
+
+                <div id="faceBar"></div>
+
+            </div>
+
+            <span id="faceText">
+
+                Scanning...
+
+            </span>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         UPDATE SCREEN
+    ========================== -->
+
+    <section id="updateScreen" class="screen">
+
+        <div class="card">
+
+            <h2>
+
+                Galaxy Update
+
+            </h2>
+
+            <p>
+
+                A Birthday Update is Ready
+
+            </p>
+
+            <ul>
+
+                <li>❤️ Love Optimization</li>
+
+                <li>🎂 Birthday Features</li>
+
+                <li>✨ Better Memories</li>
+
+                <li>📱 Premium Experience</li>
+
+            </ul>
+
+            <button id="installBtn">
+
+                Install Update
+
+            </button>
+
+        </div>
+
+    </section>
+    
+        <!-- =========================
+         INSTALL SCREEN
+    ========================== -->
+
+    <section id="installScreen" class="screen">
+
+        <div class="card">
+
+            <h2>
+
+                Installing...
+
+            </h2>
+
+            <div class="progress">
+
+                <div id="installBar"></div>
+
+            </div>
+
+            <p id="installText">
+
+                Preparing Birthday Update...
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         PERFECT MATCH
+    ========================== -->
+
+    <section id="matchScreen" class="screen">
+
+        <div class="card">
+
+            <img src="me.jpeg"
+                 class="profileImage"
+                 alt="Cristel">
+
+            <h2>
+
+                Perfect Match Found ❤️
+
+            </h2>
+
+            <p>
+
+                Cristel Joy
+
+            </p>
+
+            <div class="loveProgress">
+
+                <div class="loveFill"></div>
+
+            </div>
+
+            <p>
+
+                Compatibility
+
+                100%
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         RESTART
+    ========================== -->
+
+    <section id="restartScreen" class="screen">
+
+        <div class="bootContent">
+
+            <h1 class="logo">
+
+                Galaxy S26
+
+            </h1>
+
+            <p class="subtitle">
+
+                Restarting Device...
+
+            </p>
+
+            <div class="bootProgress">
+
+                <div id="restartFill"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         HOME SCREEN
+    ========================== -->
+
+    <section id="homeScreen" class="screen">
+
+        <div class="homeBackground">
+
+            <div class="phoneStatus">
+
+                <span>
+
+                    12:00
+
+                </span>
+
+                <span>
+
+                    📶 5G 🔋100%
+
+                </span>
+
+            </div>
+
+            <div class="phoneClock">
+
+                12:00
+
+            </div>
+
+            <div class="phoneDate">
+
+                Thursday, July 16
+
+            </div>
+
+            <div class="appsGrid">
+
+                <div class="app" id="messagesApp">
+
+                    <div class="appIcon">
+
+                        💬
+
+                    </div>
+
+                    <span>
+
+                        Messages
+
+                    </span>
+
+                </div>
+
+                <div class="app" id="galleryApp">
+
+                    <div class="appIcon">
+
+                        🖼️
+
+                    </div>
+
+                    <span>
+
+                        Gallery
+
+                    </span>
+
+                </div>
+
+                <div class="app" id="musicApp">
+
+                    <div class="appIcon">
+
+                        🎵
+
+                    </div>
+
+                    <span>
+
+                        Music
+
+                    </span>
+
+                </div>
+
+                <div class="app" id="birthdayApp">
+
+                    <div class="appIcon">
+
+                        🎁
+
+                    </div>
+
+                    <span>
+
+                        Birthday
+
+                    </span>
+
+                </div>
+
+                <div class="app" id="settingsApp">
+
+                    <div class="appIcon">
+
+                        ⚙️
+
+                    </div>
+
+                    <span>
+
+                        Settings
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="dock">
+
+                <div class="dockIcon">
+
+                    📞
+
+                </div>
+
+                <div class="dockIcon">
+
+                    💬
+
+                </div>
+
+                <div class="dockIcon">
+
+                    🌐
+
+                </div>
+
+                <div class="dockIcon">
+
+                    📷
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         MESSAGES
+    ========================== -->
+
+    <section id="messagesScreen" class="screen">
+
+        <div class="appHeader">
+
+            <button class="backBtn" id="messagesBack">
+
+                ←
+
+            </button>
+
+            <h2>
+
+                Messages
+
+            </h2>
+
+        </div>
+
+        <div class="chatArea">
+
+            <div class="message left">
+
+                Happy Birthday, Hubby! ❤️🎂
+
+            </div>
+
+            <div class="message left">
+
+                I made this phone just for you.
+
+            </div>
+
+            <div class="message left">
+
+                I hope every screen reminds you how much I love you.
+
+            </div>
+
+            <div class="message left">
+
+                Enjoy your Galaxy S26 Birthday Edition. ❤️
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         GALLERY
+    ========================== -->
+
+    <section id="galleryScreen" class="screen">
+
+        <div class="appHeader">
+
+            <button class="backBtn" id="galleryBack">
+
+                ←
+
+            </button>
+
+            <h2>
+
+                Gallery
+
+            </h2>
+
+        </div>
+
+        <div class="galleryGrid">
+
+            <img src="us.jpeg" alt="Memory">
+
+            <img src="me.jpeg" alt="Memory">
+
+            <img src="us.jpeg" alt="Memory">
+
+            <img src="me.jpeg" alt="Memory">
+
+            <img src="us.jpeg" alt="Memory">
+
+            <img src="me.jpeg" alt="Memory">
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         MUSIC
+    ========================== -->
+
+    <section id="musicScreen" class="screen">
+
+        <div class="appHeader">
+
+            <button class="backBtn" id="musicBack">
+
+                ←
+
+            </button>
+
+            <h2>
+
+                Music
+
+            </h2>
+
+        </div>
+
+        <div class="musicPlayer">
+
+            <img src="us.jpeg" class="albumArt">
+
+            <h3>
+
+                14
+
+            </h3>
+
+            <p>
+
+                Our Song ❤️
+
+            </p>
+
+            <audio id="player" controls>
+
+                <source src="bg.mp3" type="audio/mpeg">
+
+            </audio>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         BIRTHDAY
+    ========================== -->
+
+    <section id="birthdayScreen" class="screen">
+
+        <div class="appHeader">
+
+            <button class="backBtn" id="birthdayBack">
+
+                ←
+
+            </button>
+
+            <h2>
+
+                Birthday
+
+            </h2>
+
+        </div>
+
+        <div class="birthdayContent">
+
+            <div class="giftBox">
+
+                🎁
+
+            </div>
+
+            <h2>
+
+                Happy 22nd Birthday,
+                Hubby! ❤️
+
+            </h2>
+
+            <p>
+
+                Tap the gift to reveal
+                your surprise.
+
+            </p>
+
+            <button id="openGift">
+
+                Open Gift
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         SETTINGS
+    ========================== -->
+
+    <section id="settingsScreen" class="screen">
+
+        <div class="appHeader">
+
+            <button class="backBtn" id="settingsBack">
+
+                ←
+
+            </button>
+
+            <h2>
+
+                Settings
+
+            </h2>
+
+        </div>
+
+        <div class="settingsList">
+
+            <div class="settingItem">
+
+                <span>
+
+                    Device
+
+                </span>
+
+                <strong>
+
+                    Galaxy S26
+
+                </strong>
+
+            </div>
+
+            <div class="settingItem">
+
+                <span>
+
+                    Owner
+
+                </span>
+
+                <strong>
+
+                    Raymart ❤️
+
+                </strong>
+
+            </div>
+
+            <div class="settingItem">
+
+                <span>
+
+                    Version
+
+                </span>
+
+                <strong>
+
+                    Birthday Edition
+
+                </strong>
+
+            </div>
+
+            <div class="settingItem">
+
+                <span>
+
+                    Powered By
+
+                </span>
+
+                <strong>
+
+                    Cristel Joy
+
+                </strong>
+
+            </div>
+
+            <div class="settingItem">
+
+                <span>
+
+                    Battery
+
+                </span>
+
+                <strong>
+
+                    100%
+
+                </strong>
+
+            </div>
+
+            <div class="settingItem">
+
+                <span>
+
+                    Love Level
+
+                </span>
+
+                <strong>
+
+                    ∞ ❤️
+
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
 
 </div>
-
-<div class="lockContent">
-
-<h1 id="clock">
-
-11:59 PM
-
-</h1>
-
-<p id="date">
-
-Wednesday, July 15
-
-</p>
-
-<div class="heart">
-
-❤️
-
-</div>
-
-<h2>
-
-Birthday Eve
-
-</h2>
-
-<p>
-
-One more minute until
-
-Raymart turns 22.
-
-</p>
-
-</div>
-
-<div class="unlock">
-
-<div class="swipe"></div>
-
-Tap Anywhere
-
-</div>
-
-</section>
-
-<!-- ===========================
-FACE ID
-=========================== -->
-
-<section id="faceScreen"
-class="screen">
-
-<div class="card">
-
-<div class="scanner"></div>
-
-<h2>
-
-Face Recognition
-
-</h2>
-
-<p>
-
-Looking for Birthday Boy...
-
-</p>
-
-<div class="progress">
-
-<div id="faceBar"></div>
-
-</div>
-
-<span id="faceText">
-
-Scanning...
-
-</span>
-
-</div>
-
-</section>
-
-<!-- ===========================
-UPDATE
-=========================== -->
-
-<section id="updateScreen"
-class="screen">
-
-<div class="card">
-
-<h2>
-
-RaymartOS 22.0
-
-</h2>
-
-<p>
-
-A Birthday Update
-is Ready
-
-</p>
-
-<ul>
-
-<li>✨ Better Adventures</li>
-
-<li>❤️ Love Optimization</li>
-
-<li>🎂 Birthday Features</li>
-
-<li>😊 More Happiness</li>
-
-</ul>
-
-<button id="installBtn">
-
-Install Update
-
-</button>
-
-</div>
-
-</section>
-
-<!-- ===========================
-INSTALL
-=========================== -->
-
-<section id="installScreen"
-class="screen">
-
-<div class="card">
-
-<h2>
-
-Installing...
-
-</h2>
-
-<div class="progress">
-
-<div id="installBar"></div>
-
-</div>
-
-<p id="installText">
-
-Preparing Update...
-
-</p>
-
-</div>
-
-</section>
-
-<!-- ===========================
-PROFILE
-=========================== -->
-
-<section id="profileScreen"
-class="screen">
-
-<div class="card">
-
-<img src="me.jpeg"
-class="profile">
-
-<h2>
-
-Cristel Joy ❤️
-
-</h2>
-
-<p>
-
-Verified Soulmate
-
-</p>
-
-<div class="loveBar">
-
-<div class="loveFill"></div>
-
-</div>
-
-<p>
-
-Compatibility
-
-100%
-
-</p>
-
-</div>
-
-</section>
-
-<!-- ===========================
-BOOT
-=========================== -->
-
-<section id="bootScreen"
-class="screen">
-
-<div class="boot">
-
-<h1>
-
-RaymartOS 22
-
-</h1>
-
-<p>
-
-Powered by Cristel ❤️
-
-</p>
-
-<div class="bootBar">
-
-<div class="bootFill"></div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ===========================
-HOME
-=========================== -->
-
-<section id="homeScreen"
-class="screen">
-
-<div class="phoneStatus">
-
-<span>
-
-12:00
-
-</span>
-
-<span>
-
-📶 🔋100%
-
-</span>
-
-</div>
-
-<div class="phoneClock">
-
-12:00
-
-</div>
-
-<div class="phoneDate">
-
-Thursday
-
-July 16
-
-</div>
-
-<div class="apps">
-
-<div class="app" id="chatApp">
-
-<div class="icon">
-
-💬
-
-</div>
-
-<span>
-
-Chats
-
-</span>
-
-</div>
-
-<div class="app">
-
-<div class="icon">
-
-🖼️
-
-</div>
-
-<span>
-
-Memories
-
-</span>
-
-</div>
-
-<div class="app">
-
-<div class="icon">
-
-🎵
-
-</div>
-
-<span>
-
-Our Song
-
-</span>
-
-</div>
-
-<div class="app">
-
-<div class="icon">
-
-🎂
-
-</div>
-
-<span>
-
-Birthday
-
-</span>
-
-</div>
-
-<div class="app">
-
-<div class="icon">
-
-❤️
-
-</div>
-
-<span>
-
-About
-
-</span>
-
-</div>
-
-</div>
-
-</section>
 
 <script src="script.js"></script>
 
 </body>
 
 </html>
+
