@@ -1,648 +1,1160 @@
-// =========================================================
-// GALAXY S26 BIRTHDAY EDITION
-// PREMIUM SCRIPT
-// PART 1
-// =========================================================
+/*=========================================================
+ GALAXY S26 ❤️ RAYMART EDITION
+ Created by Cristel Joy
+=========================================================*/
 
-// ==========================
-// SCREENS
-// ==========================
+"use strict";
+
+/*=========================================================
+DOM ELEMENTS
+=========================================================*/
 
 const screens = document.querySelectorAll(".screen");
+const appScreens = document.querySelectorAll(".app-screen");
 
 const bootScreen = document.getElementById("bootScreen");
 const lockScreen = document.getElementById("lockScreen");
-const faceScreen = document.getElementById("faceScreen");
-const updateScreen = document.getElementById("updateScreen");
+const faceUnlock = document.getElementById("faceUnlock");
+const birthdayNotification = document.getElementById("birthdayNotification");
+const softwareUpdate = document.getElementById("softwareUpdate");
 const installScreen = document.getElementById("installScreen");
-const matchScreen = document.getElementById("matchScreen");
+const perfectMatch = document.getElementById("perfectMatch");
 const restartScreen = document.getElementById("restartScreen");
 const homeScreen = document.getElementById("homeScreen");
 
-const messagesScreen = document.getElementById("messagesScreen");
-const galleryScreen = document.getElementById("galleryScreen");
-const musicScreen = document.getElementById("musicScreen");
-const birthdayScreen = document.getElementById("birthdayScreen");
-const settingsScreen = document.getElementById("settingsScreen");
+const unlockButton = document.getElementById("unlockButton");
 
-// ==========================
-// ELEMENTS
-// ==========================
+const openNotification =
+document.getElementById("openNotification");
 
-const bootFill = document.getElementById("bootFill");
+const dismissNotification =
+document.getElementById("dismissNotification");
 
-const faceFill = document.getElementById("faceFill");
+const installUpdate =
+document.getElementById("installUpdate");
 
-const restartFill = document.getElementById("restartFill");
+const restartSystem =
+document.getElementById("restartSystem");
 
-const loveFill = document.getElementById("loveFill");
+const bootProgress =
+document.getElementById("bootProgress");
 
-const installBtn = document.getElementById("installBtn");
+const bootStatus =
+document.getElementById("bootStatus");
 
-const installFill = document.getElementById("installFill");
+const scannerText =
+document.getElementById("scannerText");
 
-const installStatus = document.getElementById("installStatus");
+const installCircle =
+document.getElementById("installCircle");
 
-const installPercent = document.getElementById("installPercent");
+const installPercentage =
+document.getElementById("installPercentage");
 
-const circleProgress = document.getElementById("circleProgress");
+const installStatus =
+document.getElementById("installStatus");
 
-const faceStatus = document.getElementById("faceStatus");
+const installSteps =
+document.querySelectorAll(".install-step");
 
-// ==========================
-// FUNCTIONS
-// ==========================
+const loveProgress =
+document.getElementById("loveProgress");
+
+const loveValue =
+document.getElementById("loveValue");
+
+const homeClock =
+document.getElementById("homeClock");
+
+const homeDate =
+document.getElementById("homeDate");
+
+const lockClock =
+document.getElementById("lockClock");
+
+const lockDate =
+document.getElementById("lockDate");
+
+const audioPlayer =
+document.getElementById("audioPlayer");
+
+/*=========================================================
+GLOBAL VARIABLES
+=========================================================*/
+
+let installPercent = 0;
+
+let bootPercent = 0;
+
+let currentScreen = "boot";
+
+let isUnlocked = false;
+
+/*=========================================================
+UTILITIES
+=========================================================*/
+
+function hideAllScreens(){
+
+    screens.forEach(screen=>{
+
+        screen.classList.remove("active");
+
+    });
+
+}
+
+function hideAllApps(){
+
+    appScreens.forEach(app=>{
+
+        app.classList.remove("active");
+
+    });
+
+}
 
 function showScreen(screen){
 
-screens.forEach(item=>{
+    hideAllScreens();
 
-item.classList.remove("active");
-
-});
-
-screen.classList.add("active");
+    screen.classList.add("active");
 
 }
 
-// ==========================
-// BOOT
-// ==========================
+function showApp(app){
 
-window.onload=()=>{
+    hideAllApps();
 
-let percent=0;
-
-const boot=setInterval(()=>{
-
-percent+=2;
-
-bootFill.style.width=percent+"%";
-
-if(percent>=100){
-
-clearInterval(boot);
-
-setTimeout(()=>{
-
-showScreen(lockScreen);
-
-},500);
+    app.classList.add("active");
 
 }
 
-},40);
+function closeApps(){
 
-};
+    hideAllApps();
 
-// ==========================
-// LOCK
-// ==========================
-
-lockScreen.addEventListener("click",()=>{
-
-showScreen(faceScreen);
-
-startFace();
-
-});
-
-// ==========================
-// FACE ID
-// ==========================
-
-function startFace(){
-
-let percent=0;
-
-const scan=setInterval(()=>{
-
-percent+=2;
-
-faceFill.style.width=percent+"%";
-
-if(percent>=100){
-
-clearInterval(scan);
-
-faceStatus.innerHTML="Face Recognized ❤️";
-
-setTimeout(()=>{
-
-showScreen(updateScreen);
-
-},1200);
+    homeScreen.classList.add("active");
 
 }
 
-},40);
+/*=========================================================
+LIVE CLOCK
+=========================================================*/
+
+function updateClock(){
+
+    const now = new Date();
+
+    const time =
+        now.toLocaleTimeString([],{
+
+            hour:"2-digit",
+
+            minute:"2-digit"
+
+        });
+
+    const date =
+        now.toLocaleDateString([],{
+
+            weekday:"long",
+
+            month:"long",
+
+            day:"numeric"
+
+        });
+
+    if(homeClock){
+
+        homeClock.textContent = time;
+
+    }
+
+    if(lockClock){
+
+        lockClock.textContent = time;
+
+    }
+
+    if(homeDate){
+
+        homeDate.textContent = date;
+
+    }
+
+    if(lockDate){
+
+        lockDate.textContent = date;
+
+    }
 
 }
 
-// ==========================
-// UPDATE
-// ==========================
+updateClock();
 
-installBtn.addEventListener("click",()=>{
+setInterval(updateClock,1000);
 
-showScreen(installScreen);
+/*=========================================================
+BOOT SEQUENCE
+=========================================================*/
 
-startInstall();
+const bootMessages=[
 
-});
+    "Initializing Birthday Experience...",
 
-// ==========================
-// INSTALL
-// ==========================
+    "Loading Memories...",
 
-function startInstall(){
+    "Preparing Love...",
 
-let percent=0;
-
-const messages=[
-
-"Preparing Birthday Edition...",
-
-"Downloading Memories...",
-
-"Installing Love...",
-
-"Optimizing Happiness...",
-
-"Finalizing Update..."
+    "Starting Raymart Edition..."
 
 ];
 
-installStatus.innerHTML=messages[0];
+function bootSequence(){
 
-const install=setInterval(()=>{
+    const timer=setInterval(()=>{
 
-percent++;
+        bootPercent++;
 
-if (installFill) {
-    installFill.style.width = percent + "%";
+        bootProgress.style.width=
+            bootPercent+"%";
+
+        if(bootPercent<25){
+
+            bootStatus.textContent=
+            bootMessages[0];
+
+        }
+
+        else if(bootPercent<50){
+
+            bootStatus.textContent=
+            bootMessages[1];
+
+        }
+
+        else if(bootPercent<75){
+
+            bootStatus.textContent=
+            bootMessages[2];
+
+        }
+
+        else{
+
+            bootStatus.textContent=
+            bootMessages[3];
+
+        }
+
+        if(bootPercent>=100){
+
+            clearInterval(timer);
+
+            setTimeout(()=>{
+
+                showScreen(lockScreen);
+
+            },700);
+
+        }
+
+    },40);
+
 }
 
-if (installPercent) {
-    installPercent.innerHTML = percent + "%";
+/*=========================================================
+LOCK SCREEN
+=========================================================*/
+
+if(unlockButton){
+
+    unlockButton.addEventListener("click",()=>{
+
+        if(isUnlocked) return;
+
+        isUnlocked = true;
+
+        showScreen(faceUnlock);
+
+        startFaceUnlock();
+
+    });
+
 }
 
-if (circleProgress) {
-    const circumference = 515;
+/*=========================================================
+FACE UNLOCK
+=========================================================*/
+
+function startFaceUnlock(){
+
+    scannerText.textContent = "Scanning Face...";
+
+    setTimeout(()=>{
+
+        scannerText.textContent = "Analyzing...";
+
+    },1200);
+
+    setTimeout(()=>{
+
+        scannerText.textContent = "Face Recognized ❤️";
+
+    },2400);
+
+    setTimeout(()=>{
+
+        showScreen(birthdayNotification);
+
+    },3400);
+
+}
+
+/*=========================================================
+BIRTHDAY NOTIFICATION
+=========================================================*/
+
+if(openNotification){
+
+    openNotification.addEventListener("click",()=>{
+
+        showScreen(softwareUpdate);
+
+    });
+
+}
+
+if(dismissNotification){
+
+    dismissNotification.addEventListener("click",()=>{
+
+        showScreen(homeScreen);
+
+    });
+
+}
+
+/*=========================================================
+SOFTWARE UPDATE
+=========================================================*/
+
+if(installUpdate){
+
+    installUpdate.addEventListener("click",()=>{
+
+        showScreen(installScreen);
+
+        startInstallation();
+
+    });
+
+}
+
+/*=========================================================
+INSTALLATION
+=========================================================*/
+
+const installMessages=[
+
+    "Preparing Memories...",
+
+    "Downloading Love...",
+
+    "Installing Happiness...",
+
+    "Building Forever...",
+
+    "Almost Ready..."
+
+];
+
+function activateInstallStep(index){
+
+    installSteps.forEach((step,i)=>{
+
+        step.classList.toggle("active",i===index);
+
+    });
+
+}
+
+function updateInstallCircle(percent){
+
+    if(!installCircle) return;
+
+    const circumference = 578;
+
     const offset = circumference - (percent / 100) * circumference;
-    circleProgress.style.strokeDashoffset = offset;
-}
 
-if(percent===20){
-
-installStatus.innerHTML=messages[1];
+    installCircle.style.strokeDashoffset = offset;
 
 }
 
-if(percent===45){
+function startInstallation(){
 
-installStatus.innerHTML=messages[2];
+    installPercent = 0;
+
+    activateInstallStep(0);
+
+    const timer = setInterval(()=>{
+
+        installPercent++;
+
+        installPercentage.textContent = installPercent + "%";
+
+        updateInstallCircle(installPercent);
+
+        if(installPercent < 20){
+
+            installStatus.textContent = installMessages[0];
+            activateInstallStep(0);
+
+        }else if(installPercent < 40){
+
+            installStatus.textContent = installMessages[1];
+            activateInstallStep(1);
+
+        }else if(installPercent < 60){
+
+            installStatus.textContent = installMessages[2];
+            activateInstallStep(2);
+
+        }else if(installPercent < 80){
+
+            installStatus.textContent = installMessages[3];
+            activateInstallStep(3);
+
+        }else{
+
+            installStatus.textContent = installMessages[4];
+            activateInstallStep(4);
+
+        }
+
+        if(installPercent >= 100){
+
+            clearInterval(timer);
+
+            setTimeout(()=>{
+
+                showScreen(perfectMatch);
+
+                startLoveMeter();
+
+            },900);
+
+        }
+
+    },65);
 
 }
 
-if(percent===70){
+/*=========================================================
+PERFECT MATCH
+=========================================================*/
 
-installStatus.innerHTML=messages[3];
+function startLoveMeter(){
 
-}
+    let value = 0;
 
-if(percent===90){
+    const timer = setInterval(()=>{
 
-installStatus.innerHTML=messages[4];
+        value++;
 
-}
+        loveProgress.style.width = value + "%";
 
-if(percent>=100){
+        loveValue.textContent = value + "%";
 
-clearInterval(install);
+        if(value >= 100){
 
-loveFill.style.width="100%";
+            clearInterval(timer);
 
-setTimeout(()=>{
+        }
 
-showScreen(matchScreen);
-
-startMatch();
-
-},800);
+    },18);
 
 }
 
-},45);
+if(restartSystem){
+
+    restartSystem.addEventListener("click",()=>{
+
+        showScreen(restartScreen);
+
+        startRestart();
+
+    });
 
 }
 
-// ==========================
-// MATCH
-// ==========================
-
-function startMatch(){
-
-setTimeout(()=>{
-
-showScreen(restartScreen);
-
-startRestart();
-
-},2800);
-
-}
-
-// ==========================
-// RESTART
-// ==========================
+/*=========================================================
+RESTART SEQUENCE
+=========================================================*/
 
 function startRestart(){
 
-let percent=0;
+    setTimeout(()=>{
 
-const restart=setInterval(()=>{
+        showScreen(homeScreen);
 
-percent+=2;
+        currentScreen = "home";
 
-restartFill.style.width=percent+"%";
-
-if(percent>=100){
-
-clearInterval(restart);
-
-setTimeout(()=>{
-
-showScreen(homeScreen);
-
-},600);
+    },3000);
 
 }
 
-},40);
+/*=========================================================
+HOME SCREEN
+=========================================================*/
+
+const appIcons =
+document.querySelectorAll(".app-icon");
+
+const dockIcons =
+document.querySelectorAll(".dock-icon[data-app]");
+
+const backButtons =
+document.querySelectorAll("[data-back]");
+
+const appMap = {
+
+    messagesApp:
+        document.getElementById("messagesApp"),
+
+    galleryApp:
+        document.getElementById("galleryApp"),
+
+    musicApp:
+        document.getElementById("musicApp"),
+
+    memoriesApp:
+        document.getElementById("memoriesApp"),
+
+    birthdayApp:
+        document.getElementById("birthdayApp"),
+
+    settingsApp:
+        document.getElementById("settingsApp")
+
+};
+
+/*=========================================================
+APP OPEN
+=========================================================*/
+
+function openApplication(appId){
+
+    const app = appMap[appId];
+
+    if(!app) return;
+
+    hideAllApps();
+
+    animateOpen(app);
+
+    app.classList.add("active");
+
+    switch(appId){
+
+        case "messagesApp":
+
+            loadMessages();
+
+            break;
+
+        case "musicApp":
+
+            initializeMusic();
+
+            break;
+
+        case "galleryApp":
+
+            initializeGallery();
+
+            break;
+
+        case "birthdayApp":
+
+            initializeBirthday();
+
+            break;
+
+    }
 
 }
 
-// =========================================================
-// PREMIUM SCRIPT
-// PART 2
-// =========================================================
+appIcons.forEach(icon=>{
 
-// ======================================
-// HOME APPS
-// ======================================
+    icon.addEventListener("click",()=>{
 
-const messagesApp=document.getElementById("messagesApp");
-const galleryApp=document.getElementById("galleryApp");
-const musicApp=document.getElementById("musicApp");
-const birthdayApp=document.getElementById("birthdayApp");
-const settingsApp=document.getElementById("settingsApp");
+        openApplication(icon.dataset.app);
 
-// ======================================
-// BACK BUTTONS
-// ======================================
+    });
 
-const messagesBack=document.getElementById("messagesBack");
-const galleryBack=document.getElementById("galleryBack");
-const musicBack=document.getElementById("musicBack");
-const birthdayBack=document.getElementById("birthdayBack");
-const settingsBack=document.getElementById("settingsBack");
+});
 
-// ======================================
-// OPEN APPS
-// ======================================
+dockIcons.forEach(icon=>{
 
-messagesApp.onclick=()=>{
+    icon.addEventListener("click",()=>{
 
-showScreen(messagesScreen);
+        openApplication(icon.dataset.app);
 
-loadMessages();
+    });
 
-};
+});
 
-galleryApp.onclick=()=>{
+/*=========================================================
+BACK BUTTONS
+=========================================================*/
 
-showScreen(galleryScreen);
+backButtons.forEach(button=>{
 
-};
+    button.addEventListener("click",()=>{
 
-musicApp.onclick=()=>{
+        closeApps();
 
-showScreen(musicScreen);
+    });
 
-};
+});
 
-birthdayApp.onclick=()=>{
+/*=========================================================
+HOME SHORTCUTS
+=========================================================*/
 
-showScreen(birthdayScreen);
+document.addEventListener("keydown",(event)=>{
 
-};
+    if(event.key === "Escape"){
 
-settingsApp.onclick=()=>{
+        closeApps();
 
-showScreen(settingsScreen);
+    }
 
-};
+});
 
-// ======================================
-// BACK
-// ======================================
+/*=========================================================
+APP TRANSITIONS
+=========================================================*/
 
-messagesBack.onclick=()=>showScreen(homeScreen);
+Object.values(appMap).forEach(app=>{
 
-galleryBack.onclick=()=>showScreen(homeScreen);
+    if(!app) return;
 
-birthdayBack.onclick=()=>showScreen(homeScreen);
+    app.addEventListener("animationend",()=>{
 
-settingsBack.onclick=()=>showScreen(homeScreen);
+        app.classList.remove("fade-in");
 
-musicBack.onclick=()=>{
+    });
 
-player.pause();
+});
 
-playBtn.innerHTML="▶";
+function animateOpen(app){
 
-showScreen(homeScreen);
+    app.classList.remove("fade-in");
 
-};
+    void app.offsetWidth;
 
-// ======================================
-// MESSAGES
-// ======================================
+    app.classList.add("fade-in");
 
-const birthdayMessages=[
+}
 
-"Happy Birthday, Hubby! ❤️🎂",
 
-"It's finally your special day.",
+/*=========================================================
+HOME INITIAL STATE
+=========================================================*/
 
-"I built this Galaxy S26 just for you.",
+hideAllApps();
 
-"I hope every screen reminds you how much I love you.",
+/*=========================================================
+MESSAGES
+=========================================================*/
 
-"I'm proud of everything you've achieved.",
+const typingIndicator =
+document.getElementById("typingIndicator");
 
-"I'll always be your number one supporter.",
+const messageList =
+document.getElementById("messageList");
 
-"Happy Birthday, my love. ❤️",
+const messageSequence=[
 
-"Forever yours,\nCristel Joy"
+{
+text:"Happy Birthday, Hubby! ❤️",
+time:"12:00 AM",
+status:"Delivered",
+type:"received"
+},
+
+{
+text:"I made something special just for you.",
+time:"12:01 AM",
+status:"Seen",
+type:"sent"
+},
+
+{
+text:"I hope this little Galaxy phone makes you smile today. 🥹❤️",
+time:"12:02 AM",
+status:"Seen",
+type:"received"
+},
+
+{
+text:"I love you so much, Raymart.",
+time:"12:03 AM",
+status:"Seen",
+type:"sent"
+}
 
 ];
+
+let messagesLoaded=false;
 
 function loadMessages(){
 
-const area=document.getElementById("chatArea");
+    if(messagesLoaded) return;
 
-area.innerHTML="";
+    messagesLoaded=true;
 
-let index=0;
+    let index=0;
 
-function send(){
+    function nextMessage(){
 
-if(index>=birthdayMessages.length){
+        if(index>=messageSequence.length){
 
-return;
+            if(typingIndicator){
 
-}
+                typingIndicator.style.display="none";
 
-const bubble=document.createElement("div");
+            }
 
-bubble.className="message";
+            return;
 
-bubble.innerHTML=birthdayMessages[index];
+        }
 
-area.appendChild(bubble);
+        const msg=messageSequence[index];
 
-area.scrollTop=area.scrollHeight;
+        if(typingIndicator){
 
-index++;
+            typingIndicator.style.display="flex";
 
-setTimeout(send,900);
+        }
 
-}
+        setTimeout(()=>{
 
-send();
+            const article=document.createElement("article");
 
-}
+            article.className=`message ${msg.type}`;
 
-// ======================================
-// MUSIC PLAYER
-// ======================================
+            article.innerHTML=`
 
-const player=document.getElementById("player");
+<div class="bubble">
 
-const playBtn=document.getElementById("playBtn");
+${msg.text}
 
-const musicFill=document.getElementById("musicFill");
+</div>
 
-const duration=document.getElementById("duration");
+<span class="message-time">
 
-playBtn.onclick=()=>{
+${msg.time}
 
-if(player.paused){
+</span>
 
-player.play();
+<span class="message-status">
 
-playBtn.innerHTML="❚❚";
+${msg.status}
 
-}else{
-
-player.pause();
-
-playBtn.innerHTML="▶";
-
-}
-
-};
-
-player.addEventListener("loadedmetadata",()=>{
-
-const mins=Math.floor(player.duration/60);
-
-let secs=Math.floor(player.duration%60);
-
-if(secs<10){
-
-secs="0"+secs;
-
-}
-
-duration.innerHTML=mins+":"+secs;
-
-});
-
-player.addEventListener("timeupdate",()=>{
-
-const percent=
-
-(player.currentTime/player.duration)*100;
-
-musicFill.style.width=percent+"%";
-
-});
-
-// ======================================
-// GALLERY
-// ======================================
-
-document.querySelectorAll(".galleryGrid img")
-
-.forEach(image=>{
-
-image.onclick=()=>{
-
-const viewer=document.createElement("div");
-
-viewer.style.position="fixed";
-
-viewer.style.inset="0";
-
-viewer.style.background="rgba(0,0,0,.92)";
-
-viewer.style.display="flex";
-
-viewer.style.justifyContent="center";
-
-viewer.style.alignItems="center";
-
-viewer.style.zIndex="9999";
-
-viewer.innerHTML=`
-
-<img
-src="${image.src}"
-style="max-width:92%;
-max-height:92%;
-border-radius:24px;">
+</span>
 
 `;
 
-viewer.onclick=()=>{
+            if(typingIndicator){
 
-viewer.remove();
+                messageList.insertBefore(
 
-};
+                    article,
 
-document.body.appendChild(viewer);
+                    typingIndicator
 
-};
+                );
+
+            }
+
+            index++;
+
+            nextMessage();
+
+        },1300);
+
+    }
+
+    nextMessage();
+
+}
+
+/*=========================================================
+GALLERY
+=========================================================*/
+
+const galleryItems=
+document.querySelectorAll(".gallery-item img");
+
+const imageViewer=
+document.getElementById("imageViewer");
+
+const viewerImage=
+document.getElementById("viewerImage");
+
+const closeViewer=
+document.getElementById("closeViewer");
+
+galleryItems.forEach(image=>{
+
+    image.addEventListener("click",()=>{
+
+        viewerImage.src=image.src;
+
+        imageViewer.classList.add("active");
+
+    });
 
 });
 
-// ======================================
-// BIRTHDAY GIFT
-// ======================================
+if(closeViewer){
 
-const gift=document.getElementById("giftBox");
+    closeViewer.addEventListener("click",()=>{
 
-gift.onclick=()=>{
+        imageViewer.classList.remove("active");
 
-launchConfetti();
+    });
 
-document.getElementById("birthdayContent").innerHTML=`
+}
 
-<h1 style="font-size:42px">
+if(imageViewer){
 
-🎉 Happy Birthday!
+    imageViewer.addEventListener("click",(event)=>{
 
-</h1>
+        if(event.target===imageViewer){
 
-<img
-src="us.JPEG"
-style="width:240px;
-height:240px;
-object-fit:cover;
-border-radius:30px;
-margin:25px 0;
-box-shadow:0 20px 45px rgba(0,0,0,.35);">
+            imageViewer.classList.remove("active");
 
-<p style="line-height:2">
+        }
 
-Happy 22nd Birthday,
-Hubby ❤️
+    });
 
-I hope this little Galaxy S26
-makes you smile.
+}
 
-Thank you for loving me.
+/*=========================================================
+MUSIC PLAYER
+=========================================================*/
 
-Thank you for choosing me.
+const playPause =
+document.getElementById("playPause");
 
-I'll always be proud of you.
+const musicProgress =
+document.getElementById("musicProgressBar");
 
-I'll always be your home.
+const currentMusicTime =
+document.getElementById("currentMusicTime");
 
-I love you so much.
+const totalMusicTime =
+document.getElementById("totalMusicTime");
 
-Forever yours,
+let musicInitialized = false;
 
-Cristel Joy ❤️
+function initializeMusic(){
 
-</p>
+    if(musicInitialized) return;
+
+    musicInitialized = true;
+
+    if(!audioPlayer) return;
+
+    audioPlayer.load();
+
+}
+
+if(audioPlayer){
+
+    audioPlayer.addEventListener("loadedmetadata",()=>{
+
+        totalMusicTime.textContent =
+
+            formatTime(audioPlayer.duration);
+
+    });
+
+    audioPlayer.addEventListener("timeupdate",()=>{
+
+        const percent =
+
+            (audioPlayer.currentTime /
+
+            audioPlayer.duration) * 100;
+
+        musicProgress.style.width =
+
+            percent + "%";
+
+        currentMusicTime.textContent =
+
+            formatTime(audioPlayer.currentTime);
+
+    });
+
+}
+
+if(playPause){
+
+    playPause.addEventListener("click",()=>{
+
+        if(audioPlayer.paused){
+
+            audioPlayer.play();
+
+            playPause.innerHTML=`
+
+<svg viewBox="0 0 24 24" fill="none">
+
+<path d="M9 5H11V19H9V5ZM13 5H15V19H13V5Z"/>
+
+</svg>
 
 `;
 
-};
+        }else{
 
-// ======================================
-// CONFETTI
-// ======================================
+            audioPlayer.pause();
+
+            playPause.innerHTML=`
+
+<svg viewBox="0 0 24 24" fill="none">
+
+<path d="M8 5L19 12L8 19V5"/>
+
+</svg>
+
+`;
+
+        }
+
+    });
+
+}
+
+/*=========================================================
+TIME FORMAT
+=========================================================*/
+
+function formatTime(seconds){
+
+    if(isNaN(seconds))
+
+        return "0:00";
+
+    const minutes =
+
+        Math.floor(seconds / 60);
+
+    const secs =
+
+        Math.floor(seconds % 60);
+
+    return `${minutes}:${secs.toString().padStart(2,"0")}`;
+
+}
+
+/*=========================================================
+GALLERY
+=========================================================*/
+
+let galleryInitialized=false;
+
+function initializeGallery(){
+
+    if(galleryInitialized) return;
+
+    galleryInitialized=true;
+
+}
+
+/*=========================================================
+BIRTHDAY SURPRISE
+=========================================================*/
+
+const giftBox =
+document.getElementById("giftBox");
+
+const loveLetter =
+document.getElementById("loveLetter");
+
+let birthdayOpened=false;
+
+function initializeBirthday(){
+
+    if(birthdayOpened) return;
+
+}
+
+if(giftBox){
+
+    giftBox.addEventListener("click",()=>{
+
+        if(birthdayOpened) return;
+
+        birthdayOpened=true;
+
+        giftBox.style.display="none";
+
+        loveLetter.classList.remove("hidden");
+
+        launchConfetti();
+
+    });
+
+}
+
+/*=========================================================
+CONFETTI
+=========================================================*/
+
+const confettiContainer =
+document.getElementById("confettiContainer");
 
 function launchConfetti(){
 
-const colors=[
+    if(!confettiContainer) return;
 
-"#5ea8ff",
+    confettiContainer.innerHTML="";
 
-"#ff4d6d",
+    const colors=[
 
-"#ffd54f",
+        "#4D8CFF",
+        "#8EB8FF",
+        "#FF6B9A",
+        "#FFD166",
+        "#7CFFB2",
+        "#FFFFFF"
 
-"#ffffff",
+    ];
 
-"#7dd3fc"
+    for(let i=0;i<120;i++){
 
-];
+        const piece=document.createElement("div");
 
-for(let i=0;i<180;i++){
+        piece.className="confetti";
 
-const piece=document.createElement("div");
+        piece.style.left=Math.random()*100+"%";
 
-piece.className="confetti";
+        piece.style.top="-20px";
 
-piece.style.left=Math.random()*100+"vw";
+        piece.style.background=
 
-piece.style.background=
+            colors[Math.floor(Math.random()*colors.length)];
 
-colors[Math.floor(Math.random()*colors.length)];
+        piece.style.animationDelay=
 
-piece.style.animationDuration=
+            Math.random()*0.8+"s";
 
-(Math.random()*2+2)+"s";
+        piece.style.animationDuration=
 
-piece.style.transform=
+            3+Math.random()*2+"s";
 
-`rotate(${Math.random()*360}deg)`;
+        piece.style.transform=
 
-document.body.appendChild(piece);
+            `rotate(${Math.random()*360}deg)`;
 
-setTimeout(()=>{
+        confettiContainer.appendChild(piece);
 
-piece.remove();
+    }
 
-},4500);
+    setTimeout(()=>{
+
+        confettiContainer.innerHTML="";
+
+    },5500);
 
 }
 
+/*=========================================================
+SETTINGS
+=========================================================*/
+
+const batteryLevel =
+document.getElementById("batteryLevel");
+
+const loveLevel =
+document.getElementById("loveLevel");
+
+function initializeSettings(){
+
+    if(batteryLevel){
+
+        batteryLevel.textContent="100%";
+
+    }
+
+    if(loveLevel){
+
+        loveLevel.textContent="∞ ❤️";
+
+    }
+
 }
 
-// ======================================
-// FINISH
-// ======================================
+/*=========================================================
+KEYBOARD SHORTCUTS
+=========================================================*/
 
-console.clear();
+document.addEventListener("keydown",(event)=>{
 
-console.log("%cGalaxy S26 Birthday Edition Loaded ❤️",
+    if(event.key==="Escape"){
 
-"color:#5ea8ff;font-size:18px;font-weight:bold;");
+        if(imageViewer.classList.contains("active")){
+
+            imageViewer.classList.remove("active");
+
+            return;
+
+        }
+
+        closeApps();
+
+    }
+
+});
+
+/*=========================================================
+INITIALIZATION
+=========================================================*/
+
+window.addEventListener("load",()=>{
+
+    updateClock();
+
+    initializeSettings();
+
+    bootSequence();
+
+});
+
+/*=========================================================
+AUTO PLAY AFTER USER INTERACTION
+=========================================================*/
+
+document.addEventListener("click",()=>{
+
+    if(audioPlayer && audioPlayer.paused){
+
+        audioPlayer.load();
+
+    }
+
+},{once:true});
+
+/*=========================================================
+END OF SCRIPT
+=========================================================*/
+
