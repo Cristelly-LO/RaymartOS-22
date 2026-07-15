@@ -26,7 +26,7 @@ BACKGROUND
     inset:0;
     background:
     linear-gradient(rgba(5,8,22,.75),rgba(5,8,22,.90)),
-    url("assets/wallpaper.png") center center/cover no-repeat;
+    url("wallpaper.png") center center/cover no-repeat;
     z-index:-1;
 }
 
