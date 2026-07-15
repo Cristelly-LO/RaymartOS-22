@@ -789,3 +789,5 @@ const percent=
 musicFill.style.width=percent+"%";
 
 });
+
+lucide.createIcons();
