@@ -535,15 +535,15 @@ heart.style.transform="scale(1)";
 
 function openScreen(screen){
 
-screen.style.opacity=0;
-
 showScreen(screen);
+
+screen.classList.add("appOpen");
 
 setTimeout(()=>{
 
-screen.style.opacity=1;
+screen.classList.remove("appOpen");
 
-},10);
+},350);
 
 }
 
