@@ -576,3 +576,65 @@ alert("🎉 Happy 22nd Birthday, Raymart! ❤️");
 // =====================================================
 
 console.log("Galaxy S26 Birthday Edition Loaded ❤️");
+
+// =======================================
+// Samsung Messages Animation
+// =======================================
+
+const birthdayMessages=[
+
+"Happy Birthday, Hubby ❤️🎂",
+
+"I made this Galaxy S26 just for you.",
+
+"I hope this reminds you how loved you are.",
+
+"Thank you for choosing me every single day.",
+
+"I'm always proud of you.",
+
+"I'll always be your number one supporter.",
+
+"I love you so much. ❤️"
+
+];
+
+let messageIndex=0;
+
+messagesApp.addEventListener("click",()=>{
+
+const area=document.getElementById("chatArea");
+
+area.innerHTML="";
+
+messageIndex=0;
+
+sendMessage();
+
+});
+
+function sendMessage(){
+
+if(messageIndex>=birthdayMessages.length){
+
+return;
+
+}
+
+const bubble=document.createElement("div");
+
+bubble.className="message left";
+
+bubble.innerHTML=birthdayMessages[messageIndex];
+
+document.getElementById("chatArea").appendChild(bubble);
+
+document.getElementById("chatArea").scrollTop=
+
+document.getElementById("chatArea").scrollHeight;
+
+messageIndex++;
+
+setTimeout(sendMessage,1200);
+
+}
