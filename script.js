@@ -753,3 +753,39 @@ piece.remove();
 }
 
 }
+
+// ==========================================
+// MUSIC PLAYER V2
+// ==========================================
+
+const playSong=document.getElementById("playSong");
+
+const musicFill=document.querySelector(".musicFill");
+
+playSong.addEventListener("click",()=>{
+
+if(player.paused){
+
+player.play();
+
+playSong.innerHTML="❚❚";
+
+}else{
+
+player.pause();
+
+playSong.innerHTML="▶";
+
+}
+
+});
+
+player.addEventListener("timeupdate",()=>{
+
+const percent=
+
+(player.currentTime/player.duration)*100;
+
+musicFill.style.width=percent+"%";
+
+});
