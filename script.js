@@ -638,3 +638,118 @@ messageIndex++;
 setTimeout(sendMessage,1200);
 
 }
+// ==========================================
+// BIRTHDAY GIFT V2
+// ==========================================
+
+const gift=document.getElementById("giftBox");
+
+gift.addEventListener("click",()=>{
+
+launchConfetti();
+
+document.getElementById("birthdayContent").innerHTML=`
+
+<h1
+style="font-size:42px;margin-bottom:20px;">
+
+🎉 Happy Birthday
+Hubby! ❤️
+
+</h1>
+
+<img
+src="us.JPEG"
+style="width:230px;
+height:230px;
+object-fit:cover;
+border-radius:30px;
+margin:25px 0;
+box-shadow:0 15px 40px rgba(0,0,0,.35);">
+
+<p
+style="font-size:18px;
+line-height:1.9;
+max-width:380px;">
+
+Happy 22nd Birthday,
+my love.
+
+I know life hasn't always been easy,
+but I'm so proud of you.
+
+Thank you for every sacrifice,
+every effort,
+and every dream you're chasing.
+
+I hope this little Galaxy S26
+made you smile today.
+
+Always remember...
+
+No matter where life takes us,
+I'll always choose you.
+
+I love you so much.
+
+Forever yours,
+
+❤️ Cristel Joy
+
+</p>
+
+`;
+
+});
+
+// ==========================================
+// CONFETTI
+// ==========================================
+
+function launchConfetti(){
+
+const colors=[
+
+"#ff4d6d",
+
+"#ffd60a",
+
+"#4ea8ff",
+
+"#7bffb3",
+
+"#ffffff"
+
+];
+
+for(let i=0;i<180;i++){
+
+const piece=document.createElement("div");
+
+piece.className="confetti";
+
+piece.style.left=Math.random()*100+"vw";
+
+piece.style.background=
+
+colors[Math.floor(Math.random()*colors.length)];
+
+piece.style.animationDuration=
+
+(Math.random()*2+2)+"s";
+
+piece.style.transform=
+
+"rotate("+Math.random()*360+"deg)";
+
+document.body.appendChild(piece);
+
+setTimeout(()=>{
+
+piece.remove();
+
+},4500);
+
+}
+
+}
