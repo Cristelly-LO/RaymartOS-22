@@ -1,63 +1,92 @@
-/* =====================================================
-GALAXY S26 BIRTHDAY EDITION
-style.css - PART 1
-===================================================== */
+/* =========================================================
+   GALAXY S26 BIRTHDAY EDITION
+   PREMIUM UI
+========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
+:root{
+
+--bg:#070b16;
+--surface:rgba(255,255,255,.08);
+--surface2:rgba(255,255,255,.14);
+
+--border:rgba(255,255,255,.16);
+
+--blue:#5ea8ff;
+
+--blue2:#2979ff;
+
+--text:#ffffff;
+
+--shadow:
+0 20px 60px rgba(0,0,0,.45);
+
+--radius:34px;
+
+}
+
+/* ========================================================= */
+
 *{
+
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+
+font-family:Poppins,sans-serif;
+
 }
 
-html,body{
+html,
+body{
 
 width:100%;
 height:100%;
+
 overflow:hidden;
 
-background:#050816;
+background:#000;
 
-color:#fff;
+color:var(--text);
 
 }
+
+/* ========================================================= */
 
 body{
 
 display:flex;
+
 justify-content:center;
+
 align-items:center;
 
 }
 
-/* =====================================================
-PHONE
-===================================================== */
+/* ========================================================= */
 
 #phone{
 
 position:relative;
 
 width:390px;
+
 height:844px;
 
 overflow:hidden;
 
 border-radius:45px;
 
-background:#000;
+background:var(--bg);
 
 box-shadow:
 
-0 35px 80px rgba(0,0,0,.45);
+0 40px 90px rgba(0,0,0,.45);
 
 }
 
-/* =====================================================
-BACKGROUND
-===================================================== */
+/* ========================================================= */
 
 .background{
 
@@ -67,14 +96,20 @@ inset:0;
 
 background:
 
-linear-gradient(rgba(5,8,22,.55),rgba(5,8,22,.75)),
-url("wallpaper.png") center center/cover no-repeat;
+linear-gradient(rgba(7,11,22,.45),
+rgba(7,11,22,.78)),
+
+url("wallpaper.png")
+
+center center/
+
+cover no-repeat;
 
 z-index:-2;
 
 }
 
-.background::after{
+.background::before{
 
 content:"";
 
@@ -82,13 +117,13 @@ position:absolute;
 
 inset:0;
 
-backdrop-filter:blur(18px);
+backdrop-filter:
+
+blur(16px);
 
 }
 
-/* =====================================================
-SCREENS
-===================================================== */
+/* ========================================================= */
 
 .screen{
 
@@ -98,7 +133,7 @@ inset:0;
 
 display:none;
 
-padding:25px;
+padding:28px;
 
 }
 
@@ -112,9 +147,7 @@ animation:fade .45s ease;
 
 }
 
-/* =====================================================
-STATUS BAR
-===================================================== */
+/* ========================================================= */
 
 .statusBar,
 .homeStatus{
@@ -129,15 +162,13 @@ font-size:14px;
 
 font-weight:600;
 
-margin-bottom:30px;
+margin-bottom:35px;
 
 }
 
-/* =====================================================
-BOOT
-===================================================== */
+/* ========================================================= */
 
-.bootContainer{
+.boot{
 
 margin:auto;
 
@@ -145,37 +176,37 @@ text-align:center;
 
 }
 
-.samsungLogo{
+.samsung{
 
-font-size:48px;
+font-size:50px;
 
 font-weight:800;
 
 letter-spacing:-2px;
 
-margin-bottom:15px;
+margin-bottom:14px;
 
 }
 
-.bootContainer p{
+.boot p{
 
-opacity:.8;
+opacity:.75;
 
 margin-bottom:45px;
 
 }
 
-.progressBar{
+.loader{
 
-width:270px;
+width:280px;
 
 height:8px;
 
 border-radius:30px;
 
-overflow:hidden;
+background:rgba(255,255,255,.10);
 
-background:rgba(255,255,255,.15);
+overflow:hidden;
 
 }
 
@@ -189,15 +220,19 @@ width:0;
 
 height:100%;
 
-background:linear-gradient(90deg,#4da3ff,#7dd3fc);
+background:
+
+linear-gradient(90deg,
+
+var(--blue),
+
+#8dd7ff);
 
 }
 
-/* =====================================================
-LOCK SCREEN
-===================================================== */
+/* ========================================================= */
 
-.lockContainer{
+.lockContent{
 
 margin:auto;
 
@@ -207,9 +242,9 @@ text-align:center;
 
 }
 
-#clock{
+.time{
 
-font-size:92px;
+font-size:96px;
 
 font-weight:800;
 
@@ -219,31 +254,47 @@ letter-spacing:-5px;
 
 }
 
-.lockContainer h3{
+.ampm{
 
-font-size:28px;
+font-size:30px;
 
 font-weight:500;
 
-margin-top:-10px;
+margin-top:-8px;
 
 }
 
-#date{
+.date{
 
-margin:15px 0 35px;
-
-opacity:.8;
+margin-top:15px;
 
 font-size:18px;
 
+opacity:.82;
+
 }
 
-/* =====================================================
-LOCK WIDGET
-===================================================== */
+.weather{
 
-.lockWidget{
+margin:30px auto;
+
+padding:10px 18px;
+
+width:max-content;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.10);
+
+backdrop-filter:blur(20px);
+
+font-size:14px;
+
+}
+
+/* ========================================================= */
+
+.widget{
 
 display:flex;
 
@@ -253,35 +304,33 @@ gap:18px;
 
 padding:18px;
 
+margin-top:25px;
+
 border-radius:30px;
 
-background:rgba(255,255,255,.15);
+background:var(--surface);
 
-backdrop-filter:blur(25px);
+backdrop-filter:blur(28px);
 
--webkit-backdrop-filter:blur(25px);
+border:1px solid var(--border);
 
-border:1px solid rgba(255,255,255,.18);
-
-margin-top:20px;
+box-shadow:var(--shadow);
 
 }
 
-.lockWidget img{
+.widget img{
 
-width:90px;
+width:105px;
 
-height:90px;
+height:105px;
 
 border-radius:22px;
 
 object-fit:cover;
 
-box-shadow:0 15px 35px rgba(0,0,0,.35);
-
 }
 
-.lockWidget span{
+.widget span{
 
 display:inline-block;
 
@@ -293,49 +342,47 @@ background:rgba(255,255,255,.12);
 
 font-size:12px;
 
-margin-bottom:8px;
+margin-bottom:10px;
 
 }
 
-.lockWidget h2{
+.widget h2{
 
-font-size:22px;
+font-size:24px;
 
 margin-bottom:6px;
 
 }
 
-.lockWidget p{
+.widget p{
 
-font-size:15px;
+line-height:1.6;
 
 opacity:.85;
 
-line-height:1.5;
-
 }
 
-.unlockText{
+/* ========================================================= */
 
-text-align:center;
+.swipe{
 
 margin-top:auto;
 
-margin-bottom:15px;
+text-align:center;
 
 font-size:15px;
 
-opacity:.8;
+opacity:.75;
 
 animation:float 2s infinite;
 
 }
 
-/* =====================================================
-CARD
-===================================================== */
+/* =========================================================
+FACE ID
+========================================================= */
 
-.card{
+.faceContainer{
 
 margin:auto;
 
@@ -343,107 +390,31 @@ width:100%;
 
 max-width:360px;
 
-padding:30px;
-
-border-radius:32px;
-
-background:rgba(255,255,255,.12);
-
-backdrop-filter:blur(28px);
-
--webkit-backdrop-filter:blur(28px);
-
-border:1px solid rgba(255,255,255,.18);
-
 text-align:center;
 
 }
 
-.card h2{
-
-margin:18px 0 10px;
-
-font-size:28px;
-
-}
-
-.card p{
-
-opacity:.85;
-
-line-height:1.7;
-
-}
-
-.card ul{
-
-margin:25px 0;
-
-padding:0;
-
-}
-
-.card li{
-
-list-style:none;
-
-padding:10px 0;
-
-}
-
-button{
-
-width:100%;
-
-padding:16px;
-
-border:none;
-
-border-radius:18px;
-
-background:#2f80ff;
-
-color:white;
-
-font-size:17px;
-
-font-weight:600;
-
-cursor:pointer;
-
-transition:.3s;
-
-}
-
-button:hover{
-
-transform:translateY(-2px);
-
-}
-
-/* =====================================================
-FACE SCANNER
-===================================================== */
-
-.scanner{
+.faceCircle{
 
 position:relative;
 
-width:150px;
+width:180px;
 
-height:150px;
+height:180px;
 
-margin:0 auto 20px;
+margin:auto;
 
 border-radius:50%;
 
-border:4px solid #58a6ff;
-
-overflow:hidden;
+border:4px solid rgba(94,168,255,.55);
 
 box-shadow:
 
-0 0 30px rgba(88,166,255,.5);
+0 0 45px rgba(94,168,255,.35);
+
+overflow:hidden;
+
+background:rgba(255,255,255,.03);
 
 }
 
@@ -457,27 +428,307 @@ width:100%;
 
 height:6px;
 
-background:#7dd3fc;
+background:#8dd7ff;
 
-box-shadow:0 0 15px #7dd3fc;
+box-shadow:0 0 20px #8dd7ff;
 
 animation:scan 2s linear infinite;
 
 }
 
-.profilePhoto{
+.scanCorners span{
 
-width:150px;
+position:absolute;
 
-height:150px;
+width:30px;
+
+height:30px;
+
+border:4px solid #8dd7ff;
+
+}
+
+.scanCorners span:nth-child(1){
+
+top:12px;
+left:12px;
+
+border-right:none;
+border-bottom:none;
+
+}
+
+.scanCorners span:nth-child(2){
+
+top:12px;
+right:12px;
+
+border-left:none;
+border-bottom:none;
+
+}
+
+.scanCorners span:nth-child(3){
+
+bottom:12px;
+left:12px;
+
+border-right:none;
+border-top:none;
+
+}
+
+.scanCorners span:nth-child(4){
+
+bottom:12px;
+right:12px;
+
+border-left:none;
+border-top:none;
+
+}
+
+.faceContainer h2{
+
+margin-top:35px;
+
+font-size:30px;
+
+}
+
+.faceContainer p{
+
+margin-top:10px;
+
+opacity:.8;
+
+}
+
+.progress{
+
+width:100%;
+
+height:8px;
+
+margin-top:35px;
+
+background:rgba(255,255,255,.12);
+
+border-radius:30px;
+
+overflow:hidden;
+
+}
+
+#faceStatus{
+
+display:block;
+
+margin-top:20px;
+
+font-weight:500;
+
+opacity:.9;
+
+}
+
+/* =========================================================
+GLASS CARD
+========================================================= */
+
+.glassCard{
+
+margin:auto;
+
+width:100%;
+
+padding:32px;
+
+border-radius:34px;
+
+background:rgba(255,255,255,.10);
+
+backdrop-filter:blur(30px);
+
+-webkit-backdrop-filter:blur(30px);
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+text-align:center;
+
+}
+
+.glassCard h2{
+
+font-size:30px;
+
+margin-bottom:10px;
+
+}
+
+.glassCard p{
+
+line-height:1.7;
+
+opacity:.85;
+
+}
+
+.updateIcon{
+
+font-size:56px;
+
+margin-bottom:20px;
+
+}
+
+.updateList{
+
+margin:28px 0;
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+}
+
+.updateItem{
+
+padding:14px 18px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,.08);
+
+text-align:left;
+
+}
+
+.glassCard button{
+
+width:100%;
+
+padding:18px;
+
+border:none;
+
+border-radius:18px;
+
+font-size:17px;
+
+font-weight:700;
+
+background:linear-gradient(135deg,#5ea8ff,#2979ff);
+
+color:white;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.glassCard button:hover{
+
+transform:translateY(-2px);
+
+}
+
+/* =========================================================
+INSTALL
+========================================================= */
+
+.installCircle{
+
+position:relative;
+
+width:190px;
+
+height:190px;
+
+margin:30px auto;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.installCircle span{
+
+position:absolute;
+
+font-size:34px;
+
+font-weight:700;
+
+}
+
+.installCircle svg{
+
+width:190px;
+
+height:190px;
+
+transform:rotate(-90deg);
+
+}
+
+.installCircle circle{
+
+fill:none;
+
+stroke-width:10;
+
+cx:95;
+
+cy:95;
+
+r:82;
+
+stroke:rgba(255,255,255,.10);
+
+}
+
+#circleProgress{
+
+stroke:#5ea8ff;
+
+stroke-linecap:round;
+
+stroke-dasharray:515;
+
+stroke-dashoffset:515;
+
+transition:.3s;
+
+}
+
+/* =========================================================
+MATCH
+========================================================= */
+
+.profile{
+
+width:165px;
+
+height:165px;
 
 border-radius:50%;
 
 object-fit:cover;
 
-margin-bottom:20px;
+margin:auto;
 
-border:4px solid rgba(255,255,255,.4);
+border:5px solid rgba(255,255,255,.25);
+
+box-shadow:0 15px 40px rgba(0,0,0,.35);
 
 }
 
@@ -485,21 +736,39 @@ border:4px solid rgba(255,255,255,.4);
 
 display:inline-block;
 
+margin-top:25px;
+
 padding:8px 16px;
 
-border-radius:20px;
+border-radius:30px;
 
 background:rgba(255,255,255,.12);
 
-margin-bottom:15px;
-
 font-size:13px;
+
+font-weight:600;
 
 }
 
-/* =====================================================
+.loveProgress{
+
+margin:25px 0;
+
+width:100%;
+
+height:10px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.10);
+
+overflow:hidden;
+
+}
+
+/* =========================================================
 HOME
-===================================================== */
+========================================================= */
 
 .home{
 
@@ -513,15 +782,19 @@ height:100%;
 
 .homeClock{
 
-font-size:86px;
+font-size:92px;
 
 font-weight:800;
 
-letter-spacing:-4px;
-
 line-height:1;
 
-margin-top:10px;
+letter-spacing:-5px;
+
+margin-top:5px;
+
+text-shadow:
+
+0 10px 30px rgba(0,0,0,.35);
 
 }
 
@@ -529,49 +802,61 @@ margin-top:10px;
 
 font-size:18px;
 
-opacity:.85;
+opacity:.82;
 
 margin-bottom:25px;
 
 }
 
+/* =========================================================
+BIRTHDAY WIDGET
+========================================================= */
+
 .birthdayWidget{
 
 display:flex;
+
+align-items:center;
 
 gap:18px;
 
 padding:18px;
 
-border-radius:30px;
-
-background:rgba(255,255,255,.15);
-
-backdrop-filter:blur(28px);
-
--webkit-backdrop-filter:blur(28px);
-
-border:1px solid rgba(255,255,255,.20);
-
 margin-bottom:35px;
+
+border-radius:34px;
+
+background:rgba(255,255,255,.10);
+
+backdrop-filter:blur(30px);
+
+-webkit-backdrop-filter:blur(30px);
+
+border:1px solid rgba(255,255,255,.16);
+
+box-shadow:
+
+0 25px 60px rgba(0,0,0,.35);
 
 }
 
 .widgetImage{
 
-width:105px;
+width:110px;
 
-height:105px;
+height:110px;
 
 border-radius:24px;
 
 object-fit:cover;
 
-box-shadow:0 15px 35px rgba(0,0,0,.35);
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.35);
 
 }
 
-.widgetContent{
+.widgetInfo{
 
 flex:1;
 
@@ -583,43 +868,47 @@ justify-content:center;
 
 }
 
-.widgetContent span{
+.widgetInfo span{
 
-font-size:12px;
+display:inline-block;
+
+width:max-content;
 
 padding:6px 12px;
 
-background:rgba(255,255,255,.12);
-
 border-radius:20px;
 
-width:max-content;
+background:rgba(255,255,255,.12);
+
+font-size:12px;
 
 margin-bottom:10px;
 
 }
 
-.widgetContent h2{
+.widgetInfo h2{
 
 font-size:24px;
 
-margin-bottom:8px;
+line-height:1.2;
+
+margin-bottom:10px;
 
 }
 
-.widgetContent p{
+.widgetInfo p{
 
 font-size:15px;
 
 line-height:1.6;
 
-opacity:.9;
+opacity:.85;
 
 }
 
-/* =====================================================
+/* =========================================================
 APPS
-===================================================== */
+========================================================= */
 
 .appsGrid{
 
@@ -629,7 +918,7 @@ grid-template-columns:repeat(3,1fr);
 
 gap:28px;
 
-padding:0 8px;
+padding:5px;
 
 }
 
@@ -640,8 +929,6 @@ display:flex;
 flex-direction:column;
 
 align-items:center;
-
-justify-content:center;
 
 cursor:pointer;
 
@@ -657,11 +944,11 @@ transform:translateY(-6px);
 
 .icon{
 
-width:72px;
+width:76px;
 
-height:72px;
+height:76px;
 
-border-radius:22px;
+border-radius:26px;
 
 display:flex;
 
@@ -671,23 +958,37 @@ align-items:center;
 
 font-size:34px;
 
-background:linear-gradient(180deg,#4da3ff,#1d6df2);
+background:
 
-box-shadow:0 15px 35px rgba(0,0,0,.35);
+linear-gradient(180deg,#5ea8ff,#2979ff);
 
-margin-bottom:10px;
+box-shadow:
+
+0 18px 35px rgba(0,0,0,.35);
+
+transition:.35s;
+
+}
+
+.app:hover .icon{
+
+transform:scale(1.06);
 
 }
 
 .app span{
 
+margin-top:10px;
+
 font-size:14px;
+
+font-weight:500;
 
 }
 
-/* =====================================================
+/* =========================================================
 DOCK
-===================================================== */
+========================================================= */
 
 .dock{
 
@@ -701,15 +1002,19 @@ align-items:center;
 
 padding:15px;
 
-border-radius:30px;
+border-radius:32px;
 
-background:rgba(255,255,255,.14);
+background:rgba(255,255,255,.12);
 
-backdrop-filter:blur(25px);
+backdrop-filter:blur(30px);
 
--webkit-backdrop-filter:blur(25px);
+-webkit-backdrop-filter:blur(30px);
 
-border:1px solid rgba(255,255,255,.15);
+border:1px solid rgba(255,255,255,.16);
+
+box-shadow:
+
+0 20px 40px rgba(0,0,0,.30);
 
 }
 
@@ -717,11 +1022,21 @@ border:1px solid rgba(255,255,255,.15);
 
 font-size:28px;
 
+cursor:pointer;
+
+transition:.3s;
+
 }
 
-/* =====================================================
+.dock div:hover{
+
+transform:scale(1.15);
+
+}
+
+/* =========================================================
 APP HEADER
-===================================================== */
+========================================================= */
 
 .appHeader{
 
@@ -729,9 +1044,9 @@ display:flex;
 
 align-items:center;
 
-gap:15px;
+gap:16px;
 
-margin-bottom:20px;
+margin-bottom:22px;
 
 }
 
@@ -743,41 +1058,55 @@ height:48px;
 
 padding:0;
 
+border:none;
+
 border-radius:50%;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(20px);
+
+color:#fff;
 
 font-size:22px;
 
+cursor:pointer;
+
 }
 
-.headerInfo{
+.chatUser{
 
 display:flex;
 
 align-items:center;
 
-gap:15px;
+gap:14px;
 
 }
 
-.chatProfile{
+.chatAvatar{
 
-width:52px;
+width:54px;
 
-height:52px;
+height:54px;
 
 border-radius:50%;
 
 object-fit:cover;
 
+border:2px solid rgba(255,255,255,.25);
+
 }
 
-.headerInfo h3{
+.chatUser h3{
 
 font-size:18px;
 
+margin-bottom:2px;
+
 }
 
-.headerInfo span{
+.chatUser span{
 
 font-size:13px;
 
@@ -785,9 +1114,9 @@ opacity:.7;
 
 }
 
-/* =====================================================
+/* =========================================================
 MESSAGES
-===================================================== */
+========================================================= */
 
 .chatArea{
 
@@ -795,13 +1124,21 @@ flex:1;
 
 overflow-y:auto;
 
+padding:10px 4px 20px;
+
 display:flex;
 
 flex-direction:column;
 
 gap:16px;
 
-padding-right:5px;
+scroll-behavior:smooth;
+
+}
+
+.chatArea::-webkit-scrollbar{
+
+display:none;
 
 }
 
@@ -811,17 +1148,25 @@ align-self:flex-start;
 
 max-width:82%;
 
-padding:16px 20px;
+padding:16px 18px 26px;
 
-border-radius:24px;
+border-radius:26px 26px 26px 8px;
 
-background:#2f80ff;
+background:linear-gradient(180deg,#5ea8ff,#2979ff);
 
-line-height:1.6;
+color:#fff;
 
-animation:messageIn .45s ease;
+font-size:15px;
+
+line-height:1.7;
 
 position:relative;
+
+box-shadow:
+
+0 12px 30px rgba(0,0,0,.25);
+
+animation:messageIn .45s ease;
 
 }
 
@@ -831,19 +1176,19 @@ content:"✓✓ 12:00 AM";
 
 position:absolute;
 
-bottom:8px;
-
 right:15px;
+
+bottom:8px;
 
 font-size:10px;
 
-opacity:.7;
+opacity:.75;
 
 }
 
-/* =====================================================
+/* =========================================================
 GALLERY
-===================================================== */
+========================================================= */
 
 .galleryGrid{
 
@@ -853,7 +1198,15 @@ grid-template-columns:repeat(2,1fr);
 
 gap:15px;
 
-overflow:auto;
+overflow-y:auto;
+
+padding-bottom:20px;
+
+}
+
+.galleryGrid::-webkit-scrollbar{
+
+display:none;
 
 }
 
@@ -861,15 +1214,19 @@ overflow:auto;
 
 width:100%;
 
-height:185px;
+height:190px;
 
 object-fit:cover;
 
-border-radius:20px;
-
-transition:.3s;
+border-radius:22px;
 
 cursor:pointer;
+
+transition:.35s;
+
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.25);
 
 }
 
@@ -879,9 +1236,9 @@ transform:scale(1.03);
 
 }
 
-/* =====================================================
+/* =========================================================
 MUSIC
-===================================================== */
+========================================================= */
 
 .musicPlayer{
 
@@ -893,37 +1250,67 @@ align-items:center;
 
 text-align:center;
 
+padding-top:15px;
+
 }
 
 .albumCover{
 
-width:240px;
+width:250px;
 
-height:240px;
+height:250px;
 
-border-radius:28px;
+border-radius:30px;
 
 object-fit:cover;
 
-margin-bottom:25px;
+box-shadow:
 
-box-shadow:0 20px 45px rgba(0,0,0,.4);
+0 25px 55px rgba(0,0,0,.35);
+
+margin-bottom:28px;
 
 }
 
-.musicProgress{
+.musicPlayer span{
+
+font-size:12px;
+
+letter-spacing:3px;
+
+opacity:.65;
+
+}
+
+.musicPlayer h2{
+
+margin-top:10px;
+
+font-size:32px;
+
+}
+
+.musicPlayer p{
+
+opacity:.75;
+
+margin-top:6px;
+
+}
+
+.musicBar{
 
 width:100%;
 
 height:7px;
 
-background:rgba(255,255,255,.12);
+border-radius:30px;
 
-border-radius:20px;
+background:rgba(255,255,255,.10);
 
 overflow:hidden;
 
-margin:25px 0 12px;
+margin:30px 0 12px;
 
 }
 
@@ -935,11 +1322,11 @@ height:100%;
 
 background:#fff;
 
+transition:.15s;
+
 }
 
 .musicTime{
-
-width:100%;
 
 display:flex;
 
@@ -949,27 +1336,41 @@ font-size:13px;
 
 opacity:.7;
 
+width:100%;
+
 }
 
 .controls{
 
 display:flex;
 
-gap:22px;
+gap:20px;
 
-margin-top:30px;
+margin-top:35px;
 
 }
 
 .controls button{
 
-width:68px;
+width:65px;
 
-height:68px;
+height:65px;
 
-padding:0;
+border:none;
 
 border-radius:50%;
+
+font-size:24px;
+
+background:rgba(255,255,255,.10);
+
+backdrop-filter:blur(20px);
+
+color:#fff;
+
+cursor:pointer;
+
+transition:.3s;
 
 }
 
@@ -979,7 +1380,7 @@ width:82px;
 
 height:82px;
 
-font-size:30px;
+font-size:32px;
 
 background:#fff;
 
@@ -987,41 +1388,75 @@ color:#111;
 
 }
 
-/* =====================================================
+.controls button:hover{
+
+transform:scale(1.08);
+
+}
+
+/* =========================================================
 BIRTHDAY
-===================================================== */
+========================================================= */
 
 .birthdayContent{
+
+height:100%;
 
 display:flex;
 
 flex-direction:column;
 
-align-items:center;
-
 justify-content:center;
 
-text-align:center;
+align-items:center;
 
-height:100%;
+text-align:center;
 
 }
 
 .giftBox{
 
-font-size:110px;
+font-size:120px;
 
 cursor:pointer;
 
-animation:giftFloat 2s infinite;
-
 margin-bottom:25px;
+
+animation:giftFloat 2s ease-in-out infinite;
+
+transition:.3s;
 
 }
 
-/* =====================================================
+.giftBox:hover{
+
+transform:scale(1.08);
+
+}
+
+.birthdayContent h2{
+
+font-size:34px;
+
+margin-bottom:15px;
+
+}
+
+.birthdayContent p{
+
+font-size:17px;
+
+line-height:1.8;
+
+opacity:.85;
+
+max-width:320px;
+
+}
+
+/* =========================================================
 SETTINGS
-===================================================== */
+========================================================= */
 
 .settingsList{
 
@@ -1039,19 +1474,59 @@ display:flex;
 
 justify-content:space-between;
 
-padding:18px;
+align-items:center;
 
-border-radius:20px;
+padding:18px 20px;
 
-background:rgba(255,255,255,.12);
+border-radius:22px;
 
-backdrop-filter:blur(20px);
+background:rgba(255,255,255,.10);
+
+backdrop-filter:blur(24px);
+
+border:1px solid rgba(255,255,255,.12);
 
 }
 
-/* =====================================================
+.setting span{
+
+opacity:.8;
+
+}
+
+.setting strong{
+
+font-weight:600;
+
+}
+
+/* =========================================================
+CONFETTI
+========================================================= */
+
+.confetti{
+
+position:fixed;
+
+top:-30px;
+
+width:10px;
+
+height:18px;
+
+border-radius:4px;
+
+pointer-events:none;
+
+animation:confettiFall linear forwards;
+
+z-index:9999;
+
+}
+
+/* =========================================================
 ANIMATIONS
-===================================================== */
+========================================================= */
 
 @keyframes fade{
 
@@ -1083,7 +1558,7 @@ top:-10px;
 
 100%{
 
-top:150px;
+top:185px;
 
 }
 
@@ -1115,7 +1590,7 @@ transform:translateY(0);
 
 50%{
 
-transform:translateY(-12px);
+transform:translateY(-15px);
 
 }
 
@@ -1141,9 +1616,37 @@ transform:translateY(0);
 
 }
 
-/* =====================================================
+@keyframes confettiFall{
+
+0%{
+
+transform:
+
+translateY(-20px)
+
+rotate(0deg);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+
+translateY(110vh)
+
+rotate(720deg);
+
+opacity:0;
+
+}
+
+}
+
+/* =========================================================
 RESPONSIVE
-===================================================== */
+========================================================= */
 
 @media (max-width:430px){
 
