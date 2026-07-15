@@ -1,967 +1,1337 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <!-- ==========================================================
+         GALAXY S26 ❤️ RAYMART EDITION
+         Created by Cristel Joy ❤️
+         ========================================================== -->
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width,initial-scale=1.0">
+    <title>Galaxy S26 ❤️ Raymart Edition</title>
 
-<title>Galaxy S26 Birthday Edition</title>
+    <meta name="theme-color" content="#090b12">
+    <meta name="color-scheme" content="dark">
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-rel="stylesheet">
-
-<link rel="stylesheet"
-href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div id="phone">
+<div id="app">
 
-<div class="background"></div>
+    <!-- ===================================== -->
+    <!-- WALLPAPER -->
+    <!-- ===================================== -->
 
-<!-- ================================= -->
-<!-- BOOT -->
-<!-- ================================= -->
+    <div id="wallpaper">
+        <img src="wallpaper.png" alt="Wallpaper">
+        <div class="wallpaper-overlay"></div>
+    </div>
 
-<section id="bootScreen"
-class="screen active">
+    <!-- ===================================== -->
+    <!-- PHONE FRAME -->
+    <!-- ===================================== -->
 
-<div class="boot">
+    <div id="phone">
 
-<div class="samsung">
+        <div class="phone-glass"></div>
 
-Galaxy S26
+        <div class="status-bar">
+            <span id="statusTime">12:00</span>
 
-</div>
+            <div class="status-icons">
 
-<p>
+                <svg viewBox="0 0 24 24" class="status-icon">
+                    <path d="M2 18h2v2H2zm4-3h2v5H6zm4-4h2v9h-2zm4-3h2v12h-2zm4-5h2v17h-2"/>
+                </svg>
 
-Birthday Edition
+                <svg viewBox="0 0 24 24" class="status-icon">
+                    <path d="M2 8c5-5 15-5 20 0-5-2-15-2-20 0zm3 4c3-3 11-3 14 0-3-1-11-1-14 0zm4 4c2-1 4-1 6 0"/>
+                </svg>
 
-</p>
+                <svg viewBox="0 0 24 24" class="status-icon">
+                    <path d="M2 8h18v8H2z"/>
+                    <path d="M21 10h1v4h-1z"/>
+                </svg>
 
-<div class="loader">
+            </div>
+        </div>
 
-<div id="bootFill"></div>
+        <!-- ===================================== -->
+        <!-- BOOT SCREEN -->
+        <!-- ===================================== -->
 
-</div>
+        <section id="bootScreen" class="screen active">
 
-</div>
+            <div class="boot-glow"></div>
+
+            <div class="boot-content">
+
+                <div class="boot-logo">
+
+                    <div class="logo-ring"></div>
+
+                    <h1>GALAXY</h1>
+
+                    <span>Raymart Edition</span>
+
+                    <small>Created with ❤️ by Cristel Joy</small>
+
+                </div>
+
+                <div class="boot-progress">
+
+                    <div class="progress-track">
+
+                        <div
+                            id="bootFill"
+                            class="progress-fill">
+                        </div>
+
+                    </div>
+
+                    <p id="bootText">
+
+                        Initializing Birthday Experience...
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="particles">
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+        </section>
+
+        <!-- ===================================== -->
+        <!-- LOCK SCREEN -->
+        <!-- ===================================== -->
+
+        <section id="lockScreen" class="screen">
+
+            <div class="lock-blur"></div>
+
+            <div class="lock-header">
+
+                <div
+                    id="lockClock"
+                    class="lock-clock">
+
+                    12:00
+
+                </div>
+
+                <div
+                    id="lockDate"
+                    class="lock-date">
+
+                    Thursday, July 16
+
+                </div>
+
+            </div>
+
+            <div class="weather-card glass">
+
+                <div>
+
+                    <h2>26°</h2>
+
+                    <span>Cloudy</span>
+
+                </div>
+
+                <div class="weather-location">
+
+                    📍 Tanay, Rizal
+
+                </div>
+
+            </div>
+
+            <div class="birthday-card glass">
+
+                <img
+                    src="us.jpeg"
+                    alt="Cristel & Raymart">
+
+                <div>
+
+                    <h2>
+
+                        ❤️ Tomorrow starts now.
+
+                    </h2>
+
+                    <p>
+
+                        A beautiful surprise is waiting for you.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div id="unlockHint">
+
+                Tap anywhere to unlock
+
+            </div>
+
+        </section>
+
+        <!-- ===================================== -->
+        <!-- FACE UNLOCK -->
+        <!-- ===================================== -->
+
+        <section
+            id="faceUnlock"
+            class="screen">
+
+            <div class="scanner">
+
+                <div class="scanner-ring"></div>
+
+                <div class="scanner-ring second"></div>
+
+                <div class="scanner-line"></div>
+
+                <div class="scanner-center">
+
+                    <svg
+                        class="face-svg"
+                        viewBox="0 0 64 64">
+
+                        <circle
+                            cx="32"
+                            cy="32"
+                            r="22"/>
+
+                    </svg>
+
+                </div>
+
+            </div>
+
+            <div
+                id="scannerStatus"
+                class="scanner-status">
+
+                Scanning Face...
+
+            </div>
+
+        </section>
+
+        <!-- ===================================== -->
+        <!-- BIRTHDAY NOTIFICATION -->
+        <!-- ===================================== -->
+
+        <section
+            id="birthdayNotification"
+            class="screen">
+
+            <div class="notification glass">
+
+                <div class="notification-top">
+
+                    <h2>
+
+                        Happy Birthday! 🎉
+
+                    </h2>
+
+                    <span>
+
+                        Now
+
+                    </span>
+
+                </div>
+
+                <p>
+
+                    Today is July 16.
+
+                    A special surprise has been prepared just for you.
+
+                </p>
+
+                <div class="notification-actions">
+
+                    <button
+                        id="dismissBtn"
+                        class="secondary-btn">
+
+                        Dismiss
+
+                    </button>
+
+                    <button
+                        id="openBtn"
+                        class="primary-btn">
+
+                        Open
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+<section id="softwareUpdate" class="screen">
+
+    <div class="update-container glass">
+
+        <div class="update-icon">
+
+            <svg viewBox="0 0 64 64">
+
+                <circle cx="32" cy="32" r="28"></circle>
+
+                <path d="M32 18v18"></path>
+
+                <path d="M24 30l8 8 8-8"></path>
+
+            </svg>
+
+        </div>
+
+        <div class="update-title">
+
+            Birthday Edition 22.0
+
+        </div>
+
+        <div class="update-subtitle">
+
+            A special update created exclusively for Raymart.
+
+        </div>
+
+        <div class="feature-list">
+
+            <div class="feature-item">
+
+                <span class="feature-dot"></span>
+
+                <div>
+
+                    <h3>Love Optimization</h3>
+
+                    <p>Your heart is now running at maximum happiness.</p>
+
+                </div>
+
+            </div>
+
+            <div class="feature-item">
+
+                <span class="feature-dot"></span>
+
+                <div>
+
+                    <h3>Memory Engine</h3>
+
+                    <p>Your favorite moments are now beautifully organized.</p>
+
+                </div>
+
+            </div>
+
+            <div class="feature-item">
+
+                <span class="feature-dot"></span>
+
+                <div>
+
+                    <h3>Birthday Experience</h3>
+
+                    <p>Unlock today's surprise made with love.</p>
+
+                </div>
+
+            </div>
+
+            <div class="feature-item">
+
+                <span class="feature-dot"></span>
+
+                <div>
+
+                    <h3>Forever Mode</h3>
+
+                    <p>Compatibility improvements and lifetime support.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button id="installBtn" class="primary-btn">
+
+            Install Now
+
+        </button>
+
+    </div>
 
 </section>
 
-<!-- ================================= -->
-<!-- LOCK -->
-<!-- ================================= -->
+<section id="installScreen" class="screen">
 
-<section id="lockScreen"
-class="screen">
+    <div class="install-wrapper">
 
-<div class="statusBar">
+        <div class="progress-ring">
 
-<span>
+            <svg width="220" height="220">
 
-11:59
+                <circle
+                    class="ring-bg"
+                    cx="110"
+                    cy="110"
+                    r="90">
 
-</span>
+                </circle>
 
-<span>
+                <circle
+                    id="installRing"
+                    class="ring-progress"
+                    cx="110"
+                    cy="110"
+                    r="90">
 
-📶 5G 🔋100%
+                </circle>
 
-</span>
+            </svg>
 
-</div>
+            <div class="progress-center">
 
-<div class="lockContent">
+                <span id="installPercent">
 
-<div class="time">
+                    0%
 
-11:59
+                </span>
 
-</div>
+            </div>
 
-<div class="ampm">
+        </div>
 
-PM
+        <div
+            id="installStatus"
+            class="install-status">
 
-</div>
+            Preparing Memories...
 
-<div class="date">
+        </div>
 
-Wednesday
+        <div class="install-steps">
 
-July 15
+            <div class="step active">
 
-</div>
+                Preparing Memories
 
-<div class="weather">
+            </div>
 
-☁️ 26°
+            <div class="step">
 
-Morong
+                Downloading Love
 
-</div>
+            </div>
 
-<div class="widget">
+            <div class="step">
 
-<img
-src="us.jpeg">
+                Installing Happiness
 
-<div>
+            </div>
 
-<span>
+            <div class="step">
 
-❤️ Birthday Edition
+                Building Forever
 
-</span>
+            </div>
 
-<h2>
+            <div class="step">
 
-Tomorrow starts now.
+                Almost Ready
 
-</h2>
+            </div>
 
-<p>
+        </div>
 
-One minute left
-until your birthday.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="swipe">
-
-Tap Anywhere To Unlock
-
-</div>
+    </div>
 
 </section>
 
-<!-- ================================= -->
-<!-- FACE RECOGNITION -->
-<!-- ================================= -->
+<section id="perfectMatch" class="screen">
 
-<section id="faceScreen"
-class="screen">
+    <div class="match-card glass">
 
-<div class="faceContainer">
+        <div class="match-photo">
 
-<div class="faceCircle">
+            <img
+                src="me.jpeg"
+                alt="Cristel">
 
-<div class="scanLine"></div>
+        </div>
 
-<div class="scanCorners">
+        <div class="heart-pulse">
 
-<span></span>
-<span></span>
-<span></span>
-<span></span>
+            ❤
 
-</div>
+        </div>
 
-</div>
+        <h2>
 
-<h2>
+            Perfect Match
 
-Face Recognition
+        </h2>
 
-</h2>
+        <div class="compatibility">
 
-<p>
+            <div class="compatibility-track">
 
-Scanning owner...
+                <div
+                    id="loveFill"
+                    class="compatibility-fill">
 
-</p>
+                </div>
 
-<div class="progress">
+            </div>
 
-<div id="faceFill"></div>
+            <div
+                id="lovePercent"
+                class="compatibility-text">
 
-</div>
+                100%
 
-<span id="faceStatus">
+            </div>
 
-Looking for Raymart...
+        </div>
 
-</span>
+        <div class="verified-badge">
 
-</div>
+            ✔ Verified Soulmate
 
-</section>
+        </div>
 
-<!-- ================================= -->
-<!-- SOFTWARE UPDATE -->
-<!-- ================================= -->
+        <button
+            id="restartBtn"
+            class="primary-btn">
 
-<section id="updateScreen"
-class="screen">
+            Restart Device
 
-<div class="glassCard">
+        </button>
 
-<div class="updateIcon">
-
-⬇️
-
-</div>
-
-<h2>
-
-Galaxy Software Update
-
-</h2>
-
-<p>
-
-Version
-
-<b>Birthday Edition 22.0</b>
-
-is ready to install.
-
-</p>
-
-<div class="updateList">
-
-<div class="updateItem">
-
-❤️ Love Optimization
-
-</div>
-
-<div class="updateItem">
-
-🎂 Birthday Experience
-
-</div>
-
-<div class="updateItem">
-
-📷 Memory Improvements
-
-</div>
-
-<div class="updateItem">
-
-⚡ Performance Boost
-
-</div>
-
-</div>
-
-<button id="installBtn">
-
-Install Now
-
-</button>
-
-</div>
+    </div>
 
 </section>
 
-<!-- ================================= -->
-<!-- INSTALLING -->
-<!-- ================================= -->
+<section id="restartScreen" class="screen">
 
-<section id="installScreen"
-class="screen">
+    <div class="restart-content">
 
-<div class="glassCard">
+        <div class="restart-logo">
 
-<h2>
+            GALAXY
 
-Installing...
+        </div>
 
-</h2>
+        <div class="restart-ring">
 
-<div class="installCircle">
+            <span></span>
 
-<span id="installPercent">
+        </div>
 
-0%
+        <div class="restart-text">
 
-</span>
+            Restarting Birthday Edition...
 
-<svg>
+        </div>
 
-<circle></circle>
-
-<circle id="circleProgress"></circle>
-
-</svg>
-
-</div>
-
-<p id="installStatus">
-
-Preparing files...
-
-</p>
-
-</div>
+    </div>
 
 </section>
 
-<!-- ================================= -->
-<!-- PERFECT MATCH -->
-<!-- ================================= -->
+<section id="homeScreen" class="screen">
 
-<section id="matchScreen"
-class="screen">
+    <div class="home-overlay"></div>
 
-<div class="glassCard">
+    <div class="home-header">
 
-<img
-src="me.jpeg"
-class="profile">
+        <div class="home-clock" id="homeClock">
+            12:00
+        </div>
 
-<span class="verified">
+        <div class="home-date" id="homeDate">
+            Thursday, July 16
+        </div>
 
-✔ Verified Soulmate
+    </div>
 
-</span>
+    <div class="birthday-widget glass">
 
-<h2>
+        <div class="birthday-widget-image">
 
-Cristel Joy
+            <img
+                src="us.jpeg"
+                alt="Raymart & Cristel">
 
-</h2>
+        </div>
 
-<p>
+        <div class="birthday-widget-content">
 
-Perfect Match Found
+            <h2>
 
-</p>
+                ❤️ Happy Birthday Hubby
 
-<div class="loveProgress">
+            </h2>
 
-<div id="loveFill">
+            <p>
 
-</div>
+                Every app inside this phone
+                was made with love.
 
-</div>
+            </p>
 
-<h3>
+        </div>
 
-Compatibility
+    </div>
 
-100%
+    <div class="apps-grid">
 
-</h3>
+        <button
+            class="app-icon"
+            data-app="messages">
 
-</div>
+            <div class="icon-circle">
+
+                <svg viewBox="0 0 64 64">
+
+                    <path d="M10 16h44v26H24l-10 10V16z"/>
+
+                </svg>
+
+            </div>
+
+            <span>
+
+                Messages
+
+            </span>
+
+        </button>
+
+        <button
+            class="app-icon"
+            data-app="gallery">
+
+            <div class="icon-circle">
+
+                <svg viewBox="0 0 64 64">
+
+                    <rect
+                        x="10"
+                        y="12"
+                        width="44"
+                        height="40"
+                        rx="8"/>
+
+                    <circle
+                        cx="22"
+                        cy="24"
+                        r="4"/>
+
+                    <path
+                        d="M18 42l10-10 8 8 8-10 8 12"/>
+
+                </svg>
+
+            </div>
+
+            <span>
+
+                Gallery
+
+            </span>
+
+        </button>
+
+        <button
+            class="app-icon"
+            data-app="music">
+
+            <div class="icon-circle">
+
+                <svg viewBox="0 0 64 64">
+
+                    <path d="M40 14v26"/>
+
+                    <circle cx="24" cy="44" r="6"/>
+
+                    <circle cx="40" cy="40" r="6"/>
+
+                    <path d="M40 14l12 4"/>
+
+                </svg>
+
+            </div>
+
+            <span>
+
+                Music
+
+            </span>
+
+        </button>
+
+        <button
+            class="app-icon"
+            data-app="birthday">
+
+            <div class="icon-circle">
+
+                <svg viewBox="0 0 64 64">
+
+                    <rect
+                        x="14"
+                        y="26"
+                        width="36"
+                        height="24"
+                        rx="4"/>
+
+                    <path d="M32 14v36"/>
+
+                    <path d="M14 34h36"/>
+
+                </svg>
+
+            </div>
+
+            <span>
+
+                Birthday
+
+            </span>
+
+        </button>
+
+        <button
+            class="app-icon"
+            data-app="memories">
+
+            <div class="icon-circle">
+
+                <svg viewBox="0 0 64 64">
+
+                    <path
+                        d="M20 18h24v28H20z"/>
+
+                    <path
+                        d="M20 28h24"/>
+
+                    <path
+                        d="M20 38h24"/>
+
+                </svg>
+
+            </div>
+
+            <span>
+
+                Memories
+
+            </span>
+
+        </button>
+
+        <button
+            class="app-icon"
+            data-app="settings">
+
+            <div class="icon-circle">
+
+                <svg viewBox="0 0 64 64">
+
+                    <circle
+                        cx="32"
+                        cy="32"
+                        r="8"/>
+
+                    <path
+                        d="M32 12v8M32 44v8M12 32h8M44 32h8M18 18l6 6M40 40l6 6M18 46l6-6M40 24l6-6"/>
+
+                </svg>
+
+            </div>
+
+            <span>
+
+                Settings
+
+            </span>
+
+        </button>
+
+    </div>
+
+    <div class="dock glass">
+
+        <button class="dock-app">
+
+            <svg viewBox="0 0 64 64">
+
+                <path d="M20 14h24v36H20z"/>
+
+            </svg>
+
+        </button>
+
+        <button class="dock-app">
+
+            <svg viewBox="0 0 64 64">
+
+                <path d="M10 16h44v26H24l-10 10V16z"/>
+
+            </svg>
+
+        </button>
+
+        <button class="dock-app">
+
+            <svg viewBox="0 0 64 64">
+
+                <circle
+                    cx="32"
+                    cy="32"
+                    r="14"/>
+
+            </svg>
+
+        </button>
+
+        <button class="dock-app">
+
+            <svg viewBox="0 0 64 64">
+
+                <circle
+                    cx="32"
+                    cy="32"
+                    r="18"/>
+
+                <path
+                    d="M32 18v14l10 6"/>
+
+            </svg>
+
+        </button>
+
+    </div>
 
 </section>
 
-<!-- ================================= -->
-<!-- RESTART -->
-<!-- ================================= -->
+<section id="messagesApp" class="app-screen">
 
-<section id="restartScreen"
-class="screen">
+    <div class="app-header glass">
 
-<div class="boot">
+        <button class="back-btn" data-close="messages">
 
-<div class="samsung">
+            <svg viewBox="0 0 24 24">
 
-Galaxy S26
+                <path d="M15 6l-6 6 6 6"/>
 
-</div>
+            </svg>
 
-<p>
+        </button>
 
-Restarting Device...
+        <h2>
 
-</p>
+            Messages
 
-<div class="loader">
+        </h2>
 
-<div id="restartFill"></div>
+    </div>
 
-</div>
+    <div class="messages-container">
 
-</div>
+        <div class="message received">
+
+            <span class="message-text">
+
+                Hi love. ❤️
+
+            </span>
+
+            <span class="message-time">
+
+                11:40 PM
+
+            </span>
+
+        </div>
+
+        <div class="message sent">
+
+            <span class="message-text">
+
+                Hi hubby! Kumusta ka?
+
+            </span>
+
+            <span class="message-time">
+
+                11:41 PM
+
+            </span>
+
+            <span class="message-status">
+
+                Delivered
+
+            </span>
+
+        </div>
+
+        <div id="typingBubble" class="typing-bubble">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+        <div id="conversation"></div>
+
+    </div>
 
 </section>
 
-<!-- ================================= -->
-<!-- HOME -->
-<!-- ================================= -->
+<section id="galleryApp" class="app-screen">
 
-<section id="homeScreen"
-class="screen">
+    <div class="app-header glass">
 
-<div class="home">
+        <button class="back-btn" data-close="gallery">
 
-<div class="homeStatus">
+            <svg viewBox="0 0 24 24">
 
-<span>
+                <path d="M15 6l-6 6 6 6"/>
 
-12:00
+            </svg>
 
-</span>
+        </button>
 
-<span>
+        <h2>
 
-📶 5G 🔋100%
+            Gallery
 
-</span>
+        </h2>
 
-</div>
+    </div>
 
-<div class="homeClock">
+    <div class="gallery-grid">
 
-12:00
+        <div class="gallery-item">
 
-</div>
+            <img
+                src="us.jpeg"
+                alt="Memory 1">
 
-<div class="homeDate">
+        </div>
 
-Thursday, July 16
+        <div class="gallery-item">
 
-</div>
+            <img
+                src="me.jpeg"
+                alt="Memory 2">
 
-<div class="birthdayWidget">
+        </div>
 
-<img
-src="us.JPEG"
-class="widgetImage">
+        <div class="gallery-item">
 
-<div class="widgetInfo">
+            <img
+                src="us.jpeg"
+                alt="Memory 3">
 
-<span>
+        </div>
 
-❤️ Birthday Edition
+        <div class="gallery-item">
 
-</span>
+            <img
+                src="me.jpeg"
+                alt="Memory 4">
 
-<h2>
+        </div>
 
-Happy Birthday,
-Hubby!
-
-</h2>
-
-<p>
-
-Every app inside this phone
-was made with love,
-especially for you.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="appsGrid">
-
-<div class="app"
-id="messagesApp">
-
-<div class="icon">
-
-💬
-
-</div>
-
-<span>
-
-Messages
-
-</span>
-
-</div>
-
-<div class="app"
-id="galleryApp">
-
-<div class="icon">
-
-🖼️
-
-</div>
-
-<span>
-
-Gallery
-
-</span>
-
-</div>
-
-<div class="app"
-id="musicApp">
-
-<div class="icon">
-
-🎵
-
-</div>
-
-<span>
-
-Music
-
-</span>
-
-</div>
-
-<div class="app"
-id="birthdayApp">
-
-<div class="icon">
-
-🎁
-
-</div>
-
-<span>
-
-Birthday
-
-</span>
-
-</div>
-
-<div class="app"
-id="settingsApp">
-
-<div class="icon">
-
-⚙️
-
-</div>
-
-<span>
-
-Settings
-
-</span>
-
-</div>
-
-</div>
-
-<div class="dock">
-
-<div>📞</div>
-
-<div>💬</div>
-
-<div>🌐</div>
-
-<div>📷</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- ================================= -->
-<!-- MESSAGES -->
-<!-- ================================= -->
+<section id="musicApp" class="app-screen">
 
-<section id="messagesScreen"
-class="screen">
+    <div class="app-header glass">
 
-<div class="appHeader">
+        <button class="back-btn" data-close="music">
 
-<button
-class="backBtn"
-id="messagesBack">
+            <svg viewBox="0 0 24 24">
 
-←
+                <path d="M15 6l-6 6 6 6"/>
 
-</button>
+            </svg>
 
-<div class="chatUser">
+        </button>
 
-<img
-src="me.jpeg"
-class="chatAvatar">
+        <h2>
 
-<div>
+            Music
 
-<h3>
+        </h2>
 
-Cristel ❤️
+    </div>
 
-</h3>
+    <div class="music-player">
 
-<span>
+        <div class="album-cover">
 
-Online
+            <img
+                src="us.jpeg"
+                alt="Album Cover">
 
-</span>
+        </div>
 
-</div>
+        <h3>
 
-</div>
+            14
 
-</div>
+        </h3>
 
-<div
-id="chatArea"
-class="chatArea">
+        <p>
 
-</div>
+            Our Song ❤️
+
+        </p>
+
+        <div class="music-progress">
+
+            <div
+                id="musicProgress"
+                class="music-progress-fill">
+
+            </div>
+
+        </div>
+
+        <div class="music-time">
+
+            <span id="currentTime">
+
+                0:00
+
+            </span>
+
+            <span id="duration">
+
+                0:00
+
+            </span>
+
+        </div>
+
+        <div class="music-controls">
+
+            <button id="playMusic">
+
+                <svg viewBox="0 0 24 24">
+
+                    <path d="M8 5l11 7-11 7z"/>
+
+                </svg>
+
+            </button>
+
+        </div>
+
+        <audio
+            id="audioPlayer"
+            src="bg.mp3">
+
+        </audio>
+
+    </div>
 
 </section>
 
-<!-- ================================= -->
-<!-- GALLERY -->
-<!-- ================================= -->
+<section id="memoriesApp" class="app-screen">
 
-<section id="galleryScreen"
-class="screen">
+    <div class="app-header glass">
 
-<div class="appHeader">
+        <button class="back-btn" data-close="memories">
 
-<button
-class="backBtn"
-id="galleryBack">
+            <svg viewBox="0 0 24 24">
+                <path d="M15 6l-6 6 6 6"/>
+            </svg>
 
-←
+        </button>
 
-</button>
+        <h2>Memories</h2>
 
-<h2>
+    </div>
 
-Gallery
+    <div class="timeline">
 
-</h2>
+        <div class="timeline-item">
 
-</div>
+            <div class="timeline-dot"></div>
 
-<div class="galleryGrid">
+            <div class="timeline-card glass">
 
-<img src="us.jpeg">
+                <h3>Our First Chat 💬</h3>
 
-<img src="me.jpeg">
+                <p>
+                    The day everything started.
+                    A simple conversation that became my favorite one.
+                </p>
 
-<img src="us.jpeg">
+            </div>
 
-<img src="me.jpeg">
+        </div>
 
-<img src="us.jpeg">
+        <div class="timeline-item">
 
-<img src="me.jpeg">
+            <div class="timeline-dot"></div>
 
-</div>
+            <div class="timeline-card glass">
+
+                <h3>Our First Call 📞</h3>
+
+                <p>
+                    Hearing your voice for the first time felt like home.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card glass">
+
+                <h3>Our First "I Love You" ❤️</h3>
+
+                <p>
+                    Three words that changed our lives forever.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card glass">
+
+                <h3>Our First Meeting 🥹</h3>
+
+                <p>
+                    Finally seeing you in person was everything I dreamed of.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-<!-- ================================= -->
-<!-- MUSIC -->
-<!-- ================================= -->
+<section id="birthdayApp" class="app-screen">
 
-<section id="musicScreen"
-class="screen">
+    <div class="app-header glass">
 
-<div class="appHeader">
+        <button class="back-btn" data-close="birthday">
 
-<button
-class="backBtn"
-id="musicBack">
+            <svg viewBox="0 0 24 24">
+                <path d="M15 6l-6 6 6 6"/>
+            </svg>
 
-←
+        </button>
 
-</button>
+        <h2>Birthday</h2>
 
-<h2>
+    </div>
 
-Music
+    <div class="birthday-content">
 
-</h2>
+        <div id="giftBox" class="gift-box">
 
-</div>
+            <div class="gift-lid"></div>
 
-<div class="musicPlayer">
+            <div class="gift-body"></div>
 
-<img
-src="us.jpeg"
-class="albumCover">
+            <div class="gift-ribbon"></div>
 
-<span>
+        </div>
 
-NOW PLAYING
+        <p class="gift-instruction">
 
-</span>
+            Tap the gift to open your surprise.
 
-<h2>
+        </p>
 
-14
+        <div id="letterCard" class="letter-card glass">
 
-</h2>
+            <img
+                src="us.jpeg"
+                alt="Us Together"
+                class="letter-photo">
 
-<p>
+            <h2>
 
-Our Song ❤️
+                Happy Birthday, Hubby ❤️
 
-</p>
+            </h2>
 
-<div class="musicBar">
+            <p class="love-letter">
 
-<div id="musicFill">
+                Thank you for loving me, believing in me,
+                and making every ordinary day feel special.
 
-</div>
+                I hope this little Galaxy phone reminds you
+                that no matter where life takes us,
+                you'll always have my heart.
 
-</div>
+            </p>
 
-<div class="musicTime">
+            <h3>
 
-<span>
+                I love you forever. ❤️
 
-0:00
+            </h3>
 
-</span>
+        </div>
 
-<span id="duration">
-
---:--
-
-</span>
-
-</div>
-
-<div class="controls">
-
-<button id="prevBtn">
-
-⏮
-
-</button>
-
-<button id="playBtn">
-
-▶
-
-</button>
-
-<button id="nextBtn">
-
-⏭
-
-</button>
-
-</div>
-
-<audio id="player">
-
-<source
-src="bg.mp3"
-type="audio/mpeg">
-
-</audio>
-
-</div>
+    </div>
 
 </section>
 
-<!-- ================================= -->
-<!-- BIRTHDAY -->
-<!-- ================================= -->
+<section id="settingsApp" class="app-screen">
 
-<section id="birthdayScreen"
-class="screen">
+    <div class="app-header glass">
 
-<div class="appHeader">
+        <button class="back-btn" data-close="settings">
 
-<button
-class="backBtn"
-id="birthdayBack">
+            <svg viewBox="0 0 24 24">
+                <path d="M15 6l-6 6 6 6"/>
+            </svg>
 
-←
+        </button>
 
-</button>
+        <h2>Settings</h2>
 
-<h2>
+    </div>
 
-Birthday
+    <div class="settings-list">
 
-</h2>
+        <div class="setting-item">
 
-</div>
+            <span>Owner</span>
 
-<div
-id="birthdayContent"
-class="birthdayContent">
+            <strong>Raymart ❤️</strong>
 
-<div
-id="giftBox"
-class="giftBox">
+        </div>
 
-🎁
+        <div class="setting-item">
 
-</div>
+            <span>Device</span>
 
-<h2>
+            <strong>Galaxy S26</strong>
 
-Happy Birthday ❤️
+        </div>
 
-</h2>
+        <div class="setting-item">
 
-<p>
+            <span>Edition</span>
 
-Tap the gift to reveal
-your surprise.
+            <strong>Birthday Edition</strong>
 
-</p>
+        </div>
 
-</div>
+        <div class="setting-item">
+
+            <span>Created By</span>
+
+            <strong>Cristel Joy ❤️</strong>
+
+        </div>
+
+        <div class="setting-item">
+
+            <span>Battery</span>
+
+            <strong>100%</strong>
+
+        </div>
+
+        <div class="setting-item">
+
+            <span>Love Level</span>
+
+            <strong>∞ ❤️</strong>
+
+        </div>
+
+    </div>
 
 </section>
 
-<!-- ================================= -->
-<!-- SETTINGS -->
-<!-- ================================= -->
+<div id="imageViewer">
 
-<section id="settingsScreen"
-class="screen">
+    <button id="closeViewer">
 
-<div class="appHeader">
+        <svg viewBox="0 0 24 24">
+            <path d="M6 6l12 12M18 6L6 18"/>
+        </svg>
 
-<button
-class="backBtn"
-id="settingsBack">
+    </button>
 
-←
-
-</button>
-
-<h2>
-
-Settings
-
-</h2>
+    <img
+        id="viewerImage"
+        src=""
+        alt="Preview">
 
 </div>
 
-<div class="settingsList">
-
-<div class="setting">
-
-<span>
-
-Device
-
-</span>
-
-<strong>
-
-Galaxy S26
-
-</strong>
+<div id="confettiContainer"></div>
 
 </div>
-
-<div class="setting">
-
-<span>
-
-Owner
-
-</span>
-
-<strong>
-
-Raymart ❤️
-
-</strong>
-
-</div>
-
-<div class="setting">
-
-<span>
-
-Version
-
-</span>
-
-<strong>
-
-Birthday Edition
-
-</strong>
-
-</div>
-
-<div class="setting">
-
-<span>
-
-Powered By
-
-</span>
-
-<strong>
-
-Cristel Joy
-
-</strong>
-
-</div>
-
-<div class="setting">
-
-<span>
-
-Battery
-
-</span>
-
-<strong>
-
-100%
-
-</strong>
-
-</div>
-
-<div class="setting">
-
-<span>
-
-Love Level
-
-</span>
-
-<strong>
-
-∞ ❤️
-
-</strong>
-
-</div>
-
-</div>
-
-</section>
 
 </div>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
