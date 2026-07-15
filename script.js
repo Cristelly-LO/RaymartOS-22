@@ -583,19 +583,19 @@ console.log("Galaxy S26 Birthday Edition Loaded ❤️");
 
 const birthdayMessages=[
 
-"Happy Birthday, Hubby ❤️🎂",
+"Happy Birthday, Hubby! ❤️🎂",
 
-"I made this Galaxy S26 just for you.",
+"It's finally 12:00 AM... Happy 22nd Birthday!",
 
-"I hope this reminds you how loved you are.",
+"I made this Galaxy S26 just for you because you deserve something special.",
 
-"Thank you for choosing me every single day.",
+"I know you've been working so hard for your dreams.",
 
-"I'm always proud of you.",
+"I'm so proud of you every single day.",
 
 "I'll always be your number one supporter.",
 
-"I love you so much. ❤️"
+"I love you so much, Raymart. ❤️"
 
 ];
 
