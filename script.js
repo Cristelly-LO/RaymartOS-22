@@ -13,6 +13,8 @@ const clock = document.querySelector(".clock");
 const topTime = document.getElementById("time");
 const date = document.querySelector(".date");
 
+const installBtn = document.getElementById("installBtn");
+
 // ==========================
 // CHANGE SCREEN
 // ==========================
@@ -77,3 +79,13 @@ function startFaceRecognition(){
     },5600);
 
 }
+
+// ==========================
+// INSTALL BUTTON
+// ==========================
+
+installBtn.addEventListener("click", () => {
+
+    alert("Installing RaymartOS 22...");
+
+});
