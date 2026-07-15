@@ -1316,3 +1316,25 @@ transform:scale(1);
 }
 
 }
+
+.message{
+
+opacity:0;
+
+transform:translateY(20px);
+
+animation:messageIn .45s forwards;
+
+}
+
+@keyframes messageIn{
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
