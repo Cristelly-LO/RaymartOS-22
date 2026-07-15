@@ -1,33 +1,42 @@
-// ==============================
+// =====================================================
+// GALAXY S26 BIRTHDAY EDITION
+// script.js — PART 1
+// =====================================================
+
+// ===========================
 // SCREENS
-// ==============================
+// ===========================
 
-const lockScreen=document.getElementById("lockScreen");
-const faceScreen=document.getElementById("faceScreen");
-const updateScreen=document.getElementById("updateScreen");
-const installScreen=document.getElementById("installScreen");
-const profileScreen=document.getElementById("profileScreen");
-const bootScreen=document.getElementById("bootScreen");
-const homeScreen=document.getElementById("homeScreen");
+const bootScreen = document.getElementById("bootScreen");
+const lockScreen = document.getElementById("lockScreen");
+const faceScreen = document.getElementById("faceScreen");
+const updateScreen = document.getElementById("updateScreen");
+const installScreen = document.getElementById("installScreen");
+const matchScreen = document.getElementById("matchScreen");
+const restartScreen = document.getElementById("restartScreen");
+const homeScreen = document.getElementById("homeScreen");
 
-// ==============================
+// ===========================
 // ELEMENTS
-// ==============================
+// ===========================
 
-const faceBar=document.getElementById("faceBar");
-const installBar=document.getElementById("installBar");
+const bootFill = document.getElementById("bootFill");
+const restartFill = document.getElementById("restartFill");
 
-const faceText=document.getElementById("faceText");
-const installText=document.getElementById("installText");
+const clock = document.getElementById("clock");
+const date = document.getElementById("date");
 
-const installBtn=document.getElementById("installBtn");
+const faceBar = document.getElementById("faceBar");
+const faceText = document.getElementById("faceText");
 
-const clock=document.getElementById("clock");
-const date=document.getElementById("date");
+const installBar = document.getElementById("installBar");
+const installText = document.getElementById("installText");
 
-// ==============================
+const installBtn = document.getElementById("installBtn");
+
+// ===========================
 // SHOW SCREEN
-// ==============================
+// ===========================
 
 function showScreen(screen){
 
@@ -41,9 +50,39 @@ screen.classList.add("active");
 
 }
 
-// ==============================
-// LOCK SCREEN
-// ==============================
+// ===========================
+// BOOT
+// ===========================
+
+window.onload=()=>{
+
+let percent=0;
+
+const timer=setInterval(()=>{
+
+percent+=2;
+
+bootFill.style.width=percent+"%";
+
+if(percent>=100){
+
+clearInterval(timer);
+
+setTimeout(()=>{
+
+showScreen(lockScreen);
+
+},500);
+
+}
+
+},40);
+
+};
+
+// ===========================
+// LOCK
+// ===========================
 
 lockScreen.addEventListener("click",()=>{
 
@@ -53,25 +92,25 @@ startFace();
 
 });
 
-// ==============================
+// ===========================
 // FACE RECOGNITION
-// ==============================
+// ===========================
 
 function startFace(){
 
-let width=0;
+let percent=0;
 
 const timer=setInterval(()=>{
 
-width+=2;
+percent+=2;
 
-faceBar.style.width=width+"%";
+faceBar.style.width=percent+"%";
 
-if(width>=100){
+if(percent>=100){
 
 clearInterval(timer);
 
-faceText.innerHTML="✔ Face Recognized";
+faceText.innerHTML="✅ Face Recognized";
 
 setTimeout(()=>{
 
@@ -79,13 +118,13 @@ clock.innerHTML="12:00 AM";
 
 date.innerHTML="Thursday, July 16";
 
-},700);
+},500);
 
 setTimeout(()=>{
 
 showScreen(updateScreen);
 
-},1700);
+},1800);
 
 }
 
@@ -93,9 +132,9 @@ showScreen(updateScreen);
 
 }
 
-// ==============================
+// ===========================
 // UPDATE BUTTON
-// ==============================
+// ===========================
 
 installBtn.addEventListener("click",()=>{
 
@@ -105,9 +144,9 @@ startInstall();
 
 });
 
-// ==============================
-// INSTALLATION
-// ==============================
+// ===========================
+// INSTALL
+// ===========================
 
 function startInstall(){
 
@@ -117,13 +156,13 @@ const messages=[
 
 "Preparing Birthday Update...",
 
-"Downloading Smiles...",
+"Downloading Love...",
 
 "Collecting Memories...",
 
 "Installing Happiness...",
 
-"Searching for the Best Girlfriend...",
+"Finding Soulmate...",
 
 "Perfect Match Found ❤️"
 
@@ -137,25 +176,25 @@ percent++;
 
 installBar.style.width=percent+"%";
 
-if(percent==20){
+if(percent===20){
 
 installText.innerHTML=messages[1];
 
 }
 
-if(percent==40){
+if(percent===40){
 
 installText.innerHTML=messages[2];
 
 }
 
-if(percent==60){
+if(percent===60){
 
 installText.innerHTML=messages[3];
 
 }
 
-if(percent==80){
+if(percent===80){
 
 installText.innerHTML=messages[4];
 
@@ -169,11 +208,11 @@ installText.innerHTML=messages[5];
 
 setTimeout(()=>{
 
-showScreen(profileScreen);
+showScreen(matchScreen);
 
-startProfile();
+startMatch();
 
-},1200);
+},1000);
 
 }
 
@@ -181,32 +220,359 @@ startProfile();
 
 }
 
-// ==============================
-// PROFILE
-// ==============================
+// ===========================
+// MATCH
+// ===========================
 
-function startProfile(){
+function startMatch(){
 
 setTimeout(()=>{
 
-showScreen(bootScreen);
+showScreen(restartScreen);
 
-startBoot();
+startRestart();
 
 },3000);
 
 }
 
-// ==============================
-// BOOT
-// ==============================
+// ===========================
+// RESTART
+// ===========================
 
-function startBoot(){
+function startRestart(){
+
+let percent=0;
+
+const timer=setInterval(()=>{
+
+percent+=2;
+
+restartFill.style.width=percent+"%";
+
+if(percent>=100){
+
+clearInterval(timer);
 
 setTimeout(()=>{
 
 showScreen(homeScreen);
 
-},3200);
+},500);
 
 }
+
+},40);
+
+}
+
+// =====================================================
+// APP SCREENS
+// =====================================================
+
+const messagesScreen=document.getElementById("messagesScreen");
+const galleryScreen=document.getElementById("galleryScreen");
+const musicScreen=document.getElementById("musicScreen");
+const birthdayScreen=document.getElementById("birthdayScreen");
+const settingsScreen=document.getElementById("settingsScreen");
+
+// =====================================================
+// HOME APPS
+// =====================================================
+
+const messagesApp=document.getElementById("messagesApp");
+const galleryApp=document.getElementById("galleryApp");
+const musicApp=document.getElementById("musicApp");
+const birthdayApp=document.getElementById("birthdayApp");
+const settingsApp=document.getElementById("settingsApp");
+
+// =====================================================
+// BACK BUTTONS
+// =====================================================
+
+const messagesBack=document.getElementById("messagesBack");
+const galleryBack=document.getElementById("galleryBack");
+const musicBack=document.getElementById("musicBack");
+const birthdayBack=document.getElementById("birthdayBack");
+const settingsBack=document.getElementById("settingsBack");
+
+// =====================================================
+// OPEN APPS
+// =====================================================
+
+messagesApp.addEventListener("click",()=>{
+
+showScreen(messagesScreen);
+
+});
+
+galleryApp.addEventListener("click",()=>{
+
+showScreen(galleryScreen);
+
+});
+
+musicApp.addEventListener("click",()=>{
+
+showScreen(musicScreen);
+
+});
+
+birthdayApp.addEventListener("click",()=>{
+
+showScreen(birthdayScreen);
+
+});
+
+settingsApp.addEventListener("click",()=>{
+
+showScreen(settingsScreen);
+
+});
+
+// =====================================================
+// BACK HOME
+// =====================================================
+
+messagesBack.addEventListener("click",()=>{
+
+showScreen(homeScreen);
+
+});
+
+galleryBack.addEventListener("click",()=>{
+
+showScreen(homeScreen);
+
+});
+
+musicBack.addEventListener("click",()=>{
+
+showScreen(homeScreen);
+
+});
+
+birthdayBack.addEventListener("click",()=>{
+
+showScreen(homeScreen);
+
+});
+
+settingsBack.addEventListener("click",()=>{
+
+showScreen(homeScreen);
+
+});
+
+// =====================================================
+// BIRTHDAY GIFT
+// =====================================================
+
+const openGift=document.getElementById("openGift");
+
+openGift.addEventListener("click",()=>{
+
+document.querySelector(".birthdayContent").innerHTML=`
+
+<div class="giftBox">
+
+🎉
+
+</div>
+
+<h2>
+
+Happy 22nd Birthday,
+Hubby! ❤️
+
+</h2>
+
+<p>
+
+I know life hasn't always been easy,
+but I'm so proud of everything you've become.
+
+Thank you for loving me,
+working hard for your dreams,
+and making me feel loved every single day.
+
+May this year bring you closer to every dream,
+especially your dream phone.
+
+I'll always be here,
+cheering you on,
+loving you,
+and choosing you.
+
+I love you so much.
+
+Happy Birthday, Raymart.
+
+❤️
+
+- Cristel Joy
+
+</p>
+
+`;
+
+});
+
+// =====================================================
+// END OF SCRIPT
+// =====================================================
+
+// =====================================================
+// BONUS ANIMATIONS & IMPROVEMENTS
+// Add this BELOW everything in script.js
+// =====================================================
+
+// ===========================
+// AUTO PLAY MUSIC WHEN OPENING MUSIC APP
+// ===========================
+
+const player=document.getElementById("player");
+
+musicApp.addEventListener("click",()=>{
+
+setTimeout(()=>{
+
+player.play().catch(()=>{});
+
+},500);
+
+});
+
+// ===========================
+// STOP MUSIC WHEN LEAVING
+// ===========================
+
+musicBack.addEventListener("click",()=>{
+
+player.pause();
+
+player.currentTime=0;
+
+});
+
+// ===========================
+// APP ICON ANIMATION
+// ===========================
+
+const apps=document.querySelectorAll(".app");
+
+apps.forEach((app,index)=>{
+
+app.style.animationDelay=(index*0.08)+"s";
+
+});
+
+// ===========================
+// DOUBLE TAP WALLPAPER
+// SECRET MESSAGE
+// ===========================
+
+let tapCount=0;
+
+const wallpaper=document.querySelector(".homeBackground");
+
+wallpaper.addEventListener("click",()=>{
+
+tapCount++;
+
+if(tapCount>=5){
+
+alert(
+"I love you so much, Hubby. ❤️\n\nHappy 22nd Birthday!\n\n— Cristel Joy"
+);
+
+tapCount=0;
+
+}
+
+setTimeout(()=>{
+
+tapCount=0;
+
+},1800);
+
+});
+
+// ===========================
+// SETTINGS EASTER EGG
+// ===========================
+
+document.querySelectorAll(".settingItem")[5]
+.addEventListener("click",()=>{
+
+alert("Love Level: ∞ ❤️");
+
+});
+
+// ===========================
+// HEART BEAT EVERY 8 SECONDS
+// ===========================
+
+setInterval(()=>{
+
+const heart=document.querySelector(".heart");
+
+if(!heart) return;
+
+heart.style.transform="scale(1.25)";
+
+setTimeout(()=>{
+
+heart.style.transform="scale(1)";
+
+},250);
+
+},8000);
+
+// ===========================
+// FADE APP OPEN
+// ===========================
+
+function openScreen(screen){
+
+screen.style.opacity=0;
+
+showScreen(screen);
+
+setTimeout(()=>{
+
+screen.style.opacity=1;
+
+},10);
+
+}
+
+messagesApp.onclick=()=>openScreen(messagesScreen);
+
+galleryApp.onclick=()=>openScreen(galleryScreen);
+
+musicApp.onclick=()=>openScreen(musicScreen);
+
+birthdayApp.onclick=()=>openScreen(birthdayScreen);
+
+settingsApp.onclick=()=>openScreen(settingsScreen);
+
+// ===========================
+// HAPPY BIRTHDAY POPUP
+// ===========================
+
+setTimeout(()=>{
+
+if(homeScreen.classList.contains("active")){
+
+alert("🎉 Happy 22nd Birthday, Raymart! ❤️");
+
+}
+
+},1000);
+
+// =====================================================
+// FINAL
+// =====================================================
+
+console.log("Galaxy S26 Birthday Edition Loaded ❤️");
