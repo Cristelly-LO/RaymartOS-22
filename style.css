@@ -1212,3 +1212,82 @@ font-size:90px;
 
 }
 
+/* ===========================
+HOME WIDGET
+=========================== */
+
+.homeWidget{
+
+width:90%;
+
+max-width:420px;
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+padding:18px;
+
+margin-bottom:40px;
+
+border-radius:28px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(22px);
+
+border:1px solid rgba(255,255,255,.20);
+
+box-shadow:
+
+0 18px 45px rgba(0,0,0,.30);
+
+}
+
+.widgetPhoto{
+
+width:95px;
+
+height:95px;
+
+border-radius:24px;
+
+object-fit:cover;
+
+box-shadow:
+
+0 12px 25px rgba(0,0,0,.25);
+
+}
+
+.widgetText{
+
+flex:1;
+
+}
+
+.widgetText h2{
+
+font-size:24px;
+
+margin-bottom:8px;
+
+}
+
+.widgetText p{
+
+opacity:.85;
+
+line-height:1.6;
+
+}
+
+/* make icons a little lower */
+
+.appsGrid{
+
+margin-top:15px;
+
+}
