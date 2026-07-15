@@ -1,12 +1,9 @@
-/* ==========================================
-   GOOGLE FONT
-========================================== */
+/* ======================================================
+   GALAXY S26 BIRTHDAY EDITION
+   style.css — PART 1
+====================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-/* ==========================================
-   RESET
-========================================== */
 
 *{
 margin:0;
@@ -15,25 +12,41 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
-body{
+html,body{
 
-background:#040816;
+width:100%;
+height:100%;
 overflow:hidden;
+
+background:#050816;
+
 color:#fff;
 
 }
 
-/* ==========================================
-   BACKGROUND
-========================================== */
+#phone{
+
+position:relative;
+
+width:100vw;
+height:100vh;
+
+overflow:hidden;
+
+}
+
+/* ===========================
+BACKGROUND
+=========================== */
 
 .background{
 
-position:fixed;
+position:absolute;
+
 inset:0;
 
 background:
-linear-gradient(rgba(4,8,22,.65),rgba(4,8,22,.90)),
+linear-gradient(rgba(5,8,22,.65),rgba(5,8,22,.90)),
 url("wallpaper.png") center center/cover no-repeat;
 
 z-index:-2;
@@ -48,13 +61,13 @@ position:absolute;
 
 inset:0;
 
-backdrop-filter:blur(18px);
+backdrop-filter:blur(20px);
 
 }
 
-/* ==========================================
-   SCREEN
-========================================== */
+/* ===========================
+SCREENS
+=========================== */
 
 .screen{
 
@@ -82,11 +95,68 @@ animation:fade .6s ease;
 
 }
 
-/* ==========================================
-   STATUS BAR
-========================================== */
+/* ===========================
+BOOT
+=========================== */
 
-.status{
+.bootContent{
+
+text-align:center;
+
+}
+
+.logo{
+
+font-size:52px;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+margin-bottom:10px;
+
+}
+
+.subtitle{
+
+font-size:18px;
+
+opacity:.8;
+
+margin-bottom:40px;
+
+}
+
+.bootProgress{
+
+width:260px;
+
+height:6px;
+
+background:rgba(255,255,255,.15);
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+#bootFill,
+#restartFill{
+
+width:0%;
+
+height:100%;
+
+background:linear-gradient(90deg,#4ea8ff,#8fd4ff);
+
+}
+
+/* ===========================
+LOCK
+=========================== */
+
+.statusBar{
 
 position:absolute;
 
@@ -108,10 +178,6 @@ opacity:.85;
 
 }
 
-/* ==========================================
-   LOCK SCREEN
-========================================== */
-
 .lockContent{
 
 text-align:center;
@@ -120,17 +186,15 @@ text-align:center;
 
 #clock{
 
-font-size:68px;
+font-size:72px;
 
 font-weight:700;
-
-letter-spacing:2px;
 
 }
 
 #date{
 
-margin-top:8px;
+margin-top:10px;
 
 font-size:18px;
 
@@ -140,11 +204,11 @@ opacity:.8;
 
 .heart{
 
-font-size:60px;
+font-size:65px;
 
-margin:35px 0 18px;
+margin:35px 0 20px;
 
-animation:beat 1.5s infinite;
+animation:beat 1.6s infinite;
 
 }
 
@@ -160,17 +224,13 @@ margin-bottom:10px;
 
 font-size:18px;
 
-line-height:1.6;
+line-height:1.7;
 
-opacity:.85;
+opacity:.9;
 
 }
 
-/* ==========================================
-   UNLOCK
-========================================== */
-
-.unlock{
+.unlockArea{
 
 position:absolute;
 
@@ -178,31 +238,29 @@ bottom:35px;
 
 text-align:center;
 
+opacity:.85;
+
 animation:float 2s infinite;
-
-font-size:15px;
-
-opacity:.8;
 
 }
 
-.swipe{
+.swipeBar{
 
 width:90px;
 
 height:6px;
 
-border-radius:20px;
-
 background:white;
+
+border-radius:20px;
 
 margin:auto auto 12px;
 
 }
 
-/* ==========================================
-   GLASS CARD
-========================================== */
+/* ===========================
+CARD
+=========================== */
 
 .card{
 
@@ -212,16 +270,17 @@ max-width:380px;
 
 padding:30px;
 
-border-radius:28px;
+border-radius:30px;
 
 background:rgba(255,255,255,.08);
 
 backdrop-filter:blur(20px);
 
-border:1px solid rgba(255,255,255,.15);
+border:1px solid rgba(255,255,255,.12);
 
 box-shadow:
-0 15px 40px rgba(0,0,0,.35);
+
+0 15px 45px rgba(0,0,0,.35);
 
 }
 
@@ -229,9 +288,7 @@ box-shadow:
 
 text-align:center;
 
-margin-bottom:12px;
-
-font-size:30px;
+margin-bottom:15px;
 
 }
 
@@ -259,9 +316,9 @@ padding:10px 0;
 
 }
 
-/* ==========================================
-   BUTTON
-========================================== */
+/* ===========================
+BUTTON
+=========================== */
 
 button{
 
@@ -269,7 +326,7 @@ width:100%;
 
 padding:16px;
 
-margin-top:15px;
+margin-top:20px;
 
 border:none;
 
@@ -285,7 +342,7 @@ font-weight:600;
 
 cursor:pointer;
 
-transition:.25s;
+transition:.3s;
 
 }
 
@@ -301,21 +358,25 @@ transform:scale(.98);
 
 }
 
-/* ==========================================
-   SCANNER
-========================================== */
+/* ===========================
+FACE RECOGNITION
+=========================== */
 
 .scanner{
 
-width:120px;
+position:relative;
 
-height:120px;
+width:130px;
 
-border-radius:50%;
+height:130px;
 
 margin:0 auto 25px;
 
+border-radius:50%;
+
 border:4px solid #4ea8ff;
+
+overflow:hidden;
 
 box-shadow:
 
@@ -325,9 +386,25 @@ animation:pulse 2s infinite;
 
 }
 
-/* ==========================================
-   PROGRESS BAR
-========================================== */
+.scannerLine{
+
+position:absolute;
+
+left:0;
+
+width:100%;
+
+height:6px;
+
+background:#7fd4ff;
+
+box-shadow:
+
+0 0 15px #7fd4ff;
+
+animation:scan 2s linear infinite;
+
+}
 
 .progress{
 
@@ -352,11 +429,11 @@ width:0%;
 
 height:100%;
 
-background:linear-gradient(90deg,#4ea8ff,#74c0ff);
+background:linear-gradient(90deg,#4ea8ff,#7fd4ff);
 
 border-radius:20px;
 
-transition:.4s;
+transition:.3s;
 
 }
 
@@ -367,21 +444,21 @@ display:block;
 
 text-align:center;
 
-margin-top:15px;
-
 font-weight:500;
+
+margin-top:10px;
 
 }
 
-/* ==========================================
-   PROFILE
-========================================== */
+/* ===========================
+PROFILE
+=========================== */
 
-.profile{
+.profileImage{
 
-width:140px;
+width:150px;
 
-height:140px;
+height:150px;
 
 border-radius:50%;
 
@@ -389,29 +466,29 @@ object-fit:cover;
 
 display:block;
 
-margin:0 auto 20px;
+margin:0 auto 25px;
 
 border:4px solid white;
 
 box-shadow:
 
-0 0 30px rgba(255,255,255,.35);
+0 0 35px rgba(255,255,255,.35);
 
 }
 
-.loveBar{
+.loveProgress{
 
 width:100%;
 
 height:12px;
 
-border-radius:20px;
-
-background:rgba(255,255,255,.15);
-
 margin:25px 0;
 
+border-radius:20px;
+
 overflow:hidden;
+
+background:rgba(255,255,255,.15);
 
 }
 
@@ -421,45 +498,545 @@ width:100%;
 
 height:100%;
 
-background:linear-gradient(90deg,#ff4f8a,#ff8fb8);
+background:linear-gradient(90deg,#ff4f8a,#ff9bbd);
 
 }
 
-/* ==========================================
-   MOBILE
-========================================== */
+/* ===========================
+HOME
+=========================== */
 
-@media(max-width:480px){
+#homeScreen{
 
-#clock{
-
-font-size:58px;
+padding:0;
 
 }
 
-.lockContent h2{
+.homeBackground{
+
+width:100%;
+
+height:100%;
+
+background:
+linear-gradient(rgba(5,8,22,.40),rgba(5,8,22,.60)),
+url("us.jpeg") center center/cover no-repeat;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.phoneStatus{
+
+width:100%;
+
+padding:18px 22px;
+
+display:flex;
+
+justify-content:space-between;
+
+font-size:14px;
+
+font-weight:600;
+
+}
+
+.phoneClock{
+
+font-size:72px;
+
+font-weight:700;
+
+margin-top:30px;
+
+}
+
+.phoneDate{
+
+font-size:18px;
+
+opacity:.85;
+
+margin-bottom:45px;
+
+}
+
+/* ===========================
+APPS
+=========================== */
+
+.appsGrid{
+
+width:100%;
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:28px;
+
+padding:0 18px;
+
+}
+
+.app{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.app:hover{
+
+transform:scale(1.08);
+
+}
+
+.appIcon{
+
+width:72px;
+
+height:72px;
+
+border-radius:22px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:34px;
+
+background:linear-gradient(135deg,#5ca8ff,#2563eb);
+
+box-shadow:
+
+0 12px 30px rgba(0,0,0,.35);
+
+}
+
+.app span{
+
+margin-top:10px;
+
+font-size:14px;
+
+text-align:center;
+
+}
+
+/* ===========================
+DOCK
+=========================== */
+
+.dock{
+
+position:absolute;
+
+bottom:25px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:90%;
+
+max-width:390px;
+
+padding:15px;
+
+display:flex;
+
+justify-content:space-around;
+
+border-radius:28px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.18);
+
+box-shadow:
+
+0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.dockIcon{
+
+width:58px;
+
+height:58px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
 
 font-size:28px;
 
-}
+border-radius:18px;
 
-.lockContent p{
+background:rgba(255,255,255,.10);
 
-font-size:16px;
-
-}
-
-.card{
-
-padding:24px;
+transition:.3s;
 
 }
 
+.dockIcon:hover{
+
+transform:scale(1.1);
+
 }
 
-/* ==========================================
-   ANIMATIONS
-========================================== */
+/* ===========================
+APP HEADER
+=========================== */
+
+.appHeader{
+
+width:100%;
+
+padding:20px;
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.backBtn{
+
+width:48px;
+
+height:48px;
+
+padding:0;
+
+margin:0;
+
+border-radius:50%;
+
+font-size:22px;
+
+background:#2563eb;
+
+}
+
+/* ===========================
+MESSAGES
+=========================== */
+
+#messagesScreen{
+
+background:#0b1120;
+
+padding:0;
+
+justify-content:flex-start;
+
+}
+
+.chatArea{
+
+width:100%;
+
+padding:20px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+overflow:auto;
+
+}
+
+.message{
+
+max-width:80%;
+
+padding:15px 18px;
+
+border-radius:22px;
+
+font-size:15px;
+
+line-height:1.6;
+
+}
+
+.left{
+
+align-self:flex-start;
+
+background:#2563eb;
+
+}
+
+/* ===========================
+GALLERY
+=========================== */
+
+#galleryScreen{
+
+background:#050816;
+
+padding:0;
+
+justify-content:flex-start;
+
+}
+
+.galleryGrid{
+
+padding:20px;
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:15px;
+
+width:100%;
+
+overflow:auto;
+
+}
+
+.galleryGrid img{
+
+width:100%;
+
+height:180px;
+
+object-fit:cover;
+
+border-radius:18px;
+
+}
+
+/* ===========================
+MUSIC
+=========================== */
+
+#musicScreen{
+
+background:#050816;
+
+padding:0;
+
+justify-content:flex-start;
+
+}
+
+.musicPlayer{
+
+padding:40px 25px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+width:100%;
+
+}
+
+.albumArt{
+
+width:250px;
+
+height:250px;
+
+border-radius:30px;
+
+object-fit:cover;
+
+margin-bottom:30px;
+
+box-shadow:
+
+0 15px 40px rgba(0,0,0,.35);
+
+}
+
+.musicPlayer h3{
+
+font-size:28px;
+
+margin-bottom:8px;
+
+}
+
+.musicPlayer p{
+
+opacity:.8;
+
+margin-bottom:25px;
+
+}
+
+audio{
+
+width:100%;
+
+max-width:350px;
+
+}
+
+/* ===========================
+BIRTHDAY
+=========================== */
+
+#birthdayScreen{
+
+background:#050816;
+
+padding:0;
+
+justify-content:flex-start;
+
+}
+
+.birthdayContent{
+
+width:100%;
+
+padding:40px 25px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+text-align:center;
+
+}
+
+.giftBox{
+
+font-size:120px;
+
+cursor:pointer;
+
+animation:bounce 2s infinite;
+
+margin-bottom:30px;
+
+}
+
+.birthdayContent h2{
+
+font-size:32px;
+
+margin-bottom:15px;
+
+}
+
+.birthdayContent p{
+
+font-size:17px;
+
+opacity:.85;
+
+line-height:1.7;
+
+margin-bottom:25px;
+
+}
+
+/* ===========================
+SETTINGS
+=========================== */
+
+#settingsScreen{
+
+background:#050816;
+
+padding:0;
+
+justify-content:flex-start;
+
+}
+
+.settingsList{
+
+width:100%;
+
+padding:20px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.settingItem{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 20px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+}
+
+.settingItem span{
+
+opacity:.8;
+
+font-size:15px;
+
+}
+
+.settingItem strong{
+
+font-size:15px;
+
+font-weight:600;
+
+}
+
+/* ===========================
+ANIMATIONS
+=========================== */
 
 @keyframes beat{
 
@@ -515,11 +1092,28 @@ transform:scale(1);
 
 }
 
+@keyframes scan{
+
+0%{
+
+top:-10px;
+
+}
+
+100%{
+
+top:140px;
+
+}
+
+}
+
 @keyframes fade{
 
 from{
 
 opacity:0;
+
 transform:scale(.98);
 
 }
@@ -527,303 +1121,94 @@ transform:scale(.98);
 to{
 
 opacity:1;
+
 transform:scale(1);
 
 }
 
 }
-/* ==========================================
-   BOOT SCREEN
-========================================== */
 
-.boot{
+@keyframes bounce{
 
-text-align:center;
-
-}
-
-.boot h1{
-
-font-size:42px;
-
-font-weight:700;
-
-letter-spacing:2px;
-
-margin-bottom:15px;
-
-}
-
-.boot p{
-
-opacity:.8;
-
-margin-bottom:40px;
-
-}
-
-.bootBar{
-
-width:260px;
-
-height:6px;
-
-background:rgba(255,255,255,.15);
-
-border-radius:30px;
-
-overflow:hidden;
-
-margin:auto;
-
-}
-
-.bootFill{
-
-width:0%;
-
-height:100%;
-
-background:linear-gradient(90deg,#4ea8ff,#79c4ff);
-
-animation:bootLoad 3s forwards;
-
-}
-
-/* ==========================================
-   HOME SCREEN
-========================================== */
-
-#homeScreen{
-
-justify-content:flex-start;
-
-background:
-linear-gradient(rgba(4,8,22,.45),rgba(4,8,22,.65)),
-url("us.jpeg") center center/cover no-repeat;
-
-}
-
-/* ==========================================
-   PHONE STATUS
-========================================== */
-
-.phoneStatus{
-
-width:100%;
-
-display:flex;
-
-justify-content:space-between;
-
-padding:18px 8px;
-
-font-size:14px;
-
-font-weight:600;
-
-}
-
-.phoneClock{
-
-margin-top:30px;
-
-font-size:68px;
-
-font-weight:700;
-
-text-align:center;
-
-}
-
-.phoneDate{
-
-margin-bottom:45px;
-
-opacity:.85;
-
-font-size:18px;
-
-text-align:center;
-
-}
-
-/* ==========================================
-   APPS
-========================================== */
-
-.apps{
-
-width:100%;
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:28px;
-
-padding:0 15px;
-
-}
-
-.app{
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-cursor:pointer;
-
-transition:.25s;
-
-}
-
-.app:hover{
-
-transform:scale(1.08);
-
-}
-
-.icon{
-
-width:72px;
-
-height:72px;
-
-border-radius:22px;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-font-size:34px;
-
-background:
-
-linear-gradient(135deg,#60a5fa,#2563eb);
-
-box-shadow:
-
-0 10px 25px rgba(0,0,0,.35);
-
-}
-
-.app span{
-
-margin-top:10px;
-
-font-size:14px;
-
-}
-
-/* ==========================================
-   PHONE DOCK
-========================================== */
-
-.dock{
-
-position:absolute;
-
-bottom:25px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-width:90%;
-
-max-width:380px;
-
-padding:14px;
-
-display:flex;
-
-justify-content:space-around;
-
-border-radius:28px;
-
-background:rgba(255,255,255,.10);
-
-backdrop-filter:blur(20px);
-
-border:1px solid rgba(255,255,255,.18);
-
-}
-
-.dockIcon{
-
-width:58px;
-
-height:58px;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-font-size:28px;
-
-border-radius:18px;
-
-background:rgba(255,255,255,.12);
-
-transition:.3s;
-
-}
-
-.dockIcon:hover{
-
-transform:scale(1.08);
-
-}
-
-/* ==========================================
-   POP ANIMATION
-========================================== */
-
-.app{
-
-animation:pop .6s ease;
-
-}
-
-@keyframes pop{
-
-0%{
-
-opacity:0;
-
-transform:translateY(20px);
-
-}
-
-100%{
-
-opacity:1;
+0%,100%{
 
 transform:translateY(0);
 
 }
 
-}
+50%{
 
-@keyframes bootLoad{
-
-from{
-
-width:0%;
-
-}
-
-to{
-
-width:100%;
+transform:translateY(-15px);
 
 }
 
 }
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:480px){
+
+.logo{
+
+font-size:42px;
+
+}
+
+#clock{
+
+font-size:58px;
+
+}
+
+.phoneClock{
+
+font-size:58px;
+
+}
+
+.lockContent h2{
+
+font-size:28px;
+
+}
+
+.lockContent p{
+
+font-size:16px;
+
+}
+
+.card{
+
+padding:24px;
+
+}
+
+.appIcon{
+
+width:65px;
+
+height:65px;
+
+font-size:30px;
+
+}
+
+.albumArt{
+
+width:220px;
+
+height:220px;
+
+}
+
+.giftBox{
+
+font-size:90px;
+
+}
+
+}
+
