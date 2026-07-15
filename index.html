@@ -1,111 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RaymartOS 22</title>
+
+    <title>RaymartOS 22 ❤️</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-    <!-- Background -->
-    <div class="background"></div>
+<!-- =========================
+BACKGROUND
+========================= -->
 
-    <!-- Lock Screen -->
-    <section id="lockScreen" class="screen active">
+<div class="background"></div>
 
-        <div class="status-bar">
-            <span id="time">11:59 PM</span>
+<!-- =========================
+LOCK SCREEN
+========================= -->
+
+<section id="lockScreen" class="screen active">
+
+    <div class="status">
+
+        <span>11:59 PM</span>
+
+    </div>
+
+    <div class="lock">
+
+        <h1 id="clock">
+            11:59 PM
+        </h1>
+
+        <p id="date">
+            Wednesday, July 15
+        </p>
+
+        <div class="heart">
+            ❤️
         </div>
 
-        <div class="lock-content">
+        <h2>
+            Birthday Eve
+        </h2>
 
-            <h1 class="clock">
-                11:59 PM
-            </h1>
+        <p>
+            One more minute until
+            <br>
+            Raymart turns 22.
+        </p>
 
-            <p class="date">
-                Wednesday, July 15
-            </p>
+    </div>
 
-            <div class="heart">
-                ❤️
-            </div>
+    <div class="swipe">
 
-            <h2>
-                Birthday Eve
-            </h2>
+        <div class="line"></div>
 
-            <p class="subtitle">
-                One more minute until<br>
-                Raymart turns 22.
-            </p>
+        <span>Tap Anywhere to Unlock</span>
 
-        </div>
+    </div>
 
-        <div class="swipe">
+</section>
 
-            <div class="swipe-line"></div>
+<!-- =========================
+FACE ID
+========================= -->
 
-            <p>Swipe Up to Unlock</p>
+<section id="faceScreen" class="screen">
 
-        </div>
+    <div class="card">
 
-    </section>
+        <div class="scanner"></div>
 
-    <!-- Face Recognition -->
-    <section id="faceScreen" class="screen">
+        <h2>
+            Face Recognition
+        </h2>
 
-        <div class="face-box">
+        <p>
+            Looking for Birthday Boy...
+        </p>
 
-            <div class="scanner"></div>
+        <div class="progress">
 
-            <h2>🔍 Face Recognition</h2>
-
-            <p>Looking for Birthday Boy...</p>
-
-            <div class="progress">
-
-                <div class="progress-bar" id="faceBar"></div>
-
-            </div>
-
-            <h3 id="faceStatus">
-                Scanning...
-            </h3>
-
-        </div>
-
-    </section>
-
-    <!-- Update Screen -->
-    <section id="updateScreen" class="screen">
-
-        <div class="card">
-
-            <h2>📥 RaymartOS 22.0</h2>
-
-            <p>
-                A special birthday update is ready.
-            </p>
-
-            <ul>
-                <li>✨ More Adventures</li>
-                <li>❤️ Love Optimization</li>
-                <li>🎂 Birthday Features</li>
-                <li>😊 Happiness Improvements</li>
-            </ul>
-
-            <button id="installBtn">
-                Install Now
-            </button>
+            <div id="faceProgress"></div>
 
         </div>
 
-    </section>
+        <span id="faceText">
+            Scanning...
+        </span>
 
-    <script src="script.js"></script>
+    </div>
+
+</section>
+
+<!-- =========================
+UPDATE
+========================= -->
+
+<section id="updateScreen" class="screen">
+
+    <div class="card">
+
+        <h2>
+            RaymartOS 22.0
+        </h2>
+
+        <p class="updateText">
+
+            A special birthday update is ready.
+
+        </p>
+
+        <ul>
+
+            <li>✨ More Adventures</li>
+
+            <li>❤️ Love Optimization</li>
+
+            <li>🎂 Birthday Features</li>
+
+            <li>😊 Happiness Improvements</li>
+
+        </ul>
+
+        <button id="installBtn">
+
+            Install Now
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =========================
+INSTALL
+========================= -->
+
+<section id="installScreen" class="screen">
+
+    <div class="card">
+
+        <h2>
+
+            Installing RaymartOS...
+
+        </h2>
+
+        <div class="progress">
+
+            <div id="installProgress"></div>
+
+        </div>
+
+        <p id="installText">
+
+            Preparing update...
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =========================
+PROFILE
+========================= -->
+
+<section id="profileScreen" class="screen">
+
+    <div class="card">
+
+        <img src="assets/me.jpg" class="profile">
+
+        <h2>
+
+            Cristel Joy ❤️
+
+        </h2>
+
+        <p>
+
+            Verified Soulmate
+
+        </p>
+
+        <div class="loveBar">
+
+            <div class="loveFill"></div>
+
+        </div>
+
+        <span>
+
+            Compatibility
+            100%
+
+        </span>
+
+        <button id="continueBtn">
+
+            Continue ❤️
+
+        </button>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
 
 </body>
+
 </html>
