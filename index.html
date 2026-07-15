@@ -583,49 +583,95 @@
          MUSIC
     ========================== -->
 
-    <section id="musicScreen" class="screen">
+<div class="appHeader">
 
-        <div class="appHeader">
+    <button class="backBtn" id="musicBack">
 
-            <button class="backBtn" id="musicBack">
+        ←
 
-                ←
+    </button>
 
-            </button>
+    <h2>
 
-            <h2>
+        Music
 
-                Music
+    </h2>
 
-            </h2>
+</div>
 
-        </div>
+<div class="musicPlayer">
 
-        <div class="musicPlayer">
+    <img src="us.JPEG" class="albumArt">
 
-            <img src="us.jpeg" class="albumArt">
+    <span class="nowPlaying">
 
-            <h3>
+        NOW PLAYING
 
-                14
+    </span>
 
-            </h3>
+    <h2>
 
-            <p>
+        14
 
-                Our Song ❤️
+    </h2>
 
-            </p>
+    <p>
 
-            <audio id="player" controls>
+        Our Song ❤️
 
-                <source src="bg.mp3" type="audio/mpeg">
+    </p>
 
-            </audio>
+    <div class="musicProgress">
 
-        </div>
+        <div class="musicFill"></div>
 
-    </section>
+    </div>
+
+    <div class="musicTime">
+
+        <span>
+
+            0:00
+
+        </span>
+
+        <span>
+
+            ∞
+
+        </span>
+
+    </div>
+
+    <div class="musicControls">
+
+        <button id="prevSong">
+
+            ⏮
+
+        </button>
+
+        <button id="playSong">
+
+            ▶
+
+        </button>
+
+        <button id="nextSong">
+
+            ⏭
+
+        </button>
+
+    </div>
+
+    <audio id="player">
+
+        <source src="bg.mp3" type="audio/mpeg">
+
+    </audio>
+
+</div>
 
     <!-- =========================
          BIRTHDAY
