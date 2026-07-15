@@ -1,30 +1,37 @@
 // ==========================
-// ELEMENTS
+// SCREENS
 // ==========================
 
 const lockScreen = document.getElementById("lockScreen");
 const faceScreen = document.getElementById("faceScreen");
 const updateScreen = document.getElementById("updateScreen");
-
-const faceBar = document.getElementById("faceBar");
-const faceStatus = document.getElementById("faceStatus");
-
-const clock = document.querySelector(".clock");
-const topTime = document.getElementById("time");
-const date = document.querySelector(".date");
-
-const installBtn = document.getElementById("installBtn");
+const installScreen = document.getElementById("installScreen");
+const profileScreen = document.getElementById("profileScreen");
 
 // ==========================
-// CHANGE SCREEN
+// ELEMENTS
+// ==========================
+
+const faceProgress = document.getElementById("faceProgress");
+const installProgress = document.getElementById("installProgress");
+
+const faceText = document.getElementById("faceText");
+const installText = document.getElementById("installText");
+
+const installBtn = document.getElementById("installBtn");
+const continueBtn = document.getElementById("continueBtn");
+
+const clock = document.getElementById("clock");
+const date = document.getElementById("date");
+
+// ==========================
+// SHOW SCREEN
 // ==========================
 
 function showScreen(screen){
 
     document.querySelectorAll(".screen").forEach(s=>{
-
         s.classList.remove("active");
-
     });
 
     screen.classList.add("active");
@@ -39,53 +46,144 @@ lockScreen.addEventListener("click",()=>{
 
     showScreen(faceScreen);
 
-    setTimeout(startFaceRecognition,500);
+    startFace();
 
 });
 
 // ==========================
-// FACE ID
+// FACE RECOGNITION
 // ==========================
 
-function startFaceRecognition(){
+function startFace(){
 
-    faceBar.style.width="100%";
+    let width = 0;
 
-    setTimeout(()=>{
+    const timer = setInterval(()=>{
 
-        faceStatus.innerHTML="✔ Face Recognized";
+        width += 2;
 
-    },3000);
+        faceProgress.style.width = width + "%";
 
-    setTimeout(()=>{
+        if(width >= 100){
 
-        clock.innerHTML="12:00 AM";
-        topTime.innerHTML="12:00 AM";
+            clearInterval(timer);
 
-        date.innerHTML="Thursday, July 16";
+            faceText.innerHTML="✔ Face Recognized";
 
-    },3300);
+            setTimeout(()=>{
 
-    setTimeout(()=>{
+                clock.innerHTML="12:00 AM";
 
-        faceStatus.innerHTML="🎉 Happy Birthday, Raymart!";
+                date.innerHTML="Thursday, July 16";
 
-    },4200);
+            },800);
 
-    setTimeout(()=>{
+            setTimeout(()=>{
 
-        showScreen(updateScreen);
+                showScreen(updateScreen);
 
-    },5600);
+            },1800);
+
+        }
+
+    },40);
 
 }
 
 // ==========================
-// INSTALL BUTTON
+// INSTALL
 // ==========================
 
-installBtn.addEventListener("click", () => {
+installBtn.addEventListener("click",()=>{
 
-    alert("Installing RaymartOS 22...");
+    showScreen(installScreen);
+
+    startInstall();
+
+});
+
+// ==========================
+// INSTALL ANIMATION
+// ==========================
+
+function startInstall(){
+
+    let width=0;
+
+    const messages=[
+
+        "Preparing Birthday Update...",
+
+        "Downloading Smiles...",
+
+        "Collecting Memories...",
+
+        "Installing Hugs...",
+
+        "Searching for the Best Girlfriend...",
+
+        "Perfect Match Found ❤️"
+
+    ];
+
+    let index=0;
+
+    installText.innerHTML=messages[0];
+
+    const timer=setInterval(()=>{
+
+        width++;
+
+        installProgress.style.width=width+"%";
+
+        if(width==20){
+
+            installText.innerHTML=messages[1];
+
+        }
+
+        if(width==40){
+
+            installText.innerHTML=messages[2];
+
+        }
+
+        if(width==60){
+
+            installText.innerHTML=messages[3];
+
+        }
+
+        if(width==80){
+
+            installText.innerHTML=messages[4];
+
+        }
+
+        if(width==100){
+
+            clearInterval(timer);
+
+            installText.innerHTML=messages[5];
+
+            setTimeout(()=>{
+
+                showScreen(profileScreen);
+
+            },1500);
+
+        }
+
+    },50);
+
+}
+
+// ==========================
+// CONTINUE
+// ==========================
+
+continueBtn.addEventListener("click",()=>{
+
+    alert("🎉 Happy Birthday Raymart! ❤️\n\nNext, we'll build the Home Screen.");
 
 });
