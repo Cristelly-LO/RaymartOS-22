@@ -179,15 +179,19 @@ const install=setInterval(()=>{
 
 percent++;
 
-installFill.style.width=percent+"%";
+if (installFill) {
+    installFill.style.width = percent + "%";
+}
 
-installPercent.innerHTML=percent+"%";
+if (installPercent) {
+    installPercent.innerHTML = percent + "%";
+}
 
-const circumference=515;
-
-const offset=circumference-(percent/100)*circumference;
-
-circleProgress.style.strokeDashoffset=offset;
+if (circleProgress) {
+    const circumference = 515;
+    const offset = circumference - (percent / 100) * circumference;
+    circleProgress.style.strokeDashoffset = offset;
+}
 
 if(percent===20){
 
